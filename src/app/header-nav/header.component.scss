@@ -1,0 +1,22 @@
+:host {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1170px;
+    margin: auto;
+    
+}
+div.sticky {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+}
+button {
+    text-transform: uppercase;
+    &.button-book {
+        border: 1px solid #fff;
+        border-radius: 0px;
+        color: #fff;
+        background-color: transparent;
+    }
+}

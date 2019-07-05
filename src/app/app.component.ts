@@ -7,9 +7,4 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'beauti-frontend';
-  stickyHeader = false;
-
-  setStickyHeader(value: boolean): void {
-    this.stickyHeader = value;
-  }
 }

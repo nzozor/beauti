@@ -1,7 +1,7 @@
-<div class="menu-icon" (click)="toggleMenu()" [class.active]="active">
+<div class="menu-icon" (click)="toggleMenu()" [ngClass]="{'active': active, sticky: sticky}">
   <div>
     <span></span>
     <span></span>
   </div>
 </div>
-<span class="alt-menu">Menu</span>
+<span class="alt-menu" [class.sticky]="sticky">Menu</span>

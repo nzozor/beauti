@@ -1,3 +1,5 @@
+@import '../../scss/palette';
+
 :host {
     display: flex;
     align-items: center;
@@ -48,6 +50,12 @@
         &:last-of-type {
             bottom: 0;
         }
+
+ 
+    }
+
+    &.sticky span  {
+        background-color: $grey-black;
     }
 
     &.active {
@@ -72,7 +80,6 @@
     }
 
     &:hover {
-
         // no need hover effect on mobile.
         @media (min-width: 1024px) {
             span:first-of-type {
@@ -84,12 +91,15 @@
             }
         }
     }
-
 }
 
 .alt-menu {
 	font-family: lato;
 	font-size: 14px;
 	text-transform: uppercase;
-	color: #fff;
+    color: #fff;
+    
+    &.sticky {
+        color: $grey-black;
+    }
 }

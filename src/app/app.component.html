@@ -1,2 +1,15 @@
-<app-header-nav></app-header-nav>
+<!--The content below is only a placeholder and can be replaced.-->
+<div class="header-wrapper" [class.sticky]="stickyHeader">
+    <app-header-nav  (stickyEmit)="setStickyHeader($event)"></app-header-nav>
+</div>
+<div style="height: 2000px">
+    hello World
+    hello World
+
+    hello World
+
+    hello World
+    hello World
+
+</div>
 <router-outlet></router-outlet>

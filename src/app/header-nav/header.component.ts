@@ -32,7 +32,7 @@ export class HeaderNavComponent implements OnInit, OnDestroy {
     const winScroll = doc.scrollTop;
     const height = doc.scrollHeight - doc.clientHeight;
 
-    if ((winScroll / height) * 100 > 20) {
+    if ((winScroll / height) * 100 > 5) {
       this.stickyEmit.emit(true);
       // this.stickyHeader = true;
     } else {

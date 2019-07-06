@@ -1,5 +1,5 @@
-<app-burger-menu></app-burger-menu>
-<app-beauti-logo></app-beauti-logo>
-<button mat-flat-button color="primary" class="button-book">
+<app-burger-menu [sticky]="stickyEmit | async"></app-burger-menu>
+<app-beauti-logo [sticky]="stickyEmit | async"></app-beauti-logo>
+<button mat-flat-button color="primary" class="button-book" [class.sticky]="stickyEmit | async">
   Book a treatment
 </button>

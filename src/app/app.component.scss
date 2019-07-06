@@ -1,3 +1,14 @@
 :host {
     height: 2000px;
 }
+
+.header-wrapper {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    transition: all .8s;
+}
+
+.sticky {
+    background: white;
+}

@@ -98,8 +98,13 @@
 	font-size: 14px;
 	text-transform: uppercase;
     color: #fff;
-    
+    display: none;
+
     &.sticky {
         color: $grey-black;
+    }
+
+    @media (min-width: 576px) {
+        display: initial;
     }
 }

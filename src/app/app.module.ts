@@ -9,6 +9,7 @@ import { HeaderNavComponent } from './header-nav/header.component';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {MatButtonModule} from '@angular/material/button';
 import { BeautiLogoComponent } from './beauti-logo/beauti-logo.component';
+import { MenuLinkComponent } from './menu-link/menu-link.component';
 
 @NgModule({
   declarations: [
@@ -16,6 +17,7 @@ import { BeautiLogoComponent } from './beauti-logo/beauti-logo.component';
     BurgerMenuComponent,
     HeaderNavComponent,
     BeautiLogoComponent,
+    MenuLinkComponent,
   ],
   imports: [
     BrowserModule,

@@ -1,42 +1,78 @@
-    :host {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        max-width: 1170px;
-        margin: auto;
-        padding: 0 15px;
-        @media (min-width: 576px) {
+@import '../../scss/palette';
+
+app-burger-menu {
+    display: none;
+    @media (max-width: 1023px) {
+        display: initial;
+    }
+}
+:host {
+    &>div {
+        background-color: transparent;
+        transition: all .8s;
+        padding: 15px;
+        &.sticky {
+            background-color: white;
+        }
+
+        >div {
+            display: flex;
             justify-content: space-between;
-            padding: 0 50px;
-        }
-    }
+            align-items: center;
+            margin: auto;
+            padding: 0 15px;
 
-    button {
-        text-transform: uppercase;
-
-        &.button-book {
-            border: 1px solid #fff;
-            border-radius: 0px;
-            color: #fff;
-            background-color: transparent;
-            transition: all .8s;
-            display: none;
-
-            &.sticky {
-                border-color: #3E3D3C;
-                color: #3E3D3C;
-            }
             @media (min-width: 576px) {
-                display: initial;
+                padding: 0 50px;
             }
         }
     }
 
-    .mobile-menu {
-        width: 50px;
-        height: 50px;
-        
-        @media (min-width: 576px) {
-            display: none;
+    .menu-list {
+        display: flex;
+        li{
+            margin: 0 30px;
+            list-style: none;
+            a {
+                text-decoration: none;
+                text-transform: uppercase;
+                color: inherit;
+            }
         }
     }
+}
+
+button {
+    text-transform: uppercase;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    padding: 5px 50px;
+
+    &.button-book {
+        border: 1px solid #fff;
+        border-radius: 4px;
+        color: #fff;
+        background-color: transparent;
+        transition: all .8s;
+        display: none;
+        font-family: lato;
+
+        &.sticky {
+            border-color: #3E3D3C;
+            color: #3E3D3C;
+        }
+
+        @media (min-width: 576px) {
+            display: initial;
+        }
+    }
+}
+
+.mobile-menu {
+    width: 50px;
+    height: 50px;
+
+    @media (min-width: 576px) {
+        display: none;
+    }
+}

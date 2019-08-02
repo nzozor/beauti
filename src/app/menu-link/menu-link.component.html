@@ -1,0 +1,20 @@
+ <div *ngIf="!subMenuActive" class="main-menu">
+  <ul [@openClose] *ngIf="active">
+    <li *ngFor="let item of mainMenu">
+      <a href="/" *ngIf="!item.subMenu">{{ item.title }}</a>
+      <a *ngIf="item.subMenu" (click)="togglesSubenu(item)">{{ item.title }}</a>
+    </li>
+  </ul>
+</div>
+
+<div class="sub-menu" *ngIf="subMenuActive && active">
+  <div class="submenu-title">{{ activeSubMenu.title }}</div>
+  <div class="submenu-section">
+    <div *ngFor="let sub of activeSubMenu.subMenu">
+      <div class="sub-title">{{sub.title}}</div>
+      <ul>
+        <li *ngFor="let subTitle of sub.subTitles"><a href="/">{{subTitle}}</a></li>
+      </ul>
+    </div>
+  </div>
+</div>

@@ -15,8 +15,18 @@ export class HeaderNavComponent implements OnInit, OnDestroy {
   scrolltop: boolean;
   stickyHeader = false;
   windowScroll: Subscription;
+  private _menuLinkOpen: boolean;
 
-  @Output() stickyEmit = new EventEmitter<boolean>();
+  sticky = false;
+
+  set menuLinkOpen(menuLinkOpen: boolean) {
+    this._menuLinkOpen = menuLinkOpen;
+  }
+
+  get menuLinkOpen(): boolean {
+    return this._menuLinkOpen;
+  }
+
 
   ngOnInit() {
     this.windowScroll = fromEvent<MouseEvent>(document, 'scroll')
@@ -33,12 +43,14 @@ export class HeaderNavComponent implements OnInit, OnDestroy {
     const height = doc.scrollHeight - doc.clientHeight;
 
     if ((winScroll / height) * 100 > 5) {
-      this.stickyEmit.emit(true);
-      // this.stickyHeader = true;
+      this.sticky = true;
     } else {
-      // this.stickyHeader = false;
-      this.stickyEmit.emit(false);
+      this.sticky = false;
     }
+  }
+
+  setMenuLink(value: boolean) {
+    this.menuLinkOpen = value;
   }
 
   ngOnDestroy(): void {

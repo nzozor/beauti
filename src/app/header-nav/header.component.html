@@ -1,6 +1,23 @@
-<app-burger-menu [sticky]="stickyEmit | async"></app-burger-menu>
-<app-beauti-logo [sticky]="stickyEmit | async"></app-beauti-logo>
-<button mat-flat-button color="primary" class="button-book" [class.sticky]="stickyEmit | async">
-  Book a treatment
-</button>
-<div class="mobile-menu"></div>
+<div [class.sticky]="sticky">
+  <div>
+    <app-burger-menu [sticky]="sticky" (menuLinkOpen)="setMenuLink($event)"></app-burger-menu>
+    <app-beauti-logo [sticky]="sticky"></app-beauti-logo>
+    <ul class="menu-list">
+      <li><a href="">About Us</a></li>
+      <li><a href="">Price List</a></li>
+      <li><a href="">Advanced Treatments</a></li>
+      <li><a href="">Contacts</a></li>
+    </ul>
+    <button
+      mat-flat-button
+      color="primary"
+      class="button-book"
+      [class.sticky]="sticky"
+    >
+      Book now
+    </button>
+
+    <div class="mobile-menu"></div>
+  </div>
+</div>
+<app-menu-link [active]="menuLinkOpen"></app-menu-link>

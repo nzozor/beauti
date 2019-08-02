@@ -4,14 +4,10 @@ svg {
     display: block;
     width: 150px;
     max-height: 47px;
-    margin-top: 15px;
-    margin-bottom: 15px;
 
     @media (min-width: 576px) {
       width: 100%;
       max-height: 47px;
-      margin-top: 25px;
-      margin-bottom: 25px;
     }
 
     g {

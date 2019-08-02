@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-burger-menu',
@@ -9,6 +9,8 @@ export class BurgerMenuComponent implements OnInit {
 
   active = false;
   @Input() sticky: boolean;
+  @Output() menuLinkOpen = new EventEmitter<boolean>();
+
   constructor() { }
 
   ngOnInit() {
@@ -16,5 +18,6 @@ export class BurgerMenuComponent implements OnInit {
 
   toggleMenu() {
     this.active = !this.active;
+    this.menuLinkOpen.emit(this.active);
   }
 }

@@ -1,0 +1,16 @@
+.main-button.mat-flat-button.mat-primary {
+    text-transform: uppercase;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    padding: 5px 50px;
+    border: 1px solid #fff;
+    border-radius: 0;
+    color: #fff;
+    background-color: #C7CBD6;
+    transition: all .8s;
+    display: none;
+    font-family: 'Nunito Sans', sans-serif;
+    @media (min-width: 576px) {
+        display: initial;
+    }
+}

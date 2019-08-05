@@ -2,14 +2,6 @@
 <div class="header-wrapper" [class.sticky]="stickyHeader">
     <app-header-nav  (stickyEmit)="setStickyHeader($event)"></app-header-nav>
 </div>
-<div style="height: 2000px">
-    hello World
-    hello World
-
-    hello World
-
-    hello World
-    hello World
-
-</div>
+<app-jumbotron></app-jumbotron>
+<div class="parallax" [ngStyle]="{ 'background-image': 'url(' + imgUrl + ')' }"></div>
 <router-outlet></router-outlet>

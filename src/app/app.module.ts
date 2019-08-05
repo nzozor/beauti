@@ -10,6 +10,7 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {MatButtonModule} from '@angular/material/button';
 import { BeautiLogoComponent } from './beauti-logo/beauti-logo.component';
 import { MenuLinkComponent } from './menu-link/menu-link.component';
+import { JumbotronComponent } from './jumbotron/jumbotron.component';
 
 @NgModule({
   declarations: [
@@ -18,6 +19,7 @@ import { MenuLinkComponent } from './menu-link/menu-link.component';
     HeaderNavComponent,
     BeautiLogoComponent,
     MenuLinkComponent,
+    JumbotronComponent,
   ],
   imports: [
     BrowserModule,

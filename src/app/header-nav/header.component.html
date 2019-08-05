@@ -1,18 +1,18 @@
 <div [class.sticky]="sticky">
   <div>
     <app-burger-menu [sticky]="sticky" (menuLinkOpen)="setMenuLink($event)"></app-burger-menu>
-    <app-beauti-logo [sticky]="sticky"></app-beauti-logo>
-    <ul class="menu-list">
-      <li><a href="">About Us</a></li>
-      <li><a href="">Price List</a></li>
-      <li><a href="">Advanced Treatments</a></li>
-      <li><a href="">Contacts</a></li>
+    <a href="">
+      <app-beauti-logo [sticky]="sticky"></app-beauti-logo>
+    </a>
+    <ul class="menu-list">      
+      <li><a href="">ABOUT US</a></li>    
+      <li><a href="">CLASSIC TREATMENTS</a></li>
+      <li><a href="">ADVANCED TREATMENTS</a></li>
     </ul>
     <button
       mat-flat-button
       color="primary"
-      class="button-book"
-      [class.sticky]="sticky"
+      class="main-button"
     >
       Book now
     </button>

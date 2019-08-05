@@ -6,8 +6,7 @@ import { Component, OnInit, Input } from '@angular/core';
   styleUrls: ['./beauti-logo.component.scss']
 })
 export class BeautiLogoComponent implements OnInit {
-  // private fill =  '#3E3D3C';
-  private fill =  '#fff';
+  private fill =  '#000';
   @Input() sticky: boolean;
   constructor() { }
 

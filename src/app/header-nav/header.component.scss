@@ -1,5 +1,3 @@
-@import '../../scss/palette';
-
 app-burger-menu {
     display: none;
     @media (max-width: 1023px) {
@@ -11,6 +9,8 @@ app-burger-menu {
         background-color: transparent;
         transition: all .8s;
         padding: 15px;
+        padding-top: 30px;
+
         &.sticky {
             background-color: white;
         }
@@ -30,6 +30,8 @@ app-burger-menu {
 
     .menu-list {
         display: flex;
+        font-family: 'Nunito Sans', sans-serif;
+        color: #3E3D3C; // TO DO: to move
         li{
             margin: 0 30px;
             list-style: none;
@@ -47,21 +49,8 @@ button {
     overflow: hidden;
     text-overflow: ellipsis;
     padding: 5px 50px;
-
-    &.button-book {
-        border: 1px solid #fff;
-        border-radius: 4px;
-        color: #fff;
-        background-color: transparent;
-        transition: all .8s;
-        display: none;
-        font-family: lato;
-
-        &.sticky {
-            border-color: #3E3D3C;
-            color: #3E3D3C;
-        }
-
+    
+    &.main-button {
         @media (min-width: 576px) {
             display: initial;
         }

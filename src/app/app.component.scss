@@ -1,3 +1,4 @@
+
 :host {
     height: 2000px;
 }
@@ -12,3 +13,11 @@
 .sticky {
     background: white;
 }
+
+.parallax {
+    min-height: 500px; 
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }

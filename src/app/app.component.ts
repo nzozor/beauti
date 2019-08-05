@@ -8,6 +8,7 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'beauti-frontend';
   stickyHeader = false;
+  imgUrl = '../assets/home-video.png'; // ToDO: move to component or directive
 
   setStickyHeader(value: boolean): void {
     this.stickyHeader = value;

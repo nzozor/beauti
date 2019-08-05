@@ -1,0 +1,26 @@
+@import '../../scss/palette';
+
+:host {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    font-family: roboto;
+    font-size: 65px;
+    font-weight: 100;
+}
+
+p {
+    margin-top: 70px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 100;
+    color: $grey-black;
+
+    span {
+        font-weight: 300;
+    }
+}
+
+.main-button {
+    margin: 80px;
+}

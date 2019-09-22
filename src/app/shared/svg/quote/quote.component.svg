@@ -1,0 +1,8 @@
+<span class="{{position}}">
+  <svg  xmlns="http://www.w3.org/2000/svg" width="29.134" height="23.18" viewBox="0 0 29.134 23.18">
+    <g id="Group_255" data-name="Group 255" transform="translate(29.134 23.18) rotate(180)" opacity="0.347">
+      <path id="Path_230" data-name="Path 230" d="M10.643,10.912a6.742,6.742,0,0,0-1.625-.843L10.08,0,1.235,12.537a6.751,6.751,0,1,0,9.408-1.624Z" transform="translate(0)" fill="#c7cbd2"/>
+      <path id="Path_231" data-name="Path 231" d="M10.643,10.912a6.743,6.743,0,0,0-1.625-.843L10.08,0,1.235,12.537a6.751,6.751,0,1,0,9.408-1.624Z" transform="translate(15.632)" fill="#c7cbd2"/>
+    </g>
+  </svg>
+</span>

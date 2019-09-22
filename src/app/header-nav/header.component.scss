@@ -8,8 +8,7 @@ app-burger-menu {
     &>div {
         background-color: transparent;
         transition: all .8s;
-        padding: 15px;
-        padding-top: 30px;
+        padding: 18px;
 
         &.sticky {
             background-color: white;
@@ -32,6 +31,7 @@ app-burger-menu {
         display: flex;
         font-family: 'Nunito Sans', sans-serif;
         color: #3E3D3C; // TO DO: to move
+        padding: 0;
         li{
             margin: 0 30px;
             list-style: none;
@@ -39,6 +39,9 @@ app-burger-menu {
                 text-decoration: none;
                 text-transform: uppercase;
                 color: inherit;
+            }
+            &:first-of-type {
+                margin-left: 0;
             }
         }
     }

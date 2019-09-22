@@ -11,6 +11,7 @@ import {MatButtonModule} from '@angular/material/button';
 import { BeautiLogoComponent } from './beauti-logo/beauti-logo.component';
 import { MenuLinkComponent } from './menu-link/menu-link.component';
 import { JumbotronComponent } from './jumbotron/jumbotron.component';
+import { QuoteComponent } from './shared/svg/quote/quote.component';
 
 @NgModule({
   declarations: [
@@ -20,12 +21,13 @@ import { JumbotronComponent } from './jumbotron/jumbotron.component';
     BeautiLogoComponent,
     MenuLinkComponent,
     JumbotronComponent,
+    QuoteComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    MatButtonModule
+    MatButtonModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

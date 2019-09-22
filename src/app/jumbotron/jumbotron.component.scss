@@ -6,7 +6,7 @@
     flex-direction: column;
     align-items: center;
     font-family: roboto;
-    font-size: 65px;
+    font-size: 38px;
     font-weight: 100;
 }
 
@@ -21,6 +21,7 @@ p {
     }
 }
 
-.main-button {
+.main-button.mat-flat-button.mat-primary {
     margin: 80px;
+    padding: 5px 27px;
 }

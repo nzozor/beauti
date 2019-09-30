@@ -12,6 +12,9 @@ import { BeautiLogoComponent } from './beauti-logo/beauti-logo.component';
 import { MenuLinkComponent } from './menu-link/menu-link.component';
 import { JumbotronComponent } from './jumbotron/jumbotron.component';
 import { QuoteComponent } from './shared/svg/quote/quote.component';
+import { ReviewsComponent } from './reviews/reviews.component';
+import { MatIconModule } from '@angular/material/icon';
+import { ArrowComponent } from './shared/svg/arrow/arrow.component';
 
 @NgModule({
   declarations: [
@@ -22,12 +25,15 @@ import { QuoteComponent } from './shared/svg/quote/quote.component';
     MenuLinkComponent,
     JumbotronComponent,
     QuoteComponent,
+    ReviewsComponent,
+    ArrowComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     MatButtonModule,
+    MatIconModule
   ],
   providers: [],
   bootstrap: [AppComponent]

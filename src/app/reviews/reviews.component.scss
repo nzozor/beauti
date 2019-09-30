@@ -1,0 +1,154 @@
+@import '../../scss/palette';
+
+:host {
+  position: relative;
+  height: 100%;
+  width: 500px;
+
+  >div {
+    padding: 72px 0;
+  }
+}
+
+h3 {
+  font-size: 36px;
+  font-family: 'Roboto';
+  text-align: center;
+  margin-bottom: 50px;
+  color: $grey-black;
+  font-weight: 100;
+}
+
+.drag {
+  align-items: center;
+  bottom: 0;
+  color: #ccc;
+  display: flex;
+  font: 700 24px/1 sans-serif;
+  height: 500px;
+  left: 0;
+  justify-content: center;
+  right: 0;
+  top: 0;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  width: 100%;
+  background-color: black;
+}
+
+.start {
+  background-color: red;
+  display: none;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  width: 1px;
+}
+
+.start.is-showing {
+  display: block;
+}
+
+.slider {
+  display: flex;
+  align-items: center;
+
+  &.is-animating {
+    transition: transform 400ms cubic-bezier(0.5, 0, 0.5, 1);
+  }
+}
+
+.slider-pagination {
+  bottom: 6.25%;
+  left: 0;
+  pointer-events: none;
+  position: absolute;
+  text-align: center;
+  width: 100%;
+
+  >* {
+    border-radius: 50%;
+    box-shadow: 0 0 0 2px rgba(white, 0.75);
+    display: inline-block;
+    height: 6px;
+    margin-left: 4px;
+    margin-right: 4px;
+    transition: background-color 250ms;
+    width: 6px;
+
+    &.is-active {
+      background-color: rgba(white, 0.75);
+    }
+  }
+}
+
+.slider-panel {
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  width: 100%;
+  margin: 10px;
+  height: 200px;
+  border: 1px solid $grey-black;
+  padding: 35px;
+  font-family: 'Nunito Sans';
+  font-size: 15px;
+  transition: all 0.5s;
+  font-weight: 300;
+
+  .quote {
+    margin-bottom: 13px;
+    color: $grey-black;
+  }
+
+  .name {
+    color: $beauti-grey;
+    margin-bottom: 15px;
+  }
+
+  &.active-panel {
+    width: 350px !important;
+    height: 250px;
+    font-size: 18px;
+
+    .stars {
+      mat-icon {
+        color: $blue-type1;
+        font-size: 37px;
+        margin: 0 10px;
+      }
+    }
+  }
+}
+
+.stars {
+  mat-icon {
+    color: $blue-type1;
+    font-size: 30px;
+    margin: 0 5px;
+  }
+}
+
+.has-slider {
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+}
+
+.reviews {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .mat-button {
+    line-height: 0;
+    min-width: 0;
+    padding: 10px 20px;
+    margin: 40px;
+  }
+}

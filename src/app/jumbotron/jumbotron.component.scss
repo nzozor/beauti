@@ -8,20 +8,35 @@
     font-family: roboto;
     font-size: 38px;
     font-weight: 100;
+    padding-top: 40px;
 }
 
-p {
+> div {
     margin-top: 70px;
     font-family: 'Roboto', sans-serif;
     font-weight: 100;
     color: $grey-black;
-
     span {
         font-weight: 300;
     }
 }
 
+div {
+    position: relative;
+}
+
 .main-button.mat-flat-button.mat-primary {
     margin: 80px;
     padding: 5px 27px;
+}
+
+app-quote {
+    position: absolute;
+    top: -27px;
+    left: -44px;
+
+    ::ng-deep svg {
+        height: 100px;
+        width: 70px;
+    }
 }

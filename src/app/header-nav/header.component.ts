@@ -1,7 +1,6 @@
 import { Component, OnInit, Inject, OnDestroy, Output, EventEmitter } from '@angular/core';
 import { fromEvent, Observable, Subscription } from 'rxjs';
 import { throttleTime, tap } from 'rxjs/operators';
-import { DOCUMENT } from '@angular/common';
 
 
 @Component({

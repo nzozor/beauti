@@ -5,7 +5,10 @@
             "includePaths": [
               "./scss"
             ]
-        }
-
+        },
+        "assets": [
+            "assets",
+            "favicon.ico"
+          ]
     }]
 }

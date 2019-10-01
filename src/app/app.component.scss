@@ -1,9 +1,12 @@
+@import '../scss/palette';
+
 .header-wrapper {
     position: -webkit-sticky;
     position: sticky;
     top: 0;
     transition: all .8s;
     z-index: 1;
+    border: 1px solid $blue-type1;
 }
 
 .sticky {
@@ -11,7 +14,7 @@
 }
 
 .parallax {
-    min-height: 500px; 
+    min-height: 621px; 
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;

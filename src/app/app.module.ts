@@ -15,6 +15,7 @@ import { QuoteComponent } from './shared/svg/quote/quote.component';
 import { ReviewsComponent } from './reviews/reviews.component';
 import { MatIconModule } from '@angular/material/icon';
 import { ArrowComponent } from './shared/svg/arrow/arrow.component';
+import { ExcluStocklistComponent } from './exclu-stocklist/exclu-stocklist.component';
 
 @NgModule({
   declarations: [
@@ -27,6 +28,7 @@ import { ArrowComponent } from './shared/svg/arrow/arrow.component';
     QuoteComponent,
     ReviewsComponent,
     ArrowComponent,
+    ExcluStocklistComponent,
   ],
   imports: [
     BrowserModule,

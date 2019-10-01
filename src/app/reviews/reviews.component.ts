@@ -139,6 +139,6 @@ export class ReviewsComponent implements OnInit, AfterViewInit {
 
     timer = setTimeout(() => {
       sliderEl.classList.remove('is-animating');
-    }, 9000);
+    }, 500);
   }
 }

@@ -14,9 +14,15 @@
 }
 
 .parallax {
-    min-height: 621px; 
+    min-height: 500px; 
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+  }
+
+  #scene {
+    img {
+        width: 100%;
+    }
   }

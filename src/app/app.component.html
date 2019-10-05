@@ -1,9 +1,17 @@
 <!--The content below is only a placeholder and can be replaced.-->
 <div class="header-wrapper" [class.sticky]="stickyHeader">
-    <app-header-nav (stickyEmit)="setStickyHeader($event)"></app-header-nav>
+  <app-header-nav (stickyEmit)="setStickyHeader($event)"></app-header-nav>
 </div>
 <app-jumbotron></app-jumbotron>
 <div class="parallax" [ngStyle]="{ 'background-image': 'url(' + imgUrl + ')' }"></div>
+
+<!-- <div class="container">
+  <div id="scene">
+    <div data-depth="1.00">
+      <img [src]="imgUrl" alt="" />
+    </div>
+  </div>
+</div> -->
 <app-reviews></app-reviews>
 <app-exclu-stocklist></app-exclu-stocklist>
 <router-outlet></router-outlet>

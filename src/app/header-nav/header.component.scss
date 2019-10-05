@@ -30,8 +30,10 @@ app-burger-menu {
     .menu-list {
         display: flex;
         font-family: 'Nunito Sans', sans-serif;
+        font-size: 13px;
         color: #3E3D3C; // TO DO: to move
         padding: 0;
+        
         li{
             margin: 0 30px;
             list-style: none;

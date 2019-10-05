@@ -19,7 +19,7 @@ export class ReviewsComponent implements OnInit, AfterViewInit {
   sliderMainContainerStyle: {};
   sliderWidth = 247;
   
-  activeSliderWidth = 350;
+  activeSliderWidth = 321;
   sliderPanelstyle = {
     width: '247px'
   };

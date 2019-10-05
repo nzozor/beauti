@@ -7,10 +7,12 @@
     <div class='has-slider' [ngStyle]="visibleContainerStyle">
       <div class='slider' id='slider' (pan)="sliderPan($event)" [ngStyle]="sliderMainContainerStyle">
         <div class='slider-panel' [ngStyle]="sliderPanelstyle" *ngFor="let review of reviews ">
-          <div class="quote">"{{review.quote}}"</div>
-          <div class="name">{{review.reviewerName}}</div>
-          <div class="stars">
-            <mat-icon *ngFor="let star of stars">star</mat-icon>
+          <div>
+            <div class="quote">"{{review.quote}}"</div>
+            <div class="name">{{review.reviewerName}}</div>
+            <div class="stars">
+              <mat-icon *ngFor="let star of stars">star</mat-icon>
+            </div>
           </div>
         </div>
       </div>

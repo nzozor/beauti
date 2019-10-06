@@ -1,0 +1,41 @@
+@import '../../scss/palette';
+
+:host {
+  display: flex;
+  min-height: 270px;
+  flex-direction: column;
+  padding: 30px 70px;
+  font-family: 'Nunito Sans', sans-serif;
+  color: $grey-black;
+
+  .main {
+    display: flex;
+    justify-content: space-between;
+    min-height: 250px;
+    font-size: 16px;
+    text-align: center;
+    line-height: 25px;
+
+    >div {
+      div {
+        margin-bottom: 25px;
+      }
+    }
+
+    app-beauti-logo {
+      max-width: 109px;
+    }
+
+    .social {
+      img:last-of-type {
+        margin-left: 25px;
+      }
+    }
+  }
+
+  .final {
+    text-align: center;
+    font-size: 12px;
+    opacity: 0.33;
+  }
+}

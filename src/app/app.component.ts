@@ -9,7 +9,7 @@ export class AppComponent implements AfterContentInit {
   title = 'beauti-frontend';
   stickyHeader = false;
   imgUrl = 'assets/beauti-girl.jpg'; // ToDO: move to component or directive
-  initialTop: string;
+  initialTop: number;
   parallaxDiv: HTMLDivElement;
   setStickyHeader(value: boolean): void {
     this.stickyHeader = value;
@@ -17,12 +17,12 @@ export class AppComponent implements AfterContentInit {
 
   ngAfterContentInit() {
     this.parallaxDiv = document.querySelector('.parallax');
-    this.parallaxDiv.style.backgroundPositionY = '0px';
-    this.initialTop = this.parallaxDiv.style.backgroundPositionY;
+    this.parallaxDiv.style.backgroundPositionY = '200px';
+    this.initialTop = parseInt(this.parallaxDiv.style.backgroundPositionY, 10);
   }
 
   @HostListener('window:scroll')
   onWindowScroll() {
-    this.parallaxDiv.style.backgroundPositionY =  - window.scrollY * 0.5 + 'px';
+    this.parallaxDiv.style.backgroundPositionY =  this.initialTop - window.scrollY * 0.5 + 'px';
   }
 }

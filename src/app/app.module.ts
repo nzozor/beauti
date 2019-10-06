@@ -16,6 +16,7 @@ import { ReviewsComponent } from './reviews/reviews.component';
 import { MatIconModule } from '@angular/material/icon';
 import { ArrowComponent } from './shared/svg/arrow/arrow.component';
 import { ExcluStocklistComponent } from './exclu-stocklist/exclu-stocklist.component';
+import { FooterComponent } from './footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -29,6 +30,7 @@ import { ExcluStocklistComponent } from './exclu-stocklist/exclu-stocklist.compo
     ReviewsComponent,
     ArrowComponent,
     ExcluStocklistComponent,
+    FooterComponent,
   ],
   imports: [
     BrowserModule,

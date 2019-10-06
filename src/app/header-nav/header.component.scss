@@ -8,7 +8,7 @@ app-burger-menu {
     &>div {
         background-color: transparent;
         transition: all .8s;
-        padding: 18px;
+        padding: 18px 70px;
 
         &.sticky {
             background-color: white;
@@ -22,7 +22,7 @@ app-burger-menu {
             padding: 0 15px;
 
             @media (min-width: 576px) {
-                padding: 0 50px;
+                padding: 0;
             }
         }
     }
@@ -42,9 +42,7 @@ app-burger-menu {
                 text-transform: uppercase;
                 color: inherit;
             }
-            &:first-of-type {
-                margin-left: 0;
-            }
+
         }
     }
 }

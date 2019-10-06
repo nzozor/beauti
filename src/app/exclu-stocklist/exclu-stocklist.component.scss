@@ -1,13 +1,20 @@
 @import '../../scss/palette';
 
 :host {
+  > div {
     display: flex;
     justify-content: center;
     max-width: 1170px;
     margin: 0 auto;
-    > div {
-        margin: 10px;
-        max-width: 614px;
-        border: 1px solid $blue-type1;
+
+    >div {
+      margin: 10px;
+      max-width: 614px;
+      border: 1px solid $blue-type1;
+
+      img {
+        width: 100%;
+      }
     }
+  }
 }

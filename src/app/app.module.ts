@@ -17,6 +17,7 @@ import { MatIconModule } from '@angular/material/icon';
 import { ArrowComponent } from './shared/svg/arrow/arrow.component';
 import { ExcluStocklistComponent } from './exclu-stocklist/exclu-stocklist.component';
 import { FooterComponent } from './footer/footer.component';
+import { MapComponent } from './map/map.component';
 
 @NgModule({
   declarations: [
@@ -31,6 +32,7 @@ import { FooterComponent } from './footer/footer.component';
     ArrowComponent,
     ExcluStocklistComponent,
     FooterComponent,
+    MapComponent,
   ],
   imports: [
     BrowserModule,

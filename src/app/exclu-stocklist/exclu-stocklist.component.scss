@@ -6,6 +6,11 @@
     justify-content: center;
     max-width: 1170px;
     margin: 0 auto;
+    flex-wrap: wrap;
+    padding: 0 30px;
+    @media (min-width: 1024px) {
+      flex-wrap: inherit;
+    }
 
     >div {
       margin: 10px;

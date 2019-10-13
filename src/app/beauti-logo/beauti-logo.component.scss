@@ -3,11 +3,8 @@
 svg {
     display: block;
     width: 150px;
-    max-height: 47px;
-
-    @media (min-width: 576px) {
-      max-height: 31px;
-    }
+    max-height: 31px;
+  
 
     g {
       transition: fill .8s;

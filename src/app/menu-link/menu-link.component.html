@@ -1,4 +1,4 @@
- <div *ngIf="!subMenuActive" class="main-menu">
+<div *ngIf="!subMenuActive" class="main-menu">
   <ul [@openClose] *ngIf="active">
     <li *ngFor="let item of mainMenu">
       <a href="/" *ngIf="!item.subMenu">{{ item.title }}</a>
@@ -11,9 +11,11 @@
   <div class="submenu-title">{{ activeSubMenu.title }}</div>
   <div class="submenu-section">
     <div *ngFor="let sub of activeSubMenu.subMenu">
-      <div class="sub-title">{{sub.title}}</div>
+      <div class="sub-title">{{ sub.title }}</div>
       <ul>
-        <li *ngFor="let subTitle of sub.subTitles"><a href="/">{{subTitle}}</a></li>
+        <li *ngFor="let subTitle of sub.subTitles">
+          <a href="/">{{ subTitle }}</a>
+        </li>
       </ul>
     </div>
   </div>

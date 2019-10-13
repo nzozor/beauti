@@ -1,70 +1,108 @@
 app-burger-menu {
-    display: none;
-    @media (max-width: 1023px) {
-        display: initial;
-    }
+  display: none;
+  width: 175px;
+
+  @media (max-width: 1023px) {
+    display: initial;
+  }
+
+  @media (max-width: 767px) {
+    width: initial;
+  }
 }
+
 :host {
-    &>div {
-        background-color: transparent;
-        transition: all .8s;
-        padding: 18px 70px;
+  &>div {
+    transition: all .8s;
+    padding: 18px 70px;
 
-        &.sticky {
-            background-color: white;
-        }
-
-        >div {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin: auto;
-            padding: 0 15px;
-
-            @media (min-width: 576px) {
-                padding: 0;
-            }
-        }
+    @media (max-width: 767px) {
+      padding: 18px 30px;
     }
 
-    .menu-list {
-        display: flex;
-        font-family: 'Nunito Sans', sans-serif;
-        font-size: 13px;
-        color: #3E3D3C; // TO DO: to move
+    @media (max-width: 574px) {
+      padding: 18px 0;
+    }
+
+    &.sticky {
+      background-color: white;
+    }
+
+    >div {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin: auto;
+      padding: 0 15px;
+
+      @media (min-width: 576px) {
         padding: 0;
-        
-        li{
-            margin: 0 30px;
-            list-style: none;
-            a {
-                text-decoration: none;
-                text-transform: uppercase;
-                color: inherit;
-            }
+      }
 
+      @media (max-width: 767px) {
+        &::after {
+          content: '';
+          width: 50px;
         }
+      }
     }
+  }
+
+  .menu-list {
+    display: flex;
+    font-family: 'Nunito Sans', sans-serif;
+    font-size: 13px;
+    color: #3E3D3C; // TO DO: to move
+    padding: 0;
+
+    @media (max-width: 1023px) {
+      display: none;
+    }
+
+    li {
+      margin: 0 30px;
+      list-style: none;
+
+      a {
+        text-decoration: none;
+        text-transform: uppercase;
+        color: inherit;
+      }
+
+    }
+  }
 }
 
 button {
-    text-transform: uppercase;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    padding: 5px 50px;
-    
-    &.main-button {
-        @media (min-width: 576px) {
-            display: initial;
-        }
+  text-transform: uppercase;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  opacity: 0;
+
+  &.main-button {
+    width: 177px;
+
+    @media (min-width: 1024px) {
+      opacity: 1;
     }
+
+    @media (max-width: 767px) {
+      display: none;
+    }
+  }
 }
 
 .mobile-menu {
-    width: 50px;
-    height: 50px;
+  width: 50px;
+  height: 50px;
+  display: none;
 
-    @media (min-width: 576px) {
-        display: none;
-    }
+  @media (min-width: 576px) {
+    display: none;
+  }
+}
+
+app-menu-link.active {
+  position: absolute;
+  height: 100vh;
 }

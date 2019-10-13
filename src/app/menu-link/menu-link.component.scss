@@ -6,20 +6,25 @@
     width: 100%;
     background-color: white;
     z-index: -13;
+    @media (min-width: 1024px) { 
+        display: none;
+    }
 
     & > div.main-menu {
         width: 100%;
         height: 100%;
         overflow: hidden;
-        display: initial;
         transition: all .2s;
-    
+        display: flex;
+        justify-content: center;
+        align-items: center;
         &.hidden {
             display: none;
         }
     
         ul  {
-            padding: 0;    
+            padding: 0; 
+            margin-top: -250px;   
             li {
                 list-style-type: none;
                 text-align: center;
@@ -35,21 +40,16 @@
 
     .main-menu a, .submenu-title, .sub-title {
         text-transform: uppercase;
-        color: $blue-type1;
-        font-weight: bold;
-        font-family: 'Lato', sans-serif;
+        color: $grey-black;
+        font-family: 'Nunito Sans', sans-serif;
+        font-weight: 300;
         line-height: 5rem;
         text-decoration: none;
         transition: color .2s;
 
-        @media (max-width: 767px) { 
-            font-size: 3rem;
+        @media (max-width: 1023px) { 
+            font-size: 32px;
             line-height: 4.5rem;
-        }
-
-        @media (min-width: 768px) {
-            font-size: 5.5rem;
-            line-height: 8.2rem;
         }
     }
 

@@ -15,7 +15,10 @@
     font-size: 16px;
     text-align: center;
     line-height: 25px;
-    
+    &::after {
+      content: '';
+      width: 106px;
+    }
     @media (max-width: 767px) {
       flex-direction: column;
       app-beauti-logo {
@@ -38,12 +41,6 @@
       ::ng-deep svg {
         width: initial;
         height: 25px; 
-      }
-    }
-
-    .social {
-      img:last-of-type {
-        margin-left: 25px;
       }
     }
   }

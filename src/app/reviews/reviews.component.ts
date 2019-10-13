@@ -1,4 +1,4 @@
-import { Component, OnInit, ElementRef, ViewChild, AfterViewInit } from '@angular/core';
+import { Component, OnInit, ElementRef, ViewChild, AfterViewInit, HostListener } from '@angular/core';
 import { HammerGestureConfig } from '@angular/platform-browser';
 import * as Hammer from 'hammerjs';
 
@@ -17,17 +17,18 @@ export class ReviewsComponent implements OnInit, AfterViewInit {
   sensitivity = 25;
   visibleContainerStyle: {};
   sliderMainContainerStyle: {};
-  sliderWidth = 247;
-  
-  activeSliderWidth = 321;
+  sliderWidth: number;
+  activeSliderWidth: number;
+
   sliderPanelstyle = {
     width: '247px'
   };
- 
+
   minHeight = 273;
   marginBetweenSlides = 10;
-  totalSlideWidth = (this.sliderWidth + this.marginBetweenSlides * 2);
+  totalSlideWidth: number;
   stars = [1, 2, 3, 4, 5];
+  innerWidth: number;
 
   reviews = [
     {
@@ -57,16 +58,9 @@ export class ReviewsComponent implements OnInit, AfterViewInit {
   ];
 
   constructor() { }
+
   ngOnInit() {
-    this.slideCount = 6;
-    this.sliderMainContainerStyle = {
-      width: this.totalSlideWidth * this.slideCount
-      + this.activeSliderWidth - this.sliderWidth + 'px'
-    };
-    this.visibleContainerStyle = {
-      width: this.totalSlideWidth * this.visiblePanels
-      + this.activeSliderWidth - this.sliderWidth + 'px'
-    };
+    this.defineProportion();
   }
 
   ngAfterViewInit() {
@@ -132,7 +126,7 @@ export class ReviewsComponent implements OnInit, AfterViewInit {
     const widthToTranslate = - this.totalSlideWidth * this.activeSlide;
 
     // sliderEl.style.transform = 'translateX( ' + percentage + '% )';
-    sliderEl.style.transform = 'translateX( ' + widthToTranslate + 'px )';
+    sliderEl.style.transform = 'translateX( ' + widthToTranslate + -90 + 'px )';
 
     this.setActiveSlide();
     clearTimeout(timer);
@@ -140,5 +134,40 @@ export class ReviewsComponent implements OnInit, AfterViewInit {
     timer = setTimeout(() => {
       sliderEl.classList.remove('is-animating');
     }, 500);
+  }
+
+  defineProportion() {
+    this.innerWidth = window.innerWidth;
+    if (this.innerWidth >= 1156 ) {
+      this.sliderWidth = 247;
+      this.activeSliderWidth = this.sliderWidth * (1 +  30 / 100);
+    } else if (this.innerWidth >= 992 && this.innerWidth < 1156) {
+      this.sliderWidth = 215;
+      this.activeSliderWidth = this.sliderWidth * (1 +  30 / 100);
+    } else if (this.innerWidth >= 576 && this.innerWidth < 992 ) {
+      this.sliderWidth = 190;
+      this.activeSliderWidth = this.sliderWidth * (1 +  30 / 100);
+    } else {
+      this.sliderWidth = 190;
+      this.activeSliderWidth = this.sliderWidth * (1 +  30 / 100);
+    }
+
+    this.totalSlideWidth = (this.sliderWidth + this.marginBetweenSlides * 2);
+    this.slideCount = 6;
+    this.sliderMainContainerStyle = {
+      width: this.totalSlideWidth * this.slideCount
+      + this.activeSliderWidth - this.sliderWidth + 'px'
+    };
+
+    this.visibleContainerStyle = {
+      width: this.totalSlideWidth * this.visiblePanels
+      + this.activeSliderWidth - this.sliderWidth + 'px'
+    };
+  }
+
+  @HostListener('window:resize', ['$event'])
+  onResize(event) {
+    this.defineProportion();
+    this.sliderGoTo(this.activeSlide);
   }
 }

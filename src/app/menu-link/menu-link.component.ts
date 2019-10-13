@@ -32,29 +32,8 @@ export class MenuLinkComponent implements OnInit, OnChanges {
   mainMenu: Menu[] = [
     { title: 'About Us' },
     {
-      title: 'what we do',
-      subMenu:
-        [
-          {
-            title: 'Angular tuto',
-            subTitles: [
-              'RF SKIN TIGHTENING WITHDERMAPOLAR VENUS VERSA',
-              'IPL SKIN REJUVENATION',
-              'MICRODERMABRASION',
-              'HYDRAFACIAL AQUA 3',
-              'SKIN PEELS ALUMIERMD'
-            ]
-          },
-          {
-            title: 'Javascript tutorial',
-            subTitles: [
-              'SIGNATURE FACIAL',
-              'ADVANCED SIGNATURE FACIAL',
-            ]
-          },
-        ],
+      title: 'Treatments',
     },
-    { title: 'News and offers' },
     { title: 'Contact' }
   ];
 

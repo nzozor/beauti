@@ -10,14 +10,11 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {MatButtonModule} from '@angular/material/button';
 import { BeautiLogoComponent } from './beauti-logo/beauti-logo.component';
 import { MenuLinkComponent } from './menu-link/menu-link.component';
-import { JumbotronComponent } from './jumbotron/jumbotron.component';
-import { QuoteComponent } from './shared/svg/quote/quote.component';
-import { ReviewsComponent } from './reviews/reviews.component';
 import { MatIconModule } from '@angular/material/icon';
-import { ArrowComponent } from './shared/svg/arrow/arrow.component';
-import { ExcluStocklistComponent } from './exclu-stocklist/exclu-stocklist.component';
 import { FooterComponent } from './footer/footer.component';
-import { MapComponent } from './map/map.component';
+import { HomePageModule } from './modules/home-page/home-page.module';
+import { TreatmentsModule } from './modules/treatments/treatments.module';
+import { RouterModule } from '@angular/router';
 
 @NgModule({
   declarations: [
@@ -26,20 +23,17 @@ import { MapComponent } from './map/map.component';
     HeaderNavComponent,
     BeautiLogoComponent,
     MenuLinkComponent,
-    JumbotronComponent,
-    QuoteComponent,
-    ReviewsComponent,
-    ArrowComponent,
-    ExcluStocklistComponent,
     FooterComponent,
-    MapComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     MatButtonModule,
-    MatIconModule
+    MatIconModule,
+    HomePageModule,
+    TreatmentsModule,
+    RouterModule
   ],
   providers: [],
   bootstrap: [AppComponent]

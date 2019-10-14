@@ -1,9 +1,9 @@
 import { Component, OnInit, Input, OnChanges } from '@angular/core';
 import { trigger, style, animate, transition, state, query, stagger } from '@angular/animations';
-
 export interface Menu {
   title: string;
   subMenu?: SubMenu[];
+  route?: string;
 }
 
 export interface SubMenu {
@@ -30,9 +30,10 @@ export interface SubMenu {
 export class MenuLinkComponent implements OnInit, OnChanges {
   @Input() active: boolean;
   mainMenu: Menu[] = [
-    { title: 'About Us' },
+    { title: 'About Us', route: '/about-us' },
     {
       title: 'Treatments',
+      route: '/treatments'
     },
     { title: 'Contact' }
   ];

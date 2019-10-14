@@ -1,12 +1,12 @@
 <div [class.sticky]="sticky">
   <div>
     <app-burger-menu [sticky]="sticky" (menuLinkOpen)="setMenuLink($event)"></app-burger-menu>
-    <a href="">
+    <a routerLink="/home">
       <app-beauti-logo [sticky]="sticky"></app-beauti-logo>
     </a>
     <ul class="menu-list">      
-      <li><a href="">ABOUT US</a></li>    
-      <li><a href="">TREATMENTS</a></li>
+      <li><a routerLink="/about-us">ABOUT US</a></li>    
+      <li><a routerLink="/treatments">TREATMENTS</a></li>
       <li><a href="">CONTACT</a></li>
     </ul>
     <button

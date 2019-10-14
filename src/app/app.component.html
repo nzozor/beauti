@@ -1,16 +1,8 @@
-<!--The content below is only a placeholder and can be replaced.-->
 <div class="header-wrapper" [class.sticky]="stickyHeader">
   <app-header-nav (stickyEmit)="setStickyHeader($event)"></app-header-nav>
 </div>
-<app-jumbotron></app-jumbotron>
-<div class="parallax" [ngStyle]="{ 'background-image': 'url(' + imgUrl + ')' }"></div>
 
-<app-reviews></app-reviews>
-
-<app-exclu-stocklist></app-exclu-stocklist>
-
-<app-map></app-map>
+<router-outlet></router-outlet>
 
 <app-footer></app-footer>
 
-<router-outlet></router-outlet>

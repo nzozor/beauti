@@ -33,7 +33,7 @@ import { RouterModule } from '@angular/router';
     MatIconModule,
     HomePageModule,
     TreatmentsModule,
-    RouterModule
+    RouterModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

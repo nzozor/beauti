@@ -1,5 +1,5 @@
-import { Component, OnInit, Input, OnChanges } from '@angular/core';
-import { trigger, style, animate, transition, state, query, stagger } from '@angular/animations';
+import { Component, OnInit, Input, OnChanges, Output, EventEmitter } from '@angular/core';
+import { trigger, style, animate, transition, query, stagger } from '@angular/animations';
 export interface Menu {
   title: string;
   subMenu?: SubMenu[];
@@ -29,6 +29,7 @@ export interface SubMenu {
 })
 export class MenuLinkComponent implements OnInit, OnChanges {
   @Input() active: boolean;
+  @Output() menuLinkOpen = new EventEmitter<boolean>();
   mainMenu: Menu[] = [
     { title: 'About Us', route: '/about-us' },
     {
@@ -55,5 +56,9 @@ export class MenuLinkComponent implements OnInit, OnChanges {
     this.subMenuActive = !this.subMenuActive;
     this.activeSubMenu = subMenu;
     console.log(this.activeSubMenu);
+  }
+
+  closeMenuLink() {
+    this.menuLinkOpen.emit(false);
   }
 }

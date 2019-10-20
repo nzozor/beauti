@@ -1,10 +1,10 @@
 <div [class.sticky]="sticky">
   <div>
-    <app-burger-menu [sticky]="sticky" (menuLinkOpen)="setMenuLink($event)"></app-burger-menu>
+    <app-burger-menu [active]="menuLinkOpen" [sticky]="sticky" (menuLinkOpen)="setMenuLink($event)"></app-burger-menu>
     <a routerLink="/home">
       <app-beauti-logo [sticky]="sticky"></app-beauti-logo>
     </a>
-    <ul class="menu-list">      
+    <ul class="menu-list">  
       <li><a routerLink="/about-us">ABOUT US</a></li>    
       <li><a routerLink="/treatments">TREATMENTS</a></li>
       <li><a href="">CONTACT</a></li>
@@ -20,4 +20,4 @@
     <div class="mobile-menu"></div>
   </div>
 </div>
-<app-menu-link [active]="menuLinkOpen" [class.active]="menuLinkOpen"></app-menu-link>
+<app-menu-link [active]="menuLinkOpen" [class.active]="menuLinkOpen" (menuLinkOpen)="setMenuLink($event)"></app-menu-link>

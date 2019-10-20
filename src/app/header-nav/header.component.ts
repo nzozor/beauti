@@ -17,7 +17,6 @@ export class HeaderNavComponent implements OnInit, OnDestroy {
   private _menuLinkOpen: boolean;
 
   sticky = false;
-
   set menuLinkOpen(menuLinkOpen: boolean) {
     this._menuLinkOpen = menuLinkOpen;
   }
@@ -34,6 +33,8 @@ export class HeaderNavComponent implements OnInit, OnDestroy {
         tap(this.onScroll.bind(this))
       )
       .subscribe();
+
+    this.menuLinkOpen = false;
   }
 
   onScroll(): void {

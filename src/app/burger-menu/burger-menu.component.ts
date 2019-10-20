@@ -7,7 +7,7 @@ import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 })
 export class BurgerMenuComponent implements OnInit {
 
-  active = false;
+  @Input() active = false;
   @Input() sticky: boolean;
   @Output() menuLinkOpen = new EventEmitter<boolean>();
 

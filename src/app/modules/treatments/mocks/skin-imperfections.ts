@@ -1,6 +1,7 @@
 export const SKIN_IMP_REM = [
   {
     title : 'Thread Vein/Mole/Milia/Skin Tags/Age Spot Removal',
+    treatment: '',
     description: `Lorem of the printing and typesetting industry.
     Lorem Ipsum has been the industry’s standard dummy
     text ever since the 1500s, when an unknown printer`,

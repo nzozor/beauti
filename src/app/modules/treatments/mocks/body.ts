@@ -1,6 +1,7 @@
 export const BODY_MASSAGE = [
   {
-    treatment: `Back, Neck and Shoulder Massage
+    title: 'Back, Neck and Shoulder Massage',
+    treatment: `
       Upgrade to aromatherapy oil for extra £5`,
     description: `Lorem of the printing and typesetting industry.
       Lorem Ipsum has been the industry’s standard dummy
@@ -11,7 +12,8 @@ export const BODY_MASSAGE = [
     ]
   },
   {
-    treatment: `Deep Tissue Massage
+    title: 'Deep Tissue Massage',
+    treatment: `
         Upgrade to aromatherapy oil for extra £5`,
     description: `Lorem of the printing and typesetting industry.
         Lorem Ipsum has been the industry’s standard dummy
@@ -22,7 +24,7 @@ export const BODY_MASSAGE = [
     ]
   },
   {
-    treatment: `Hot Stone Massage`,
+    title: `Hot Stone Massage`,
     description: `Lorem of the printing and typesetting industry.
         Lorem Ipsum has been the industry’s standard dummy
         text ever since the 1500s, when an unknown printer`,
@@ -34,7 +36,7 @@ export const BODY_MASSAGE = [
     ]
   },
   {
-    treatment: `Foot Massage`,
+    title: `Foot Massage`,
     description: `Lorem of the printing and typesetting industry.
         Lorem Ipsum has been the industry’s standard dummy
         text ever since the 1500s, when an unknown printer`,
@@ -47,7 +49,7 @@ export const BODY_MASSAGE = [
 
 export const BODY_CONTOURING = [
   {
-    treatment: `Fat and Cellulite Reduction`,
+    title: `Fat and Cellulite Reduction`,
     description: `Lorem of the printing and typesetting industry.
       Lorem Ipsum has been the industry’s standard dummy
       text ever since the 1500s, when an unknown printer`,

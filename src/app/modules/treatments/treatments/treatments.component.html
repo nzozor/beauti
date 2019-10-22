@@ -69,14 +69,13 @@
               <div>
                 <div class="skin-treatment">
                   <div class="title">
-                    {{ skinImperfectionRemoval[0].treatment }}
+                      <span>{{ skinImperfectionRemoval[0].title }}</span> {{ skinImperfectionRemoval[0].treatment }}
                   </div>
                   <div class="description">
                     {{ skinImperfectionRemoval[0].description }}
                   </div>
                   <div
                     class="direction-column"
-                    
                   >
                     <div class="options-key">
                       <div
@@ -181,11 +180,6 @@
               <mat-panel-title>
                 {{mainTreat.treatmentName}}
               </mat-panel-title>
-              <mat-panel-description>
-                <button mat-flat-button color="primary" class="main-button">
-                  Book now
-                </button>
-              </mat-panel-description>
             </mat-expansion-panel-header>
             <div>
               <div class="description">
@@ -214,13 +208,11 @@
                 <mat-panel-title>
                   {{mainTreat.treatmentName}}
                 </mat-panel-title>
-                <mat-panel-description>
-                  <button mat-flat-button color="primary" class="main-button">
-                    Book now
-                  </button>
-                </mat-panel-description>
               </mat-expansion-panel-header>
               <div>
+                  <div class="description">
+                      {{mainTreat.description}}
+                    </div>
                     <div
                       class="direction-column"
                       *ngIf="mainTreat.orientation !== 'row'"
@@ -277,8 +269,7 @@
                 *ngFor="let treatment of bodyRelaxingMassage"
               >
                 <div class="title">
-                  <!-- <span>{{ treatment.title }}</span> {{ treatment.treatment }} -->
-                  {{ treatment.treatment }}
+                  <span>{{ treatment.title }}</span> {{ treatment.treatment }}
                 </div>
                 <div class="description">{{ treatment.description }}</div>
                 <div
@@ -322,8 +313,7 @@
                 *ngFor="let treatment of bodyContouring"
               >
                 <div class="title">
-                  <!-- <span>{{ treatment.title }}</span> {{ treatment.treatment }} -->
-                  {{ treatment.treatment }}
+                  <span>{{ treatment.title }}</span> {{ treatment.treatment }}
                 </div>
                 <div class="description">{{ treatment.description }}</div>
                 <div
@@ -399,8 +389,7 @@
                 *ngFor="let treatment of beautyFacial"
               >
                 <div class="title">
-                  <!-- <span>{{ treatment.title }}</span> {{ treatment.treatment }} -->
-                  {{ treatment.treatment }}
+                  <span>{{ treatment.title }}</span> {{ treatment.treatment }}
                 </div>
                 <div class="description">{{ treatment.description }}</div>
                 <div
@@ -441,8 +430,7 @@
             <div>
               <div class="skin-treatment" *ngFor="let treatment of beautyNail">
                 <div class="title">
-                  <!-- <span>{{ treatment.title }}</span> {{ treatment.treatment }} -->
-                  {{ treatment.treatment }}
+                  <span>{{ treatment.title }}</span> {{ treatment.treatment }}
                 </div>
                 <div class="description">{{ treatment.description }}</div>
                 <div

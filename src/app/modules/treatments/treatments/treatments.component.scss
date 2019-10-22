@@ -12,19 +12,29 @@
     >mat-accordion {
 
       >.mat-expansion-panel {
+        &:not(.mat-expanded) .mat-expansion-panel-header:not([aria-disabled=true]):hover {
+          background: rgba(0,0,0,.01);
+        }
+
         ::ng-deep .mat-expansion-panel-body {
           padding: 0;
+          > div {
+            .description:first-child {
+              padding-top: 0;
+            }
+          }
+      
         }
 
         max-width: 853px;
         margin: 0 auto;
-        border-bottom: 1px solid #3E3D3C;
+        border-bottom: .5px solid #3e3d3c52;
         border-radius: initial;
 
         .mat-expansion-panel {
           .mat-expansion-panel-header {
             height: 35px !important;
-            // padding-top: 0;
+            padding-left: 15px;
             padding-bottom: 20px;
           }
 
@@ -44,6 +54,7 @@
               background-color: rgba($blue-type1, 0.4);
             }
 
+    
 
             .direction-column,
             direction-row {
@@ -72,7 +83,8 @@
                   min-width: 130px;
 
                   @media (max-width: 600px) {
-                    min-width: 110px;
+                    min-width: 25%;
+
                   }
                 }
               }
@@ -94,7 +106,7 @@
           position: relative;
 
           @media only screen and (max-width: 600px) {
-            padding: 10px 30px;
+            padding: 10px 15px;
           }
 
           &.mat-expanded {
@@ -156,7 +168,8 @@
     font-family: roboto;
     font-size: 15px;
     font-weight: 100;
-    padding: 25px 18px;
+    padding: 15px 18px;
+    line-height: 23px;
   }
 
   .waxing {
@@ -172,7 +185,7 @@
         width: 100%;
       }
     }
-
+ 
     .direction-row {
       font-family: 'Nunito Sans', sans-serif;
       font-size: 13px;
@@ -246,7 +259,10 @@
           padding: 10px 15px;
 
           @media only screen and (max-width: 600px) {
-            width: 20%;
+            width: 21.6%;
+            &:first-of-type {
+              width: 25%;
+            }
           }
         }
       }
@@ -263,7 +279,10 @@
             width: 25%;
 
             @media only screen and (max-width: 600px) {
-              width: 20%;
+              width: 21.6%;
+              &:first-of-type {
+                width: 25%;
+              }
             }
 
             padding: 10px 15px;
@@ -271,5 +290,15 @@
         }
       }
     }
+  }
+
+  ::ng-deep .mat-expansion-indicator {
+    transform: scale(1.5);
+    &::after {
+      border-width: 0 1px 1px 0;
+    }
+  }
+  ::ng-deep .mat-expansion-indicator::after {
+    padding: 5px;
   }
 }

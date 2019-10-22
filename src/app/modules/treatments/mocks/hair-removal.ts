@@ -1,5 +1,5 @@
 export const HAIR_REMOVAL_IPL_LASER = [{
-  treatmentName: 'IPL LASER',
+  treatmentName: 'IPL Laser Hair Removal',
     description: `Lorem of the printing and typesetting industry.
       Lorem Ipsum has been the industry’s standard dummy
       text ever since the 1500s, when an unknown printer`,
@@ -218,7 +218,9 @@ export const HAIR_REMOVAL_IPL_LASER = [{
 export const HAIR_REMOVAL_ELECTRO = [
   {
     treatmentName: `Electrolysis`,
-    description: `Lorem Descriptions`,
+    description: `Lorem of the printing and typesetting industry.
+      Lorem Ipsum has been the industry’s standard dummy
+      text ever since the 1500s, when an unknown printer`,
     options: [
       { key: '10 mins', value: '20' },
       { key: '15 mins', value: '£30' },

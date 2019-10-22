@@ -1,6 +1,7 @@
 export const BEAUTY_FACIAL = [
     {
-        treatment: `Beauti Signature Relaxing Facial
+        title: 'Beauti Signature Relaxing Facial',
+        treatment: `
         Add Dermaplaning for £30, extra 15 mins`,
         description: `Dermaplaning is a face shaving treatment believe to be
         used by Marilyn Monroe and Elizabeth Taylor and it is now a very popular
@@ -17,16 +18,18 @@ export const BEAUTY_FACIAL = [
         ],
     },
     {
-        treatment: `Beauti Signature Relaxing Facial
+        title: 'Beauti Signature Relaxing Facial',
+        treatment: `
         Add Dermaplaning for £30, extra 15 mins`,
-        description: ``,
+        description: `LOREM description`,
         options: [
             { key: 'Duration', value: '75 mins' },
             { key: 'Single', value: '£130' },
         ],
     },
     {
-        treatment: `Beauti Signature Relaxing Facial
+        title: 'Beauti Signature Relaxing Facial',
+        treatment: `
         Add Dermaplaning for £30, extra 15 mins`,
         description: `Dermaplaning is a face shaving treatment believe to be used by Marilyn
         Monroe and Elizabeth Taylor and it is now a very popular skin treatment loved by many modern women.
@@ -45,7 +48,8 @@ export const BEAUTY_FACIAL = [
 
 export const BEAUTY_NAIL = [
     {
-        treatment: `Luxury Manicure Upgrade to gel polish for extra £5`,
+        title: 'Luxury Manicure ',
+        treatment: `Upgrade to gel polish for extra £5`,
         description: `Having your nails done at Beauti is definitely a pampering and relaxing treat.
         All of our nail treatments come with a standard 5-step of care: first we will carefully file your nails to
         your prefered shape, then your cuticle will be gentally pushed back, depending on the type of your nail polish,
@@ -58,7 +62,8 @@ export const BEAUTY_NAIL = [
         ],
     },
     {
-        treatment: `Luxury Pedicure
+        title: 'Luxury Pedicure',
+        treatment: `
         Upgrade to gel polish for extra £5`,
         description: ``,
         options: [
@@ -67,7 +72,8 @@ export const BEAUTY_NAIL = [
         ],
     },
     {
-        treatment: `Medical Pedicure
+        title: 'Medical Pedicure',
+        treatment: `
         Upgrade to gel polish for extra £5`,
         description: ``,
         options: [

@@ -13,7 +13,8 @@ export const SKIN_TREATMENTS: any = [
     ]
   },
   {
-    treatment: `Aqua 3 Hydrotherapy Facial
+    title: 'Aqua 3 Hydrotherapy Facial',
+    treatment: `
     (Choose from Deep-cleaning, Anti-Aging)
     Add Black Head Extraction for £10, extra 10 mins`,
     description: `Lorem of the printing and typesetting industry.
@@ -39,7 +40,8 @@ export const SKIN_TREATMENTS: any = [
     ]
   },
   {
-    treatment: `TriBeauti Facial (Skin Rejuvenation + Radio Frequency + Microneedling
+    title: 'TriBeauti Facial ',
+    treatment: `(Skin Rejuvenation + Radio Frequency + Microneedling
     with Dermapen 3-in-1 Treatment)`,
     description: `of the printing and typesetting industry.
     Lorem Ipsum has been the industry’s standard dummy
@@ -60,7 +62,8 @@ export const SKIN_TREATMENTS: any = [
     ]
   },
   {
-    treatment: `IPL Skin Rejuvenation`,
+    title: 'IPL',
+    treatment: ` Skin Rejuvenation`,
     description: `Lorem of the printing and typesetting industry.
     Lorem Ipsum has been the industry’s standard dummy
     text ever since the 1500s, when an unknown printer`,
@@ -72,7 +75,8 @@ export const SKIN_TREATMENTS: any = [
     ]
   },
   {
-    treatment: `Microneedling with Dermapen`,
+    title: 'Microneedling',
+    treatment: `with Dermapen`,
     description: `Lorem of the printing and typesetting industry.
     Lorem Ipsum has been the industry’s standard dummy
     text ever since the 1500s, when an unknown printer`,
@@ -83,7 +87,7 @@ export const SKIN_TREATMENTS: any = [
     ]
   },
   {
-    treatment: `Radio Frequency Skin Tightening`,
+    title: `Radio Frequency Skin Tightening`,
     description: `Lorem of the printing and typesetting industry.
     Lorem Ipsum has been the industry’s standard dummy
     text ever since the 1500s, when an unknown printer`,
@@ -95,7 +99,7 @@ export const SKIN_TREATMENTS: any = [
     ]
   },
   {
-    treatment: `Skin Peels`,
+    title: `Skin Peels`,
     description: `Lorem of the printing and typesetting industry.
     Lorem Ipsum has been the industry’s standard dummy
     text ever since the 1500s, when an unknown printer`,
@@ -107,7 +111,8 @@ export const SKIN_TREATMENTS: any = [
     ]
   },
   {
-    treatment: `Plasma Face Lift *one top up session included`,
+    title: 'Plasma Face Lift',
+    treatment: `*one top up session included`,
     description: `Lorem of the printing and typesetting industry.
     Lorem Ipsum has been the industry’s standard dummy
     text ever since the 1500s, when an unknown printer`,

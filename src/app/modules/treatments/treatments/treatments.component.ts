@@ -21,6 +21,7 @@ export class TreatmentsComponent implements OnInit {
   beautyNail: any[] = BEAUTY_NAIL;
   hairRemoveLaser: {} = HAIR_REMOVAL_IPL_LASER;
   hairRemoveElectro: any[] = HAIR_REMOVAL_ELECTRO;
+  innerWidth: any;
 
   leftCol: [];
   rightCol: [];
@@ -28,8 +29,14 @@ export class TreatmentsComponent implements OnInit {
 
   constructor() { }
 
+  get isWideScreen() {
+    return this.innerWidth >= 600;
+  }
+
   ngOnInit() {
     this.leftCol = this.waxing[0].options.slice(0, Math.ceil(this.waxing[0].options.length / 2));
     this.rightCol = this.waxing[0].options.slice(Math.ceil(this.waxing[0].options.length / 2));
+
+    this.innerWidth = window.innerWidth;
   }
 }

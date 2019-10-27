@@ -1,6 +1,6 @@
 <div>
   <h3>Treatments</h3>
-  <mat-accordion [multi]="!isWideScreen">
+  <mat-accordion [multi]="true">
     <mat-expansion-panel>
       <mat-expansion-panel-header>
         <mat-panel-title>
@@ -14,93 +14,88 @@
       </mat-expansion-panel-header>
       <div class="sub">
         <!-- <mat-accordion> -->
-          <mat-expansion-panel>
-            <mat-expansion-panel-header>
-              <mat-panel-title>
-                Skin Treatments
-              </mat-panel-title>
-              <mat-panel-description></mat-panel-description>
-            </mat-expansion-panel-header>
-            <div>
+        <mat-expansion-panel>
+          <mat-expansion-panel-header>
+            <mat-panel-title>
+              Skin Treatments
+            </mat-panel-title>
+            <mat-panel-description></mat-panel-description>
+          </mat-expansion-panel-header>
+          <div>
+            <div
+              class="skin-treatment"
+              *ngFor="let treatment of skinTreatments"
+            >
+              <div class="title">
+                <span>{{ treatment.title }}</span> {{ treatment.treatment }}
+              </div>
+              <div class="description">{{ treatment.description }}</div>
               <div
-                class="skin-treatment"
-                *ngFor="let treatment of skinTreatments"
+                class="direction-column"
+                *ngIf="treatment.orientation !== 'row'"
               >
-                <div class="title">
-                  <span>{{ treatment.title }}</span> {{ treatment.treatment }}
+                <div class="options-key">
+                  <div *ngFor="let option of treatment.options">
+                    {{ option.key }}
+                  </div>
                 </div>
-                <div class="description">{{ treatment.description }}</div>
-                <div
-                  class="direction-column"
-                  *ngIf="treatment.orientation !== 'row'"
-                >
+
+                <div class="options-value">
+                  <div *ngFor="let option of treatment.options">
+                    {{ option.value }}
+                  </div>
+                </div>
+              </div>
+              <div
+                class="direction-row"
+                *ngIf="treatment.orientation === 'row'"
+              >
+                <div class="row" *ngFor="let option of treatment.options">
+                  <div>{{ option.treatment }}</div>
+                  <div>{{ option.options[1].value }}</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </mat-expansion-panel>
+        <mat-expansion-panel>
+          <mat-expansion-panel-header>
+            <mat-panel-title>
+              Skin Imperfection Removal
+            </mat-panel-title>
+            <mat-panel-description> </mat-panel-description>
+          </mat-expansion-panel-header>
+          <div>
+            <div>
+              <div class="skin-treatment">
+                <div class="title">
+                  <span>{{ skinImperfectionRemoval[0].title }}</span>
+                  {{ skinImperfectionRemoval[0].treatment }}
+                </div>
+                <div class="description">
+                  {{ skinImperfectionRemoval[0].description }}
+                </div>
+                <div class="direction-column">
                   <div class="options-key">
-                    <div *ngFor="let option of treatment.options">
+                    <div
+                      *ngFor="let option of skinImperfectionRemoval[0].options"
+                    >
                       {{ option.key }}
                     </div>
                   </div>
 
                   <div class="options-value">
-                    <div *ngFor="let option of treatment.options">
+                    <div
+                      *ngFor="let option of skinImperfectionRemoval[0].options"
+                    >
                       {{ option.value }}
                     </div>
                   </div>
                 </div>
-                <div
-                  class="direction-row"
-                  *ngIf="treatment.orientation === 'row'"
-                >
-                  <div class="row" *ngFor="let option of treatment.options">
-                    <div>{{ option.treatment }}</div>
-                    <div>{{ option.options[1].value }}</div>
-                  </div>
-                </div>
               </div>
             </div>
-          </mat-expansion-panel>
-          <mat-expansion-panel>
-            <mat-expansion-panel-header>
-              <mat-panel-title>
-                Skin Imperfection Removal
-              </mat-panel-title>
-              <mat-panel-description> </mat-panel-description>
-            </mat-expansion-panel-header>
-            <div>
-              <div>
-                <div class="skin-treatment">
-                  <div class="title">
-                      <span>{{ skinImperfectionRemoval[0].title }}</span> {{ skinImperfectionRemoval[0].treatment }}
-                  </div>
-                  <div class="description">
-                    {{ skinImperfectionRemoval[0].description }}
-                  </div>
-                  <div
-                    class="direction-column"
-                  >
-                    <div class="options-key">
-                      <div
-                        *ngFor="
-                          let option of skinImperfectionRemoval[0].options
-                        "
-                      >
-                        {{ option.key }}
-                      </div>
-                    </div>
-
-                    <div class="options-value">
-                      <div
-                        *ngFor="
-                          let option of skinImperfectionRemoval[0].options
-                        "
-                      >
-                        {{ option.value }}
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </mat-expansion-panel>
+          </div>
+        </mat-expansion-panel>
         <!-- </mat-accordion> -->
       </div>
     </mat-expansion-panel>
@@ -173,73 +168,77 @@
           </button>
         </mat-panel-description>
       </mat-expansion-panel-header>
-      <div id="hair-removal" >
+      <div id="hair-removal">
         <!-- <mat-accordion> -->
-          <mat-expansion-panel *ngFor="let mainTreat of hairRemoveLaser">
-            <mat-expansion-panel-header>
-              <mat-panel-title>
-                {{mainTreat.treatmentName}}
-              </mat-panel-title>
-            </mat-expansion-panel-header>
-            <div>
-              <div class="description">
-                {{mainTreat.description}}
-              </div>
-              <div *ngFor="let rowTreatment of mainTreat.options" class="treatment-table"> <!-- small area main table -->
-                <div class="header row">
-                  <div>{{rowTreatment.treatmentName}}</div> <!-- small area Title name --> 
-                  <div *ngFor="let rowOptions of rowTreatment.options[0].options">{{rowOptions.key}}</div>
+        <mat-expansion-panel *ngFor="let mainTreat of hairRemoveLaser">
+          <mat-expansion-panel-header>
+            <mat-panel-title>
+              {{ mainTreat.treatmentName }}
+            </mat-panel-title>
+          </mat-expansion-panel-header>
+          <div>
+            <div class="description">
+              {{ mainTreat.description }}
+            </div>
+            <div
+              *ngFor="let rowTreatment of mainTreat.options"
+              class="treatment-table"
+            >
+              <!-- small area main table -->
+              <div class="header row">
+                <div>{{ rowTreatment.treatmentName }}</div>
+                <!-- small area Title name -->
+                <div *ngFor="let rowOptions of rowTreatment.options[0].options">
+                  {{ rowOptions.key }}
                 </div>
-                <div class="body">
-                    <div *ngFor="let rowOptions of rowTreatment.options">
-                      <div >
-                        {{rowOptions.treatmentName}}
-                      </div>
-                      <div *ngFor="let colOptions of rowOptions.options">
-                        {{colOptions.value}}
-                      </div>
-                    </div>
+              </div>
+              <div class="body">
+                <div *ngFor="let rowOptions of rowTreatment.options">
+                  <div>
+                    {{ rowOptions.treatmentName }}
+                  </div>
+                  <div *ngFor="let colOptions of rowOptions.options">
+                    {{ colOptions.value }}
+                  </div>
                 </div>
               </div>
             </div>
-          </mat-expansion-panel>
-          <mat-expansion-panel *ngFor="let mainTreat of hairRemoveElectro">
-              <mat-expansion-panel-header>
-                <mat-panel-title>
-                  {{mainTreat.treatmentName}}
-                </mat-panel-title>
-              </mat-expansion-panel-header>
-              <div>
-                  <div class="description">
-                      {{mainTreat.description}}
-                    </div>
-                    <div
-                      class="direction-column"
-                      *ngIf="mainTreat.orientation !== 'row'"
-                    >
-                      <div class="options-key">
-                        <div *ngFor="let option of mainTreat.options row">
-                          {{ option.key }}
-                        </div>
-                      </div>
-    
-                      <div class="options-value">
-                        <div *ngFor="let option of mainTreat.options">
-                          {{ option.value }}
-                        </div>
-                      </div>
-                    </div>
-                    <div
-                      class="direction-row"
-                      *ngIf="mainTreat.orientation === 'row'"
-                    >
-                      <div class="row" *ngFor="let option of mainTreat.options">
-                        <div>{{ option.treatment }}</div>
-                        <div>{{ option.options[1].value }}</div>
-                      </div>
-                    </div>
-                  </div>
-            </mat-expansion-panel>
+          </div>
+        </mat-expansion-panel>
+        <mat-expansion-panel *ngFor="let mainTreat of hairRemoveElectro">
+          <mat-expansion-panel-header>
+            <mat-panel-title>
+              {{ mainTreat.treatmentName }}
+            </mat-panel-title>
+          </mat-expansion-panel-header>
+          <div>
+            <div class="description">
+              {{ mainTreat.description }}
+            </div>
+            <div
+              class="direction-column"
+              *ngIf="mainTreat.orientation !== 'row'"
+            >
+              <div class="options-key">
+                <div *ngFor="let option of mainTreat.options; row">
+                  {{ option.key }}
+                </div>
+              </div>
+
+              <div class="options-value">
+                <div *ngFor="let option of mainTreat.options">
+                  {{ option.value }}
+                </div>
+              </div>
+            </div>
+            <div class="direction-row" *ngIf="mainTreat.orientation === 'row'">
+              <div class="row" *ngFor="let option of mainTreat.options">
+                <div>{{ option.treatment }}</div>
+                <div>{{ option.options[1].value }}</div>
+              </div>
+            </div>
+          </div>
+        </mat-expansion-panel>
         <!-- </mat-accordion> -->
       </div>
     </mat-expansion-panel>
@@ -256,110 +255,110 @@
       </mat-expansion-panel-header>
       <div class="sub">
         <!-- <mat-accordion> -->
-          <mat-expansion-panel>
-            <mat-expansion-panel-header>
-              <mat-panel-title>
-                Relaxing Massages
-              </mat-panel-title>
-              <mat-panel-description></mat-panel-description>
-            </mat-expansion-panel-header>
-            <div>
+        <mat-expansion-panel>
+          <mat-expansion-panel-header>
+            <mat-panel-title>
+              Relaxing Massages
+            </mat-panel-title>
+            <mat-panel-description></mat-panel-description>
+          </mat-expansion-panel-header>
+          <div>
+            <div
+              class="skin-treatment"
+              *ngFor="let treatment of bodyRelaxingMassage"
+            >
+              <div class="title">
+                <span>{{ treatment.title }}</span> {{ treatment.treatment }}
+              </div>
+              <div class="description">{{ treatment.description }}</div>
               <div
-                class="skin-treatment"
-                *ngFor="let treatment of bodyRelaxingMassage"
+                class="direction-column"
+                *ngIf="treatment.orientation !== 'row'"
               >
-                <div class="title">
-                  <span>{{ treatment.title }}</span> {{ treatment.treatment }}
-                </div>
-                <div class="description">{{ treatment.description }}</div>
-                <div
-                  class="direction-column"
-                  *ngIf="treatment.orientation !== 'row'"
-                >
-                  <div class="options-key">
-                    <div *ngFor="let option of treatment.options">
-                      {{ option.key }}
-                    </div>
+                <div class="options-key">
+                  <div *ngFor="let option of treatment.options">
+                    {{ option.key }}
                   </div>
+                </div>
 
-                  <div class="options-value">
-                    <div *ngFor="let option of treatment.options">
-                      {{ option.value }}
-                    </div>
-                  </div>
-                </div>
-                <div
-                  class="direction-row"
-                  *ngIf="treatment.orientation === 'row'"
-                >
-                  <div class="row" *ngFor="let option of treatment.options">
-                    <div>{{ option.treatment }}</div>
-                    <div>{{ option.options[1].value }}</div>
+                <div class="options-value">
+                  <div *ngFor="let option of treatment.options">
+                    {{ option.value }}
                   </div>
                 </div>
               </div>
-            </div>
-          </mat-expansion-panel>
-          <mat-expansion-panel>
-            <mat-expansion-panel-header>
-              <mat-panel-title>
-                Body Contouring
-              </mat-panel-title>
-              <mat-panel-description></mat-panel-description>
-            </mat-expansion-panel-header>
-            <div>
               <div
-                class="skin-treatment"
-                *ngFor="let treatment of bodyContouring"
+                class="direction-row"
+                *ngIf="treatment.orientation === 'row'"
               >
-                <div class="title">
-                  <span>{{ treatment.title }}</span> {{ treatment.treatment }}
-                </div>
-                <div class="description">{{ treatment.description }}</div>
-                <div
-                  class="direction-column"
-                  *ngIf="treatment.orientation !== 'row'"
-                >
-                  <div class="options-key">
-                    <div *ngFor="let option of treatment.options">
-                      {{ option.key }}
-                    </div>
-                  </div>
-
-                  <div class="options-value">
-                    <div *ngFor="let option of treatment.options">
-                      {{ option.value }}
-                    </div>
-                  </div>
-                </div>
-                <div
-                  class="direction-column"
-                  *ngIf="treatment.orientation !== 'row'"
-                >
-                  <div class="options-key">
-                    <div *ngFor="let option of treatment.options_second">
-                      {{ option.key }}
-                    </div>
-                  </div>
-
-                  <div class="options-value">
-                    <div *ngFor="let option of treatment.options_second">
-                      {{ option.value }}
-                    </div>
-                  </div>
-                </div>
-                <div
-                  class="direction-row"
-                  *ngIf="treatment.orientation === 'row'"
-                >
-                  <div class="row" *ngFor="let option of treatment.options">
-                    <div>{{ option.treatment }}</div>
-                    <div>{{ option.options[1].value }}</div>
-                  </div>
+                <div class="row" *ngFor="let option of treatment.options">
+                  <div>{{ option.treatment }}</div>
+                  <div>{{ option.options[1].value }}</div>
                 </div>
               </div>
             </div>
-          </mat-expansion-panel>
+          </div>
+        </mat-expansion-panel>
+        <mat-expansion-panel>
+          <mat-expansion-panel-header>
+            <mat-panel-title>
+              Body Contouring
+            </mat-panel-title>
+            <mat-panel-description></mat-panel-description>
+          </mat-expansion-panel-header>
+          <div>
+            <div
+              class="skin-treatment"
+              *ngFor="let treatment of bodyContouring"
+            >
+              <div class="title">
+                <span>{{ treatment.title }}</span> {{ treatment.treatment }}
+              </div>
+              <div class="description">{{ treatment.description }}</div>
+              <div
+                class="direction-column"
+                *ngIf="treatment.orientation !== 'row'"
+              >
+                <div class="options-key">
+                  <div *ngFor="let option of treatment.options">
+                    {{ option.key }}
+                  </div>
+                </div>
+
+                <div class="options-value">
+                  <div *ngFor="let option of treatment.options">
+                    {{ option.value }}
+                  </div>
+                </div>
+              </div>
+              <div
+                class="direction-column"
+                *ngIf="treatment.orientation !== 'row'"
+              >
+                <div class="options-key">
+                  <div *ngFor="let option of treatment.options_second">
+                    {{ option.key }}
+                  </div>
+                </div>
+
+                <div class="options-value">
+                  <div *ngFor="let option of treatment.options_second">
+                    {{ option.value }}
+                  </div>
+                </div>
+              </div>
+              <div
+                class="direction-row"
+                *ngIf="treatment.orientation === 'row'"
+              >
+                <div class="row" *ngFor="let option of treatment.options">
+                  <div>{{ option.treatment }}</div>
+                  <div>{{ option.options[1].value }}</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </mat-expansion-panel>
         <!-- </mat-accordion> -->
       </div>
     </mat-expansion-panel>
@@ -376,84 +375,84 @@
       </mat-expansion-panel-header>
       <div class="sub">
         <!-- <mat-accordion> -->
-          <mat-expansion-panel>
-            <mat-expansion-panel-header>
-              <mat-panel-title>
-                Facial
-              </mat-panel-title>
-              <mat-panel-description></mat-panel-description>
-            </mat-expansion-panel-header>
-            <div>
+        <mat-expansion-panel>
+          <mat-expansion-panel-header>
+            <mat-panel-title>
+              Facial
+            </mat-panel-title>
+            <mat-panel-description></mat-panel-description>
+          </mat-expansion-panel-header>
+          <div>
+            <div class="skin-treatment" *ngFor="let treatment of beautyFacial">
+              <div class="title">
+                <span>{{ treatment.title }}</span> {{ treatment.treatment }}
+              </div>
+              <div class="description">{{ treatment.description }}</div>
               <div
-                class="skin-treatment"
-                *ngFor="let treatment of beautyFacial"
+                class="direction-column"
+                *ngIf="treatment.orientation !== 'row'"
               >
-                <div class="title">
-                  <span>{{ treatment.title }}</span> {{ treatment.treatment }}
-                </div>
-                <div class="description">{{ treatment.description }}</div>
-                <div
-                  class="direction-column"
-                  *ngIf="treatment.orientation !== 'row'"
-                >
-                  <div class="options-key">
-                    <div *ngFor="let option of treatment.options">
-                      {{ option.key }}
-                    </div>
+                <div class="options-key">
+                  <div *ngFor="let option of treatment.options">
+                    {{ option.key }}
                   </div>
+                </div>
 
-                  <div class="options-value">
-                    <div *ngFor="let option of treatment.options">
-                      {{ option.value }}
-                    </div>
+                <div class="options-value">
+                  <div *ngFor="let option of treatment.options">
+                    {{ option.value }}
                   </div>
                 </div>
-                <div
-                  class="direction-row"
-                  *ngIf="treatment.orientation === 'row'"
-                >
-                  <div class="row" *ngFor="let option of treatment.options">
-                    <div>{{ option.treatment }}</div>
-                    <div>{{ option.options[1].value }}</div>
+              </div>
+              <div
+                class="direction-row"
+                *ngIf="treatment.orientation === 'row'"
+              >
+                <div class="row" *ngFor="let option of treatment.options">
+                  <div>{{ option.treatment }}</div>
+                  <div>{{ option.options[1].value }}</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </mat-expansion-panel>
+        <mat-expansion-panel>
+          <mat-expansion-panel-header>
+            <mat-panel-title>
+              Nail Care
+            </mat-panel-title>
+            <mat-panel-description></mat-panel-description>
+          </mat-expansion-panel-header>
+          <div>
+            <div class="skin-treatment" *ngFor="let treatment of beautyNail">
+              <div class="title">
+                <span>{{ treatment.title }}</span> {{ treatment.treatment }}
+              </div>
+              <div class="description">{{ treatment.description }}</div>
+              <div
+                class="direction-column"
+                *ngIf="treatment.orientation !== 'row'"
+              >
+                <div class="options-key">
+                  <div *ngFor="let option of treatment.options">
+                    {{ option.key }}
+                  </div>
+                </div>
+
+                <div class="options-value">
+                  <div *ngFor="let option of treatment.options">
+                    {{ option.value }}
                   </div>
                 </div>
               </div>
             </div>
-          </mat-expansion-panel>
-          <mat-expansion-panel>
-            <mat-expansion-panel-header>
-              <mat-panel-title>
-                Nail Care
-              </mat-panel-title>
-              <mat-panel-description></mat-panel-description>
-            </mat-expansion-panel-header>
-            <div>
-              <div class="skin-treatment" *ngFor="let treatment of beautyNail">
-                <div class="title">
-                  <span>{{ treatment.title }}</span> {{ treatment.treatment }}
-                </div>
-                <div class="description">{{ treatment.description }}</div>
-                <div
-                  class="direction-column"
-                  *ngIf="treatment.orientation !== 'row'"
-                >
-                  <div class="options-key">
-                    <div *ngFor="let option of treatment.options">
-                      {{ option.key }}
-                    </div>
-                  </div>
-
-                  <div class="options-value">
-                    <div *ngFor="let option of treatment.options">
-                      {{ option.value }}
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </mat-expansion-panel>
+          </div>
+        </mat-expansion-panel>
         <!-- </mat-accordion> -->
       </div>
     </mat-expansion-panel>
-</mat-accordion>
+  </mat-accordion>
+  <button mat-flat-button color="primary" class="main-button">
+    Book now
+  </button>
 </div>

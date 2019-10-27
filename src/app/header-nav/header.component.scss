@@ -13,8 +13,8 @@ app-burger-menu {
 
 :host {
   &>div {
-    transition: all .8s;
     padding: 18px 70px;
+    background-color: white;
 
     @media (max-width: 767px) {
       padding: 18px 30px;
@@ -22,10 +22,6 @@ app-burger-menu {
 
     @media (max-width: 574px) {
       padding: 18px 0;
-    }
-
-    &.sticky {
-      background-color: white;
     }
 
     >div {

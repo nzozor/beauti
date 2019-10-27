@@ -34,7 +34,7 @@ export const SKIN_TREATMENTS: any = [
         value: '£324'
       },
       {
-        key: 'course6',
+        key: '6 Courses',
         value: '£612'
       }
     ]
@@ -56,7 +56,7 @@ export const SKIN_TREATMENTS: any = [
         value: '£250',
       },
       {
-        key: 'course3',
+        key: '3 Courses',
         value: '£675'
       },
     ]
@@ -70,8 +70,8 @@ export const SKIN_TREATMENTS: any = [
     options: [
       { key: 'Duration', value: '60 mins' },
       { key: 'Single', value: '£100' },
-      { key: 'course3', value: '£270' },
-      { key: 'course6', value: '£510' }
+      { key: '3 Courses', value: '£270' },
+      { key: '6 Courses', value: '£510' }
     ]
   },
   {
@@ -83,7 +83,7 @@ export const SKIN_TREATMENTS: any = [
     options: [
       { key: 'Duration', value: '60 mins' },
       { key: 'Single', value: '£180' },
-      { key: 'course4', value: '£648' }
+      { key: '4 Courses', value: '£648' }
     ]
   },
   {
@@ -94,8 +94,8 @@ export const SKIN_TREATMENTS: any = [
     options: [
       { key: 'Duration', value: '60 mins' },
       { key: 'Single', value: '£80' },
-      { key: 'course3', value: '£216'},
-      { key: 'course6', value: '£408'}
+      { key: '3 Courses', value: '£216'},
+      { key: '6 Courses', value: '£408'}
     ]
   },
   {
@@ -106,8 +106,8 @@ export const SKIN_TREATMENTS: any = [
     options: [
       { key: 'Duration', value: '45 mins'},
       { key: 'Single', value: '£110' },
-      { key: 'course3', value: '£297' },
-      { key: 'course6', value: '£561' }
+      { key: '3 Courses', value: '£297' },
+      { key: '6 Courses', value: '£561' }
     ]
   },
   {

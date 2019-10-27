@@ -302,3 +302,18 @@
     padding: 5px;
   }
 }
+
+.main-button.mat-flat-button.mat-primary {
+    border: none;
+    width: 146px;
+    height: 41px  ;
+    max-height: 146px;
+    padding: 0;
+    display: none;
+    margin: 50px auto;
+
+    @media only screen and (max-width: 600px) {
+      display: block;
+    }
+  
+}

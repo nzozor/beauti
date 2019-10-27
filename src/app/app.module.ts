@@ -15,6 +15,7 @@ import { FooterComponent } from './footer/footer.component';
 import { HomePageModule } from './modules/home-page/home-page.module';
 import { TreatmentsModule } from './modules/treatments/treatments.module';
 import { RouterModule } from '@angular/router';
+import { InstaComponent } from './shared/svg/insta/insta.component';
 
 @NgModule({
   declarations: [
@@ -24,6 +25,7 @@ import { RouterModule } from '@angular/router';
     BeautiLogoComponent,
     MenuLinkComponent,
     FooterComponent,
+    InstaComponent,
   ],
   imports: [
     BrowserModule,

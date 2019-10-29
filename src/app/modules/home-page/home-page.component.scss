@@ -1,32 +1,32 @@
 @import '../../../scss/palette';
 
 .header-wrapper {
-    position: -webkit-sticky;
-    position: sticky;
-    top: 0;
-    transition: all .8s;
-    z-index: 1;
-    border-bottom: 1px solid $blue-type1;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  transition: all .8s;
+  z-index: 1;
+  border-bottom: 1px solid $blue-type1;
 }
 
 .sticky {
-    background: white;
+  background: white;
 }
 
 .parallax {
-    min-height: 500px; 
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
+  min-height: 500px;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 
-    @media (max-width: 767px) {
-        min-height: 263px;
-    }
+  @media (max-width: 767px) {
+    min-height: 263px;
   }
+}
 
-  #scene {
-    img {
-        width: 100%;
-    }
+#scene {
+  img {
+    width: 100%;
   }
+}

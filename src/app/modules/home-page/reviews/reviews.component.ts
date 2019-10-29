@@ -7,9 +7,10 @@ import * as Hammer from 'hammerjs';
   templateUrl: './reviews.component.html',
   styleUrls: ['./reviews.component.scss']
 })
-export class ReviewsComponent implements OnInit, AfterViewInit {
+export class ReviewsComponent {
   @ViewChild('sliderEl', { static: false }) sliderEl: ElementRef;
   @ViewChild('start', { static: false }) start: ElementRef;
+  @ViewChild('slickModal', { static: false }) slickModal: any;
 
   activeSlide = 0;
   slideCount = 0;
@@ -57,117 +58,95 @@ export class ReviewsComponent implements OnInit, AfterViewInit {
     }
   ];
 
-  constructor() { }
 
-  ngOnInit() {
-    this.defineProportion();
-  }
+  slides = [
+    { img: 'https://www.freakyjolly.com/demo/Angular/Angular7/slickCarousel/assets/images/1.jpg' },
+    { img: 'https://www.freakyjolly.com/demo/Angular/Angular7/slickCarousel/assets/images/2.jpg' },
+    { img: 'https://www.freakyjolly.com/demo/Angular/Angular7/slickCarousel/assets/images/3.jpg' },
+    { img: 'https://www.freakyjolly.com/demo/Angular/Angular7/slickCarousel/assets/images/4.jpg' },
+    { img: 'https://www.freakyjolly.com/demo/Angular/Angular7/slickCarousel/assets/images/5.jpg' },
+    { img: 'https://www.freakyjolly.com/demo/Angular/Angular7/slickCarousel/assets/images/6.jpg' },
+    { img: 'https://www.freakyjolly.com/demo/Angular/Angular7/slickCarousel/assets/images/7.jpg' },
+    { img: 'https://www.freakyjolly.com/demo/Angular/Angular7/slickCarousel/assets/images/8.jpg' },
+    { img: 'https://www.freakyjolly.com/demo/Angular/Angular7/slickCarousel/assets/images/9.jpg' },
+    { img: 'https://www.freakyjolly.com/demo/Angular/Angular7/slickCarousel/assets/images/10.jpg' },
+    { img: 'https://www.freakyjolly.com/demo/Angular/Angular7/slickCarousel/assets/images/11.jpg' },
+    { img: 'https://www.freakyjolly.com/demo/Angular/Angular7/slickCarousel/assets/images/12.jpg' }
+  ];
 
-  ngAfterViewInit() {
-    this.setActiveSlide();
-  }
+  slideConfig = {
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    nextArrow: '<div class=\'nav-btn next-slide\'></div>',
+    prevArrow: '<div class=\'nav-btn prev-slide\'></div>',
+    dots: true,
+    infinite: true,
+    centerMode: true,
+    variableWidth: true,
+    adaptiveHeight: true,
 
-  setActiveSlide() {
-    const allSliderPanels = document.querySelectorAll('.slider-panel');
-    const middleSlide = (allSliderPanels[this.activeSlide + 1]) as HTMLElement;
-    [].forEach.call(allSliderPanels, (el) => el.classList.remove('active-panel'));
+    // autoplay: true,
+    // autoplaySpeed: 2000,
 
-    middleSlide.classList.add('active-panel');
-  }
-
-  onPan(e) {
-    console.log(e.pointers[0].clientX);
-  }
-
-  sliderPan(e) {
-    // Calculate pixel movements into 1:1 screen percents so gestures track with motion
-    const percentage = 100 / this.slideCount * e.deltaX
-      / this.sliderWidth;
-
-    // Multiply percent by # of slide we’re on
-    const percentageCalculated = percentage - 100 / this.slideCount * this.activeSlide;
-
-    // 4g. Apply transformation
-    (document.querySelector('.slider') as HTMLElement).style.transform = 'translateX( ' + percentageCalculated + '% )';
-
-    if (e.isFinal) {
-      if (e.velocityX > 1) {
-        this.sliderGoTo(this.activeSlide - 1);
-      } else if (e.velocityX < -1 ) {
-        this.sliderGoTo(this.activeSlide + 1);
-      } else {
-        if (percentage <= -(this.sensitivity / this.slideCount)) {
-          this.sliderGoTo(this.activeSlide + 1);
-        } else if (percentage >= (this.sensitivity / this.slideCount)) {
-          this.sliderGoTo(this.activeSlide - 1);
-        } else {
-          this.sliderGoTo(this.activeSlide);
+    focusOnSelect: true,    responsive: [
+      {
+        breakpoint: 768,
+        settings: {
+          arrows: true,
+          centerMode: true,
+          variableWidth: true,
+          // centerPadding: '40px',
+          slidesToShow: 3
+        }
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          arrows: false,
+          centerMode: true,
+          // centerPadding: '40px',
+          slidesToShow: 1
         }
       }
-    }
+    ]
+  };
+
+  constructor() { }
+
+  addSlide() {
+    this.slides.push({ img: 'http://placehold.it/350x150/777777' })
   }
 
-  sliderGoTo(slideNum: number) {
-    // Stop it from doing weird things like moving to slides that don’t exist
-    let timer;
-
-    if (slideNum < 0) {
-      this.activeSlide = 0;
-    } else if (slideNum > this.slideCount - 1 - 2) {
-      this.activeSlide = this.slideCount - 1 - 2;
-    } else {
-      this.activeSlide = slideNum;
-    }
-
-    // 5b. Apply transformation & smoothly animate via .is-animating CSS
-    const sliderEl = (document.querySelector('.slider') as HTMLElement);
-    sliderEl.classList.add('is-animating');
-
-    const widthToTranslate = - this.totalSlideWidth * this.activeSlide;
-
-    // sliderEl.style.transform = 'translateX( ' + percentage + '% )';
-    sliderEl.style.transform = 'translateX( ' + widthToTranslate + -90 + 'px )';
-
-    this.setActiveSlide();
-    clearTimeout(timer);
-
-    timer = setTimeout(() => {
-      sliderEl.classList.remove('is-animating');
-    }, 500);
+  removeSlide() {
+    this.slides.length = this.slides.length - 1;
   }
 
-  defineProportion() {
-    this.innerWidth = window.innerWidth;
-    if (this.innerWidth >= 1156 ) {
-      this.sliderWidth = 247;
-      this.activeSliderWidth = this.sliderWidth * (1 +  30 / 100);
-    } else if (this.innerWidth >= 992 && this.innerWidth < 1156) {
-      this.sliderWidth = 215;
-      this.activeSliderWidth = this.sliderWidth * (1 +  30 / 100);
-    } else if (this.innerWidth >= 576 && this.innerWidth < 992 ) {
-      this.sliderWidth = 190;
-      this.activeSliderWidth = this.sliderWidth * (1 +  30 / 100);
-    } else {
-      this.sliderWidth = 190;
-      this.activeSliderWidth = this.sliderWidth * (1 +  30 / 100);
-    }
-
-    this.totalSlideWidth = (this.sliderWidth + this.marginBetweenSlides * 2);
-    this.slideCount = 6;
-    this.sliderMainContainerStyle = {
-      width: this.totalSlideWidth * this.slideCount
-      + this.activeSliderWidth - this.sliderWidth + 'px'
-    };
-
-    this.visibleContainerStyle = {
-      width: this.totalSlideWidth * this.visiblePanels
-      + this.activeSliderWidth - this.sliderWidth + 'px'
-    };
+  slickInit(e) {
+    console.log('slick initialized');
   }
 
-  @HostListener('window:resize', ['$event'])
-  onResize(event) {
-    this.defineProportion();
-    this.sliderGoTo(this.activeSlide);
+  breakpoint(e) {
+    console.log('breakpoint');
+  }
+
+  afterChange(e) {
+    console.log('afterChange');
+    console.log('afterChange');
+  }
+
+  beforeChange(e) {
+    console.log('beforeChange');
+
+  }
+
+  swipe() {
+    setTimeout(() => {
+      this.slickModal.slickGoTo(this.slickModal.currentIndex);
+    }, 0);
+  }
+  slickGoTo(e) {
+    this.slickModal.slickGoTo(4);
+    console.log(e);
+    console.log(this.slickModal);
   }
 }

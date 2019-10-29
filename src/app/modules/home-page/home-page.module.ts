@@ -11,13 +11,15 @@ import { MapComponent } from 'src/app/shared/map/map.component';
 import { QuoteComponent } from 'src/app/shared/svg/quote/quote.component';
 import { ArrowComponent } from 'src/app/shared/svg/arrow/arrow.component';
 import { MatIconModule } from '@angular/material/icon';
+import { SlickCarouselModule } from 'ngx-slick-carousel';
 
 @NgModule({
   imports: [
     CommonModule,
     HomePageRoutingModule,
     MatIconModule,
-    MatButtonModule
+    MatButtonModule,
+    SlickCarouselModule
   ],
   declarations: [HomePageComponent, ExcluStocklistComponent, JumbotronComponent, ReviewsComponent, MapComponent, QuoteComponent,
   ArrowComponent]

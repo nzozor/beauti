@@ -1,24 +1,23 @@
 <div>
   <h3>5 Star Reviews</h3>
-  <div class="reviews">
-    <button mat-button (click)="sliderGoTo(activeSlide - 1)">
-      <app-arrow position="left"></app-arrow>
-    </button>   
-    <div class='has-slider' [ngStyle]="visibleContainerStyle">
-      <div class='slider' id='slider' (pan)="sliderPan($event)" [ngStyle]="sliderMainContainerStyle">
-        <div class='slider-panel' [ngStyle]="sliderPanelstyle" *ngFor="let review of reviews ">
-          <div>
-            <div class="quote">"{{review.quote}}"</div>
-            <div class="name">{{review.reviewerName}}</div>
-            <div class="stars">
-              <mat-icon *ngFor="let star of stars">star</mat-icon>
-            </div>
-          </div>
-        </div>
+  <ngx-slick-carousel class="carousel" 
+ #slickModal="slick-carousel" 
+ [config]="slideConfig" 
+ (init)="slickInit($event)"
+ (breakpoint)="breakpoint($event)"
+ (afterChange)="afterChange($event)"
+ (beforeChange)="beforeChange($event)"
+ (swipe)="swipe($event)"
+ >
+
+<div class='slider-panel' ngxSlickItem  *ngFor="let review of reviews ">
+    <div>
+      <div class="quote">"{{review.quote}}"</div>
+      <div class="name">{{review.reviewerName}}</div>
+      <div class="stars">
+        <mat-icon *ngFor="let star of stars">star</mat-icon>
       </div>
     </div>
-    <button mat-button (click)="sliderGoTo(activeSlide + 1)">
-      <app-arrow></app-arrow>
-    </button>   
   </div>
+</ngx-slick-carousel>
 </div>

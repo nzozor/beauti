@@ -156,3 +156,41 @@
     }
   }
 }
+
+.carousel {
+  ::ng-deep {
+    .slick-list {
+      // max-width: 964px;
+      
+      margin: 0 auto;
+      height: 350px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+
+      @media only screen and (min-width: 600px) {
+        max-width: 50%;
+      }
+    }
+
+    .slick-track {
+      transition: all .5s;
+
+    }
+    .slick-slide {
+      max-width: 247px;
+      margin: 0 10px;
+      transition: all .5s;
+      
+    }
+
+    .slick-current {
+      opacity: 1;
+      
+      @media only screen and (min-width: 600px) {
+        margin: 0 50px;
+        transform: scale(1.3);
+      }
+    }
+  }
+}

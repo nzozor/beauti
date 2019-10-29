@@ -7,7 +7,6 @@ declare var require: any;
   styleUrls: ['./map.component.scss']
 })
 export class MapComponent implements OnInit {
-
   constructor() {
 
   }

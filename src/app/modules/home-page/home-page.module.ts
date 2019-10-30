@@ -22,6 +22,7 @@ import { SlickCarouselModule } from 'ngx-slick-carousel';
     SlickCarouselModule
   ],
   declarations: [HomePageComponent, ExcluStocklistComponent, JumbotronComponent, ReviewsComponent, MapComponent, QuoteComponent,
-  ArrowComponent]
+  ArrowComponent],
+  exports: [MapComponent, SlickCarouselModule]
 })
 export class HomePageModule { }

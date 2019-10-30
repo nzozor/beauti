@@ -1,0 +1,60 @@
+<div class="container">
+  <h3>About</h3>
+  <div class="beauti">
+    <h4>
+      Beauti
+    </h4>
+    <h5>&nbsp;- your local skin and beauty specialist, Italian standard.</h5>
+  </div>
+
+  <div>
+    <p>
+      Beauti Skin Clinic is founded by professional Aesthetician and Skin Expert
+      Cinzia Campigotto in 2017 who believes in providing premium but affordable
+      skin treatments and products, as well as creating a very warm, clean and
+      friendly environment to every customer.
+    </p>
+    <p>
+      We specialize in non-surgical and advanced skin treatments to provide
+      solutions to problematic skin such as acne, rosacea, pigmentation and
+      aging. Some of our most popular treatments include Aqua 3 Hydrotherapy
+      Facial, Skin Peels, Radio Frequency Skin Tightening, Plasma Face Lift,
+      Microneedling with Dermapen as well as IPL Laser Hair Removal and
+      Electrolysis. Our LYCON hot waxing is also famous in the area which has
+      received many 5 star online reviews because of our quick and painless
+      technique, we see happy customers keep returning all the time.
+    </p>
+    <p>
+      We only use top medical grade skincare products from trusted brands to
+      help our customers achieve the best results possible. To continue your
+      journey at home, we stock AlumierMD and multi award winning anti-aging
+      collagen drink Skinade which you can purchase in store.
+    </p>
+  </div>
+
+  <h4>
+    The Founder
+  </h4>
+  <h5>
+    <span>Cinzia Campigotto</span> <br>
+    <span> <i>Aesthetician</i> </span>  
+  </h5>
+
+  <div>
+    <p>
+      With spanning 20 years of experience in the advanced skin and beauty
+      industry, Cinzia maintains an excellent reputation with a wide and loyal
+      clientele. She is specialised in Skin Consultation and Bespoke Facials.
+    </p>
+  </div>
+</div>
+
+<ngx-slick-carousel id="carousel" 
+ #slickModal="slick-carousel" 
+ [config]="slideConfig" 
+ >
+
+ <div ngxSlickItem *ngFor="let slide of slides" class="slide">
+    <img src="{{ slide.img }}" alt="" width="100%">
+</div>
+</ngx-slick-carousel>

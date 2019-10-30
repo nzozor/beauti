@@ -36,7 +36,7 @@ export class MenuLinkComponent implements OnInit, OnChanges {
       title: 'Treatments',
       route: '/treatments'
     },
-    { title: 'Contact' }
+    { title: 'Contact', route: '/contact' }
   ];
 
   subMenuActive = false;

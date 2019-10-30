@@ -1,6 +1,5 @@
-import { Component, OnInit, ElementRef, ViewChild, AfterViewInit, HostListener } from '@angular/core';
-import { HammerGestureConfig } from '@angular/platform-browser';
-import * as Hammer from 'hammerjs';
+import { Component, ElementRef, ViewChild } from '@angular/core';
+
 
 @Component({
   selector: 'app-reviews',
@@ -84,10 +83,6 @@ export class ReviewsComponent {
     centerMode: true,
     variableWidth: true,
     adaptiveHeight: true,
-
-    // autoplay: true,
-    // autoplaySpeed: 2000,
-
     focusOnSelect: true,    responsive: [
       {
         breakpoint: 768,
@@ -95,7 +90,6 @@ export class ReviewsComponent {
           arrows: true,
           centerMode: true,
           variableWidth: true,
-          // centerPadding: '40px',
           slidesToShow: 3
         }
       },
@@ -104,7 +98,6 @@ export class ReviewsComponent {
         settings: {
           arrows: false,
           centerMode: true,
-          // centerPadding: '40px',
           slidesToShow: 1
         }
       }

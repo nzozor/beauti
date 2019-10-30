@@ -16,7 +16,8 @@ export class MapComponent implements OnInit {
     mapboxgl.accessToken = 'pk.eyJ1IjoiZWxzYWJlbiIsImEiOiJjanZ4b2ZndDQwNnB5M3pyejNrZWQwaGVwIn0.T8MZoM6PJVvNkME819rAkw';
     const map = new mapboxgl.Map({
       container: 'map',
-      style: 'mapbox://styles/elsaben/cjz7dkzjk0txn1co6uw3ktw0m'
+      style: 'mapbox://styles/elsaben/cjz7dkzjk0txn1co6uw3ktw0m',
+      interactive: false
     });
   }
 }

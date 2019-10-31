@@ -32,6 +32,10 @@
         border-radius: initial;
 
         .mat-expansion-panel {
+          background-color: transparent;
+          &:hover, &:focus  {
+            background-color: transparent;
+          }
           .mat-expansion-panel-header {
             height: 35px !important;
             padding-left: 15px;

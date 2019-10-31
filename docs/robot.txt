@@ -1,0 +1,3 @@
+User-agent: *
+Disallow: /no-index/
+Sitemap: http://www.beauti.com/sitemap.xml

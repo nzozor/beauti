@@ -1,8 +1,7 @@
-<div class="header-wrapper" [class.sticky]="stickyHeader">
-  <app-header-nav (stickyEmit)="setStickyHeader($event)"></app-header-nav>
+<div class="header-wrapper sticky">
+  <app-header-nav></app-header-nav>
 </div>
 
 <router-outlet></router-outlet>
 
 <app-footer></app-footer>
-

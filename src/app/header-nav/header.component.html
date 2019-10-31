@@ -3,6 +3,7 @@
     <app-burger-menu [active]="menuLinkOpen" [sticky]="sticky" (menuLinkOpen)="setMenuLink($event)"></app-burger-menu>
     <a routerLink="/home">
       <app-beauti-logo [sticky]="sticky" (click)="menuLinkOpen=false"></app-beauti-logo>
+      <h1 style="position: absolute; left: -99999px">Beauti</h1>
     </a>
     <ul class="menu-list">  
       <li><a routerLink="/about-us">ABOUT US</a></li>    

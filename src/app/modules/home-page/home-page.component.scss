@@ -15,14 +15,25 @@
 
 .parallax {
   min-height: 500px;
+  // min-height: 650px;
+
   background-attachment: fixed;
-  background-position: center;
+  // background-position: top;
   background-repeat: no-repeat;
   background-size: cover;
 
   @media (max-width: 767px) {
+    // min-height: 263px;
+    // background-size: initial;
+    // background-position: top;
+    // background-size: 156%;
+    background-attachment: initial;
+
     min-height: 263px;
     background-size: initial;
+    background-position-y: 0!important;
+    background-position-x: -73px;
+    background-size: 165%;
   }
 }
 

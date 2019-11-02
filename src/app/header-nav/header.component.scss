@@ -21,8 +21,16 @@ app-burger-menu {
     }
 
     @media (max-width: 574px) {
-      padding: 18px 0;
+      padding: 10px 0;
+      app-beauti-logo {
+        ::ng-deep svg {
+          width: initial;
+          height: 25px; 
+        }
+      }
     }
+
+
 
     >div {
       display: flex;

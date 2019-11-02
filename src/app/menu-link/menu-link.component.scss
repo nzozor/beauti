@@ -27,7 +27,7 @@
       padding: 0;
       position: relative;
       top: 10px;
-      margin-top: 20%;
+      margin-top: 15%;
       li {
         list-style-type: none;
         text-align: center;
@@ -42,9 +42,7 @@
     }
   }
 
-  .main-menu a,
-  .submenu-title,
-  .sub-title {
+  .main-menu a {
     text-transform: uppercase;
     color: $grey-black;
     font-family: 'Nunito Sans', sans-serif;
@@ -54,60 +52,8 @@
     transition: color .2s;
 
     @media (max-width: 1023px) {
-      font-size: 32px;
-      line-height: 4.5rem;
-    }
-  }
-
-  .submenu-title {
-    text-align: center;
-  }
-
-  .sub-title {
-    @media (max-width: 767px) {
-      font-size: 20px;
-      line-height: 40px;
-    }
-
-    @media (min-width: 768px) {
-      font-size: 30px;
-      line-height: 80px;
-    }
-  }
-
-  .sub-menu {
-    width: 100%;
-
-    ul {
-      padding: 0;
-
-      li {
-        list-style-type: none;
-        text-transform: uppercase;
-        font-size: 21px;
-        line-height: 27px;
-        font-weight: 300;
-
-        a {
-          text-decoration: none;
-          color: black;
-          font-family: lato, sans-serif;
-        }
-      }
-    }
-
-    .submenu-section {
-      display: flex;
-      flex-direction: column;
-      height: 455px;
-      overflow: hidden;
-      flex-wrap: wrap;
-      align-items: flex-end;
-      width: 100%;
-
-      >div {
-        max-width: 290px;
-      }
+      font-size: 25px;
+      line-height: 50px;
     }
   }
 }

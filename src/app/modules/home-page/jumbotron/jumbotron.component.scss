@@ -15,15 +15,24 @@
   }
 }
 
->div {
-  margin-top: 70px;
+div {
+  // margin-top: 70px;
   font-family: 'Roboto', sans-serif;
   font-weight: 100;
   color: $grey-black;
 
   span {
     font-weight: 300;
+  }
 
+  br {
+    display: none;
+  }
+
+  @media (min-width: 600px) {
+    br {
+      display: block;
+    }
   }
 }
 

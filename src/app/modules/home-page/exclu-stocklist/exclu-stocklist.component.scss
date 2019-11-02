@@ -1,13 +1,14 @@
 @import '../../../../scss/palette';
 
 :host {
-  > div {
+  >div {
     display: flex;
     justify-content: center;
     max-width: 1170px;
     margin: 0 auto;
     flex-wrap: wrap;
     padding: 0 30px;
+
     @media (min-width: 1024px) {
       flex-wrap: inherit;
     }
@@ -16,10 +17,55 @@
       margin: 10px;
       max-width: 614px;
       border: 1px solid $blue-type1;
+      position: relative;
+      cursor: pointer;
+
+      
+
+      a {
+        text-decoration: none;
+
+        > div {
+          &::before {
+            content: '';
+            display: block;
+            opacity: 0;
+            height: 100%;
+            width: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            background-color: rgba($blue-type1, 0.25);
+            transition: all .4s;
+          }
+          &:hover {
+            &::before {
+              opacity: 1;
+            }
+    
+            .mat-icon {
+              display: block;
+            }
+          }
+        }
+      }
+
+
 
       img {
         width: 100%;
+
       }
+
+      .mat-icon {
+        margin: 10px;
+        display: none;
+        position: absolute;
+        right: 0;
+        top: 0;
+        color: $grey-black;
+      }
+
     }
   }
 }

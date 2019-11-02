@@ -2,7 +2,7 @@ export const SKIN_TREATMENTS: any = [
   {
     title: 'Advanced Beauti Signature Relaxing Facial',
     treatment: `
-    (Choose from Radio Frequency, Skin Rejuvenation, LED Light Therapy)
+    Choose from Radio Frequency, Skin Rejuvenation, LED Light Therapy.
     Add Dermaplaning for £30, extra 15 mins`,
     description: `Lorem of the printing and typesetting industry.
     Lorem Ipsum has been the industry’s standard dummy
@@ -15,7 +15,7 @@ export const SKIN_TREATMENTS: any = [
   {
     title: 'Aqua 3 Hydrotherapy Facial',
     treatment: `
-    (Choose from Deep-cleaning, Anti-Aging)
+    Choose from Deep-cleaning, Anti-Aging.
     Add Black Head Extraction for £10, extra 10 mins`,
     description: `Lorem of the printing and typesetting industry.
     Lorem Ipsum has been the industry’s standard dummy
@@ -41,8 +41,8 @@ export const SKIN_TREATMENTS: any = [
   },
   {
     title: 'TriBeauti Facial ',
-    treatment: `(Skin Rejuvenation + Radio Frequency + Microneedling
-    with Dermapen 3-in-1 Treatment)`,
+    treatment: `Skin Rejuvenation + Radio Frequency + Microneedling
+    with Dermapen 3-in-1 Treatment`,
     description: `of the printing and typesetting industry.
     Lorem Ipsum has been the industry’s standard dummy
     text ever since the 1500s, when an unknown printer`,
@@ -62,8 +62,8 @@ export const SKIN_TREATMENTS: any = [
     ]
   },
   {
-    title: 'IPL',
-    treatment: ` Skin Rejuvenation`,
+    title: 'Skin Rejuvenation',
+    treatment: ``,
     description: `Lorem of the printing and typesetting industry.
     Lorem Ipsum has been the industry’s standard dummy
     text ever since the 1500s, when an unknown printer`,
@@ -75,8 +75,8 @@ export const SKIN_TREATMENTS: any = [
     ]
   },
   {
-    title: 'Microneedling',
-    treatment: `with Dermapen`,
+    title: 'Microneedling with Dermapen',
+    treatment: ``,
     description: `Lorem of the printing and typesetting industry.
     Lorem Ipsum has been the industry’s standard dummy
     text ever since the 1500s, when an unknown printer`,
@@ -112,7 +112,7 @@ export const SKIN_TREATMENTS: any = [
   },
   {
     title: 'Plasma Face Lift',
-    treatment: `*one top up session included`,
+    treatment: `one top up session included`,
     description: `Lorem of the printing and typesetting industry.
     Lorem Ipsum has been the industry’s standard dummy
     text ever since the 1500s, when an unknown printer`,

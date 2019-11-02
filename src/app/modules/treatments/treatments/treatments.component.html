@@ -27,7 +27,8 @@
               *ngFor="let treatment of skinTreatments"
             >
               <div class="title">
-                <span>{{ treatment.title }}</span> {{ treatment.treatment }}
+                <span>{{ treatment.title }}</span> 
+                <span [innerHTML]="treatment.treatment"></span>
               </div>
               <div class="description">{{ treatment.description }}</div>
               <div
@@ -268,7 +269,7 @@
               *ngFor="let treatment of bodyRelaxingMassage"
             >
               <div class="title">
-                <span>{{ treatment.title }}</span> {{ treatment.treatment }}
+                <span>{{ treatment.title }}</span> <span [innerHTML]="treatment.treatment"></span>
               </div>
               <div class="description">{{ treatment.description }}</div>
               <div
@@ -312,7 +313,8 @@
               *ngFor="let treatment of bodyContouring"
             >
               <div class="title">
-                <span>{{ treatment.title }}</span> {{ treatment.treatment }}
+                <span>{{ treatment.title }}</span>
+                <span [innerHTML]="treatment.treatment"></span>
               </div>
               <div class="description">{{ treatment.description }}</div>
               <div
@@ -385,7 +387,7 @@
           <div>
             <div class="skin-treatment" *ngFor="let treatment of beautyFacial">
               <div class="title">
-                <span>{{ treatment.title }}</span> {{ treatment.treatment }}
+                <span>{{ treatment.title }}</span> <span [innerHTML]="treatment.treatment"></span>
               </div>
               <div class="description">{{ treatment.description }}</div>
               <div
@@ -426,7 +428,7 @@
           <div>
             <div class="skin-treatment" *ngFor="let treatment of beautyNail">
               <div class="title">
-                <span>{{ treatment.title }}</span> {{ treatment.treatment }}
+                <span>{{ treatment.title }}</span> <span [innerHTML]="treatment.treatment"></span>
               </div>
               <div class="description">{{ treatment.description }}</div>
               <div

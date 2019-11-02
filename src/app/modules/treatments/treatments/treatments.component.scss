@@ -101,6 +101,7 @@
         background: transparent;
         .skin-treatment {
           margin-bottom: 30px;
+          font-family: 'Nunito Sans', sans-serif;
         }
         .mat-expansion-panel-header {
           justify-content: flex-start;
@@ -240,7 +241,7 @@
 
       @media (max-width: 600px) {
         & > div > div {
-          min-width: 90px;
+          min-width: 80px;
         }
       }
     }

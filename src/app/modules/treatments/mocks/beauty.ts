@@ -58,7 +58,7 @@ export const BEAUTY_NAIL = [
          a very Italian styled Medical Pedicure is perfect option for you.`,
         options: [
             { key: 'Duration', value: '60 mins' },
-            { key: 'price', value: '£35' },
+            { key: 'Price', value: '£35' },
         ],
     },
     {
@@ -68,7 +68,7 @@ export const BEAUTY_NAIL = [
         description: ``,
         options: [
             { key: 'Duration', value: '60 mins' },
-            { key: 'price', value: '£40' },
+            { key: 'Price', value: '£40' },
         ],
     },
     {
@@ -78,7 +78,7 @@ export const BEAUTY_NAIL = [
         description: ``,
         options: [
             { key: 'Duration', value: '75 mins' },
-            { key: 'price', value: '£60' },
+            { key: 'Price', value: '£60' },
         ],
     },
     {
@@ -86,7 +86,7 @@ export const BEAUTY_NAIL = [
         description: ``,
         options: [
             { key: 'Duration', value: '10 mins' },
-            { key: 'price', value: '£12' },
+            { key: 'Price', value: '£12' },
         ],
     },
 ];

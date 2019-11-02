@@ -8,7 +8,7 @@ export const BODY_MASSAGE = [
       text ever since the 1500s, when an unknown printer`,
     options: [
       { key: 'Duration', value: '30 mins' },
-      { key: 'price', value: '£40' }
+      { key: 'Price', value: '£40' }
     ]
   },
   {
@@ -20,7 +20,7 @@ export const BODY_MASSAGE = [
         text ever since the 1500s, when an unknown printer`,
     options: [
       { key: 'Duration', value: '60 mins' },
-      { key: 'price', value: '£60' }
+      { key: 'Price', value: '£60' }
     ]
   },
   {
@@ -30,9 +30,9 @@ export const BODY_MASSAGE = [
         text ever since the 1500s, when an unknown printer`,
     options: [
       { key: 'Duration', value: '60 mins' },
-      { key: 'price', value: '£80' },
+      { key: 'Price', value: '£80' },
       { key: 'Duration', value: '90 mins' },
-      { key: 'price', value: '£120' },
+      { key: 'Price', value: '£120' },
     ]
   },
   {
@@ -42,7 +42,7 @@ export const BODY_MASSAGE = [
         text ever since the 1500s, when an unknown printer`,
     options: [
       { key: 'Duration', value: '30 mins' },
-      { key: 'price', value: '£40' },
+      { key: 'Price', value: '£40' },
     ]
   }
 ];

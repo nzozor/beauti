@@ -10,7 +10,7 @@ export class HomePageComponent implements AfterViewInit {
   stickyHeader = false;
   // imgUrl = 'assets/beauti-girl.jpg'; // ToDO: move to component or directive
 
-  imgUrl = 'assets/beauti-home-woman.jpg'; // ToDO: move to component or directive
+  imgUrl = 'assets/beauti-nail-skin.jpg'; // ToDO: move to component or directive
   initialTop: number;
   parallaxDiv: HTMLDivElement;
   setStickyHeader(value: boolean): void {

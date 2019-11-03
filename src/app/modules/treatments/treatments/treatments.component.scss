@@ -6,24 +6,26 @@
     padding: 70px 30px;
 
     @media only screen and (max-width: 600px) {
-      padding: 70px 0;
+      padding: 50px 0;
     }
 
-    >.mat-accordion, mat-accordion {
+    >.mat-accordion,
+    mat-accordion {
 
       >.mat-expansion-panel {
         &:not(.mat-expanded) .mat-expansion-panel-header:not([aria-disabled=true]):hover {
-          background: rgba(0,0,0,.01);
+          background: rgba(0, 0, 0, .01);
         }
 
         ::ng-deep .mat-expansion-panel-body {
           padding: 0;
-          > div {
+
+          >div {
             .description:first-child {
               padding-top: 0;
             }
           }
-      
+
         }
 
         max-width: 853px;
@@ -33,9 +35,12 @@
 
         .mat-expansion-panel {
           background-color: transparent;
-          &:hover, &:focus  {
+
+          &:hover,
+          &:focus {
             background-color: transparent;
           }
+
           .mat-expansion-panel-header {
             height: 35px !important;
             padding-left: 15px;
@@ -48,14 +53,26 @@
             .title {
               font-family: 'Nunito Sans', sans-serif;
               font-size: 14px;
-              padding: 18px;
-              // margin-bottom: 15px;
+              padding: 15px;
+              display: flex;
+              justify-content: space-between;
+              align-items: center;
 
-              span {
-                display: block;
-                
-                &:first-of-type {
-                  font-size: 17px;
+              @media (max-width: 600px) {
+                button {
+                  display: none;
+                }
+              }
+
+              >div {
+                margin-right: 15px;
+
+                >span {
+                  display: block;
+
+                  &:first-of-type {
+                    font-size: 17px;
+                  }
                 }
               }
 
@@ -63,7 +80,7 @@
               background-color: rgba($blue-type1, 0.6);
             }
 
-    
+
 
             .direction-column,
             direction-row {
@@ -86,18 +103,18 @@
 
                 &:last-of-type {
                   margin-bottom: 30px;
+
                   @media (max-width: 600px) {
                     margin-bottom: 15px;
                     border-bottom: 1px solid $blue-type1;
                   }
                 }
 
-                > div {
+                >div {
                   min-width: 130px;
 
                   @media (max-width: 600px) {
                     min-width: 25%;
-
                   }
                 }
               }
@@ -108,10 +125,12 @@
 
       .mat-expansion-panel {
         background: transparent;
+
         .skin-treatment {
           margin-bottom: 30px;
           font-family: 'Nunito Sans', sans-serif;
         }
+
         .mat-expansion-panel-header {
           justify-content: flex-start;
           padding: 10px 0;
@@ -127,11 +146,12 @@
 
           &.mat-expanded {
             font-weight: 400;
+
             .mat-expansion-indicator {
               top: 4px;
             }
           }
-          
+
           ::ng-deep .mat-content {
             display: flex;
             flex: initial;
@@ -147,7 +167,7 @@
             ::ng-deep .main-button.mat-flat-button.mat-primary {
               border: none;
               width: 146px;
-              max-height: 146px;
+              height: 41px;
               padding: 0;
 
               @media only screen and (max-width: 600px) {
@@ -204,7 +224,7 @@
         width: 100%;
       }
     }
- 
+
     .direction-row {
       font-family: 'Nunito Sans', sans-serif;
       font-size: 13px;
@@ -249,11 +269,12 @@
     .direction-column {
 
       @media (max-width: 600px) {
-        & > div > div {
+        &>div>div {
           min-width: 80px;
         }
       }
     }
+
     .treatment-table {
       display: flex;
       flex-direction: column;
@@ -279,6 +300,7 @@
 
           @media only screen and (max-width: 600px) {
             width: 21.6%;
+
             &:first-of-type {
               width: 25%;
             }
@@ -299,6 +321,7 @@
 
             @media only screen and (max-width: 600px) {
               width: 21.6%;
+
               &:first-of-type {
                 width: 25%;
               }
@@ -315,37 +338,52 @@
     transform: scale(1.5);
     position: relative;
     top: -4px;
+
     &::after {
       border-width: 0 1px 1px 0;
     }
   }
+
   ::ng-deep .mat-expansion-indicator::after {
     padding: 5px;
   }
 }
 
-.main-button.mat-flat-button.mat-primary.mobile {
+.book-treatment {
+  // margin: 50px auto;
+  position: fixed;
+  display: none;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.7);
+  bottom: 0;
+  text-align: center;
+  height: 70px;
+  align-items: center;
+  justify-content: center;
+  .main-button.mat-flat-button.mat-primary.mobile {
     border: none;
     width: 146px;
-    height: 41px  ;
+    height: 41px;
     max-height: 146px;
     padding: 0;
-    display: none;
-    margin: 50px auto;
-    position: sticky;
-    left: 50%;
-    transform: translate(-50%);
-    bottom: 13px;
-    @media only screen and (max-width: 600px) {
-      display: block;
-      
-    }
+    // margin: 10px;
+    // left: 50%;
+    // transform: translate(0, -50%);
+    // bottom: 13px;
+    z-index: 10;
+
+  }
+
+  @media only screen and (max-width: 600px) {
+    display: flex;
+
+  }
 }
 
 .mat-expansion-panel {
   & .mat-expansion-panel-header.mat-expanded {
-     ::ng-deep {
-      > .mat-expansion-indicator {
+    ::ng-deep {
+      >.mat-expansion-indicator {
         top: 4px;
       }
     }

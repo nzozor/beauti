@@ -31,6 +31,7 @@ export class MenuLinkComponent implements OnInit, OnChanges {
   @Input() active: boolean;
   @Output() menuLinkOpen = new EventEmitter<boolean>();
   mainMenu: Menu[] = [
+    { title: 'Home', route: '/home' },
     { title: 'About Us', route: '/about-us' },
     {
       title: 'Treatments',

@@ -24,7 +24,13 @@
     </div>
 </div>
 
-<img
-src="assets/bed-beauti.jpg"
-alt="Alumier Brixton Road"
-/>
+
+<ngx-slick-carousel id="carousel" 
+ #slickModal="slick-carousel" 
+ [config]="slideConfig" 
+>
+
+<div ngxSlickItem *ngFor="let slide of slides" class="slide">
+    <img src="{{ slide.img }}" alt="" width="100%">
+</div>
+</ngx-slick-carousel>

@@ -1,12 +1,25 @@
-.main-button.mat-flat-button.mat-primary {
+@import './palette';
+
+.main-button, .mat-stroked-button {
     text-transform: uppercase;
     overflow: hidden;
     text-overflow: ellipsis;
-    padding: 5px 50px;
     border: 1px solid #fff;
-    border-radius: 5px;
     color: #fff;
-    background-color: #C7CBD6;
     font-family: 'Nunito Sans', sans-serif;
     font-size: 13px;
+    min-width: initial!important;
+    &.mat-flat-button.mat-primary {
+        border-radius: 2px;
+        padding: 5px 50px;
+        background-color: #C7CBD6;
+    }
+    &.mat-stroked-button {
+        border-radius: 2px;
+
+        width: 146px;
+        height: 41px;
+        color: $grey-black;
+        border: 1px solid $grey-black;
+    }
 }

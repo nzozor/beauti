@@ -32,28 +32,28 @@ export class ReviewsComponent {
 
   reviews = [
     {
-      reviewerName: 'Jade',
-      quote: 'Exellent service as always',
+      reviewerName: 'Jodie',
+      quote: 'Such friendly staff - very clean',
     },
     {
-      reviewerName: 'Robert',
-      quote: 'Excellent service with a very kind, friendly and professional staff.',
-    },
-    {
-      reviewerName: 'Miriam',
-      quote: 'Best waxing I’ve had in London, I highly recommend Beauti!',
-    },
-    {
-      reviewerName: 'Jade',
-      quote: 'Exellent service as always',
-    },
-    {
-      reviewerName: 'Robert',
-      quote: 'Excellent service with a very kind, friendly and professional staff.',
+      reviewerName: 'Lucy',
+      quote: 'Lovely manicure - clean salon and professional and very friendly staff',
     },
     {
       reviewerName: 'Miriam',
       quote: 'Best waxing I’ve had in London, I highly recommend Beauti!',
+    },
+    {
+      reviewerName: 'Jade',
+      quote: 'Wonderful ladies and a beautiful venue',
+    },
+    {
+      reviewerName: 'Bethany',
+      quote: 'Lovely staff and great atmosphere. Both treatments were perfect I’ll definitely be coming back',
+    },
+    {
+      reviewerName: 'Nadia',
+      quote: 'Brilliant and painless waxing - very chilled and Julia was perfect',
     }
   ];
 

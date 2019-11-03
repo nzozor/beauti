@@ -27,13 +27,21 @@
     // background-size: initial;
     // background-position: top;
     // background-size: 156%;
-    background-attachment: initial;
+    
+    // background-attachment: initial;
 
-    min-height: 263px;
+    // min-height: 263px;
+    // background-size: initial;
+    // background-position-y: 0!important;
+    // background-position-x: -73px;
+    // background-size: 165%;
+
+    background-attachment: initial;
+    min-height: 170px;
     background-size: initial;
-    background-position-y: 0!important;
-    background-position-x: -73px;
-    background-size: 165%;
+    background-position-y: -90px!important;
+    /* background-position-x: -72px; */
+    background-size: 128%;
   }
 }
 

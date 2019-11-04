@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { BookingService } from 'src/app/services/booking.service';
 
 @Component({
   selector: 'app-jumbotron',
@@ -7,9 +8,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class JumbotronComponent implements OnInit {
 
-  constructor() { }
+  constructor(private bookingService: BookingService) { }
 
   ngOnInit() {
+  }
+
+  openBooking() {
+    this.bookingService.sendBooking(true);
   }
 
 }

@@ -11,13 +11,15 @@
       <li><a routerLink="/treatments">TREATMENTS</a></li>
       <li><a routerLink="/contact">CONTACT</a></li>
     </ul>
-    <button
-      mat-flat-button
-      color="primary"
-      class="main-button"
-    >
-      Book now
-    </button>
+      <button
+        mat-flat-button
+        color="primary"
+        class="main-button"
+        (click)="openBooking()"
+      >
+      
+        Book now
+      </button>
 
     <div class="mobile-menu"></div>
   </div>

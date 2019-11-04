@@ -5,6 +5,7 @@ import { WAX_DATA } from '../mocks/waxing';
 import { BODY_MASSAGE, BODY_CONTOURING } from '../mocks/body';
 import { BEAUTY_NAIL, BEAUTY_FACIAL } from '../mocks/beauty';
 import { HAIR_REMOVAL_IPL_LASER, HAIR_REMOVAL_ELECTRO } from '../mocks/hair-removal';
+import { BookingService } from 'src/app/services/booking.service';
 
 @Component({
   selector: 'app-treatments',
@@ -27,10 +28,16 @@ export class TreatmentsComponent implements OnInit {
   rightCol: [];
 
 
-  constructor() { }
+  constructor(private bookingService: BookingService) { }
 
   get isWideScreen() {
     return this.innerWidth >= 600;
+  }
+
+  openBooking(e) {
+    e.preventDefault();
+    e.stopPropagation();
+    this.bookingService.sendBooking(true);
   }
 
   ngOnInit() {

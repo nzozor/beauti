@@ -1,0 +1,27 @@
+
+div {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    position: relative;
+    // bottom: -24px;
+    button {
+        padding: 10px;
+        background-color: transparent;
+        border: none;
+        cursor: pointer;
+        outline: none;
+        align-self: flex-end;
+    }
+    
+    iframe {
+        height: calc(100% - 47px);
+        width: 100%;
+    
+        .button.main-button {
+            background-color: #C7CBD6;
+            color: #fff;
+        }
+    }
+}

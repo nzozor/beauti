@@ -10,7 +10,7 @@ html {
 
 body {
     height: 100%;
-    padding-top: 85px;
+    padding-top: 83px;
 
     @media (max-width: 574px) {
         padding-top: 72px;
@@ -39,4 +39,10 @@ h3 {
             bottom: -40px;
         }
     }
+}
+
+.custom-dialog-container {
+    .mat-dialog-container {
+        padding: 0;
+      }
 }

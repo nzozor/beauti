@@ -1,6 +1,7 @@
 import { Component, OnInit, Inject, OnDestroy, Output, EventEmitter } from '@angular/core';
 import { fromEvent, Observable, Subscription } from 'rxjs';
 import { throttleTime, tap } from 'rxjs/operators';
+import { BookingService } from '../services/booking.service';
 
 
 @Component({
@@ -10,7 +11,8 @@ import { throttleTime, tap } from 'rxjs/operators';
 })
 export class HeaderNavComponent implements OnInit, OnDestroy {
 
-  constructor() { }
+  constructor(private bookingService: BookingService) { }
+
   scrolltop: boolean;
   stickyHeader = false;
   windowScroll: Subscription;
@@ -53,6 +55,10 @@ export class HeaderNavComponent implements OnInit, OnDestroy {
     this.menuLinkOpen = value;
   }
 
+  openBooking() {
+    this.bookingService.sendBooking(true);
+  }
+  
   ngOnDestroy(): void {
     this.windowScroll.unsubscribe();
   }

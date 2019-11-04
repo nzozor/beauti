@@ -1,17 +1,20 @@
 <div>
   <app-quote [position]="'left'"></app-quote> 
   <div class="slogan">
-    Your local <span>skin and beauti specialist</span>, <br>
+    Your local <span>skin and beauty specialist</span>, <br>
     Italian standard.
   </div>  
 </div>
-<button
-mat-flat-button
-color="primary"
-class="main-button book"
->
-Book now
-</button>
+<a href="https://widget.treatwell.co.uk/place/beauti-skin-clinic/">
+  <button
+  mat-flat-button
+  color="primary"
+  class="main-button book"
+  (click)="openBooking()"
+  >
+  Book now
+  </button>
+</a>
 <button 
 mat-flat-button
 color="primary"

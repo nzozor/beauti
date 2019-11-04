@@ -19,9 +19,11 @@
       border: 1px solid $blue-type1;
       position: relative;
       cursor: pointer;
-
+      transition: all .4s;
       
-
+      &:hover {
+        box-shadow: 0 10px 20px rgba(3,27,78,.1); 
+      }
       a {
         text-decoration: none;
 

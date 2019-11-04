@@ -7,9 +7,9 @@
           Advanced Skin Treatments
         </mat-panel-title>
         <mat-panel-description>
-          <button mat-flat-button color="primary" class="main-button">
-            Book now
-          </button>
+            <button (click)="openBooking($event)" mat-flat-button color="primary" class="main-button">
+              Book now
+            </button>
         </mat-panel-description>
       </mat-expansion-panel-header>
       <div class="sub">
@@ -31,9 +31,11 @@
                   <span>{{ treatment.title }}</span>
                   <span [innerHTML]="treatment.treatment"></span>
                 </div>
-                <button mat-stroked-button color="primary" class="main-button">
-                  Book now
-                </button>
+                
+                  <button (click)="openBooking($event)" mat-stroked-button color="primary" class="main-button">
+                    Book now
+                  </button>
+                
               </div>
               <div class="description">{{ treatment.description }}</div>
               <div
@@ -81,13 +83,13 @@
                       [innerHTML]="skinImperfectionRemoval[0].treatment"
                     ></span>
                   </div>
-                  <button
-                    mat-stroked-button
-                    color="primary"
-                    class="main-button"
-                  >
-                    Book now
-                  </button>
+                    <button (click)="openBooking($event)"
+                      mat-stroked-button
+                      color="primary"
+                      class="main-button"
+                    >
+                      Book now
+                    </button>
                 </div>
                 <div class="description">
                   {{ skinImperfectionRemoval[0].description }}
@@ -122,9 +124,10 @@
           Waxing
         </mat-panel-title>
         <mat-panel-description>
-          <button mat-flat-button color="primary" class="main-button">
-            Book now
-          </button>
+              <button (click)="openBooking($event)" mat-flat-button color="primary" class="main-button">
+                Book now
+              </button>
+
         </mat-panel-description>
       </mat-expansion-panel-header>
       <!-- <div >
@@ -177,12 +180,12 @@
     <mat-expansion-panel>
       <mat-expansion-panel-header>
         <mat-panel-title>
-          Hair removal
+          Hair Removal
         </mat-panel-title>
         <mat-panel-description>
-          <button mat-flat-button color="primary" class="main-button">
-            Book now
-          </button>
+              <button (click)="openBooking($event)" mat-flat-button color="primary" class="main-button">
+                Book now
+              </button>
         </mat-panel-description>
       </mat-expansion-panel-header>
       <div id="hair-removal">
@@ -265,9 +268,9 @@
           Body
         </mat-panel-title>
         <mat-panel-description>
-          <button mat-flat-button color="primary" class="main-button">
-            Book now
-          </button>
+              <button (click)="openBooking($event)" mat-flat-button color="primary" class="main-button">
+                Book now
+              </button>
         </mat-panel-description>
       </mat-expansion-panel-header>
       <div class="sub">
@@ -289,9 +292,11 @@
                   <span>{{ treatment.title }}</span>
                   <span [innerHTML]="treatment.treatment"></span>
                 </div>
-                <button mat-stroked-button color="primary" class="main-button">
-                  Book now
-                </button>
+                
+                  <button (click)="openBooking($event)" mat-stroked-button color="primary" class="main-button">
+                    Book now
+                  </button>
+                
               </div>
               <div class="description">{{ treatment.description }}</div>
               <div
@@ -339,9 +344,11 @@
                   <span>{{ treatment.title }}</span>
                   <span [innerHTML]="treatment.treatment"></span>
                 </div>
-                <button mat-stroked-button color="primary" class="main-button">
-                  Book now
-                </button>
+                
+                  <button (click)="openBooking($event)" mat-stroked-button color="primary" class="main-button">
+                    Book now
+                  </button>
+                
               </div>
               <div class="description">{{ treatment.description }}</div>
               <div
@@ -397,9 +404,9 @@
           Beauty
         </mat-panel-title>
         <mat-panel-description>
-          <button mat-flat-button color="primary" class="main-button">
-            Book now
-          </button>
+              <button (click)="openBooking($event)" mat-flat-button color="primary" class="main-button">
+                Book now
+              </button>
         </mat-panel-description>
       </mat-expansion-panel-header>
       <div class="sub">
@@ -418,9 +425,11 @@
                   <span>{{ treatment.title }}</span>
                   <span [innerHTML]="treatment.treatment"></span>
                 </div>
-                <button mat-stroked-button color="primary" class="main-button">
-                  Book now
-                </button>
+                
+                  <button (click)="openBooking($event)" mat-stroked-button color="primary" class="main-button">
+                    Book now
+                  </button>
+                
               </div>
               <div class="description">{{ treatment.description }}</div>
               <div
@@ -465,9 +474,11 @@
                   <span>{{ treatment.title }}</span>
                   <span [innerHTML]="treatment.treatment"></span>
                 </div>
-                <button mat-stroked-button color="primary" class="main-button">
-                  Book now
-                </button>
+                
+                  <button (click)="openBooking($event)" mat-stroked-button color="primary" class="main-button">
+                    Book now
+                  </button>
+                
               </div>
               <div class="description">{{ treatment.description }}</div>
               <div
@@ -494,8 +505,8 @@
     </mat-expansion-panel>
   </mat-accordion>
   <div class="book-treatment">
-    <button mat-flat-button color="primary" class="main-button mobile">
-      Book now
-    </button>
+      <button (click)="openBooking($event)" mat-flat-button color="primary" class="main-button mobile">
+        Book now
+      </button>
   </div>
 </div>

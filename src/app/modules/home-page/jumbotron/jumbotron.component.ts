@@ -14,7 +14,8 @@ export class JumbotronComponent implements OnInit {
   }
 
   openBooking() {
-    this.bookingService.sendBooking(true);
+    // this.bookingService.sendBooking(true);
+    window.location.href = 'https://widget.treatwell.co.uk/place/beauti-skin-clinic/';
   }
 
 }

@@ -9,7 +9,6 @@ declare var require: any;
 export class MapComponent implements OnInit, AfterViewInit{
   map: any;
   constructor() {
-  
   }
 
   ngOnInit() {
@@ -20,6 +19,9 @@ export class MapComponent implements OnInit, AfterViewInit{
       style: 'mapbox://styles/elsaben/ck2mfzocf0e271co95fjg4wry',
       interactive: false
     });
+
+    const nav = new mapboxgl.NavigationControl();
+    this.map.addControl(nav, 'bottom-right');
   }
 
   ngAfterViewInit() {

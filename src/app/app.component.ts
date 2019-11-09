@@ -30,8 +30,6 @@ export class AppComponent implements OnInit {
       }
       window.scrollTo(0, 0);
     });
-
-    this.bookingService.getBooking().subscribe(() => this.openBookingModal());
   }
   setStickyHeader(value: boolean): void {
     this.stickyHeader = value;

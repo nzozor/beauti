@@ -37,8 +37,7 @@ export class TreatmentsComponent implements OnInit {
   openBooking(e) {
     e.preventDefault();
     e.stopPropagation();
-    // this.bookingService.sendBooking(true);
-    window.location.href = 'https://widget.treatwell.co.uk/place/beauti-skin-clinic/';
+    this.bookingService.sendBooking(true);
   }
 
   ngOnInit() {

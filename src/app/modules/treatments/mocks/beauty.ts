@@ -18,16 +18,6 @@ export const BEAUTY_FACIAL = [
         ],
     },
     {
-        title: 'Advanced Beauti Signature Relaxing Facial',
-        treatment: `
-        Choose from Radio Frequency, Skin Rejuvenation, LED Light Therapy. Add Dermaplaning for £30, extra 15 mins`,
-        description: `LOREM description`,
-        options: [
-            { key: 'Duration', value: '75 mins' },
-            { key: 'Single', value: '£130' },
-        ],
-    },
-    {
         title: 'Dermaplaning',
         treatment: `
         Add a hydration mask for £10, extra 15 mins`,

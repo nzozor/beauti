@@ -56,8 +56,7 @@ export class HeaderNavComponent implements OnInit, OnDestroy {
   }
 
   openBooking() {
-    // this.bookingService.sendBooking(true);
-    window.location.href = 'https://widget.treatwell.co.uk/place/beauti-skin-clinic/';
+    this.bookingService.sendBooking(true);
   }
 
   ngOnDestroy(): void {

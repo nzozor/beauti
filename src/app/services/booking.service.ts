@@ -10,7 +10,7 @@ export class BookingService {
   constructor() { }
 
   sendBooking(event: boolean) {
-    this.bookNow.next(event);
+    window.open('https://widget.treatwell.co.uk/place/beauti-skin-clinic/', '_blank');
   }
 
   getBooking(): Observable<boolean> {

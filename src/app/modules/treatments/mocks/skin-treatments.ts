@@ -2,7 +2,7 @@ export const SKIN_TREATMENTS: any = [
   {
     title: 'Advanced Beauti Signature Relaxing Facial',
     treatment: `
-    Choose from Radio Frequency, Skin Rejuvenation, LED Light Therapy.
+    Choose from Radio Frequency, Skin Rejuvenation, LED Light Therapy
     Add Dermaplaning for £30, extra 15 mins`,
     description: `Lorem of the printing and typesetting industry.
     Lorem Ipsum has been the industry’s standard dummy
@@ -15,7 +15,7 @@ export const SKIN_TREATMENTS: any = [
   {
     title: 'Aqua 3 Hydrotherapy Facial',
     treatment: `
-    Choose from Deep-cleaning, Anti-Aging.
+    Choose from Deep-cleaning, Anti-Aging
     Add Black Head Extraction for £10, extra 10 mins`,
     description: `Lorem of the printing and typesetting industry.
     Lorem Ipsum has been the industry’s standard dummy
@@ -30,7 +30,7 @@ export const SKIN_TREATMENTS: any = [
         value: '£120'
       },
       {
-        key: '3 Courses 10% off',
+        key: '3 Courses',
         value: '£324'
       },
       {
@@ -62,13 +62,13 @@ export const SKIN_TREATMENTS: any = [
     ]
   },
   {
-    title: 'Skin Rejuvenation',
+    title: 'IPL Skin Rejuvenation',
     treatment: ``,
     description: `Lorem of the printing and typesetting industry.
     Lorem Ipsum has been the industry’s standard dummy
     text ever since the 1500s, when an unknown printer`,
     options: [
-      { key: 'Duration', value: '60 mins' },
+      { key: 'Duration', value: '30 mins' },
       { key: 'Single', value: '£100' },
       { key: '3 Courses', value: '£270' },
       { key: '6 Courses', value: '£510' }
@@ -112,7 +112,7 @@ export const SKIN_TREATMENTS: any = [
   },
   {
     title: 'Plasma Face Lift',
-    treatment: `one top up session included`,
+    treatment: `Prices below include one free top up session`,
     description: `Lorem of the printing and typesetting industry.
     Lorem Ipsum has been the industry’s standard dummy
     text ever since the 1500s, when an unknown printer`,

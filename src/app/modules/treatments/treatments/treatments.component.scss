@@ -57,7 +57,7 @@
               display: flex;
               justify-content: space-between;
               align-items: center;
-
+              margin-bottom: 20px;
               @media (max-width: 600px) {
                 button {
                   display: none;
@@ -209,6 +209,7 @@
     // font-weight: 300;
     padding: 15px 18px;
     line-height: 23px;
+    display: none;
   }
 
   .waxing {

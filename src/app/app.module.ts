@@ -34,7 +34,7 @@ import { TreatwellComponent } from './components/treatwell/treatwell.component';
     TreatwellComponent,
   ],
   imports: [
-    BrowserModule,
+    BrowserModule.withServerTransition({ appId: 'serverApp' }),
     AppRoutingModule,
     BrowserAnimationsModule,
     MatButtonModule,

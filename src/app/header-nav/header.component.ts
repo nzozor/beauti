@@ -1,17 +1,18 @@
-import { Component, OnInit, Inject, OnDestroy, Output, EventEmitter } from '@angular/core';
+import { Component, OnInit, Inject, Output, EventEmitter } from '@angular/core';
 import { fromEvent, Observable, Subscription } from 'rxjs';
 import { throttleTime, tap } from 'rxjs/operators';
 import { BookingService } from '../services/booking.service';
 
+import { DOCUMENT } from '@angular/common';
 
 @Component({
   selector: 'app-header-nav',
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.scss']
 })
-export class HeaderNavComponent implements OnInit, OnDestroy {
+export class HeaderNavComponent implements OnInit {
 
-  constructor(private bookingService: BookingService) { }
+  constructor(@Inject(DOCUMENT) private document: Document,private bookingService: BookingService) { }
 
   scrolltop: boolean;
   stickyHeader = false;
@@ -29,7 +30,7 @@ export class HeaderNavComponent implements OnInit, OnDestroy {
 
 
   ngOnInit() {
-    this.windowScroll = fromEvent<MouseEvent>(document, 'scroll')
+    fromEvent<MouseEvent>(this.document, 'scroll')
       .pipe(
         throttleTime(20),
         tap(this.onScroll.bind(this))
@@ -40,7 +41,7 @@ export class HeaderNavComponent implements OnInit, OnDestroy {
   }
 
   onScroll(): void {
-    const doc = document.documentElement;
+    const doc = this.document.documentElement;
     const winScroll = doc.scrollTop;
     const height = doc.scrollHeight - doc.clientHeight;
 
@@ -59,7 +60,4 @@ export class HeaderNavComponent implements OnInit, OnDestroy {
     this.bookingService.sendBooking(true);
   }
 
-  ngOnDestroy(): void {
-    this.windowScroll.unsubscribe();
-  }
 }

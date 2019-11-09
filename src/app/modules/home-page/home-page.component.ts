@@ -1,4 +1,5 @@
-import { Component, AfterContentInit, HostListener, AfterViewInit } from '@angular/core';
+import { Component, AfterContentInit, HostListener, AfterViewInit, Inject } from '@angular/core';
+import { DOCUMENT } from '@angular/common';
 
 @Component({
   selector: 'app-home-page',
@@ -13,12 +14,15 @@ export class HomePageComponent implements AfterViewInit {
   imgUrl = 'assets/beauti-nail-skin.jpg'; // ToDO: move to component or directive
   initialTop: number;
   parallaxDiv: HTMLDivElement;
+
+  constructor(@Inject(DOCUMENT) private document: Document) {}
+  
   setStickyHeader(value: boolean): void {
     this.stickyHeader = value;
   }
 
   ngAfterViewInit() {
-    this.parallaxDiv = document.querySelector('.parallax');
+    this.parallaxDiv = this.document.querySelector('.parallax');
 
     this.parallaxDiv.style.backgroundPositionY = '100px';
     this.initialTop = parseInt(this.parallaxDiv.style.backgroundPositionY, 10);

@@ -10,7 +10,8 @@ export const SKIN_TREATMENTS: any = [
     options: [
       { key: 'Duration',  value: '75 mins'},
       { key: 'Single', value: '£130'}
-    ]
+    ],
+    new: true
   },
   {
     title: 'Aqua 3 Hydrotherapy Facial',
@@ -59,7 +60,8 @@ export const SKIN_TREATMENTS: any = [
         key: '3 Courses',
         value: '£675'
       },
-    ]
+    ],
+    new: true
   },
   {
     title: 'IPL Skin Rejuvenation',
@@ -72,7 +74,7 @@ export const SKIN_TREATMENTS: any = [
       { key: 'Single', value: '£100' },
       { key: '3 Courses', value: '£270' },
       { key: '6 Courses', value: '£510' }
-    ]
+    ],
   },
   {
     title: 'Microneedling with Dermapen',

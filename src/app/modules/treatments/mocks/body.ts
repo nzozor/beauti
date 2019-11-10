@@ -33,7 +33,8 @@ export const BODY_MASSAGE = [
       { key: 'Price', value: '£80' },
       { key: 'Duration', value: '90 mins' },
       { key: 'Price', value: '£120' },
-    ]
+    ],
+    new: true
   },
   {
     title: `Foot Massage`,
@@ -43,7 +44,8 @@ export const BODY_MASSAGE = [
     options: [
       { key: 'Duration', value: '30 mins' },
       { key: 'Price', value: '£40' },
-    ]
+    ],
+    new: true
   }
 ];
 

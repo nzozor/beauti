@@ -28,7 +28,7 @@
             >
               <div class="title">
                 <div>
-                  <span>{{ treatment.title }}</span>
+                  <span>{{ treatment.title }} <span class="new" *ngIf="treatment.new"> - new</span></span>
                   <span [innerHTML]="treatment.treatment"></span>
                 </div>
                 
@@ -78,7 +78,7 @@
               <div class="skin-treatment">
                 <div class="title">
                   <div>
-                    <span>{{ skinImperfectionRemoval[0].title }}</span>
+                    <span>{{ skinImperfectionRemoval[0].title }}<span class="new" *ngIf="skinImperfectionRemoval[0].new"> - new</span></span>
                     <span
                       [innerHTML]="skinImperfectionRemoval[0].treatment"
                     ></span>
@@ -289,7 +289,7 @@
             >
               <div class="title">
                 <div>
-                  <span>{{ treatment.title }}</span>
+                  <span>{{ treatment.title }}<span class="new" *ngIf="treatment.new"> - new</span></span>
                   <span [innerHTML]="treatment.treatment"></span>
                 </div>
                 
@@ -341,7 +341,7 @@
             >
               <div class="title">
                 <div>
-                  <span>{{ treatment.title }}</span>
+                  <span>{{ treatment.title }}<span class="new" *ngIf="treatment.new"> - new</span></span>
                   <span [innerHTML]="treatment.treatment"></span>
                 </div>
                 
@@ -422,7 +422,7 @@
             <div class="skin-treatment" *ngFor="let treatment of beautyFacial">
               <div class="title">
                 <div>
-                  <span>{{ treatment.title }}</span>
+                  <span>{{ treatment.title }}<span class="new" *ngIf="treatment.new"> - new</span></span>
                   <span [innerHTML]="treatment.treatment"></span>
                 </div>
                 
@@ -471,7 +471,7 @@
             <div class="skin-treatment" *ngFor="let treatment of beautyNail">
               <div class="title">
                 <div>
-                  <span>{{ treatment.title }}</span>
+                  <span>{{ treatment.title }}<span class="new" *ngIf="treatment.new"> - new</span></span>
                   <span [innerHTML]="treatment.treatment"></span>
                 </div>
                 

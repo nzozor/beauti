@@ -16,6 +16,7 @@ export const BEAUTY_FACIAL = [
             { key: 'Duration', value: '60 mins' },
             { key: 'Single', value: '£80' },
         ],
+        new: true
     },
     {
         title: 'Dermaplaning',
@@ -33,6 +34,7 @@ export const BEAUTY_FACIAL = [
             { key: 'Duration', value: '45 mins' },
             { key: 'Single', value: '£65' },
         ],
+        new: true
     },
 ];
 
@@ -50,6 +52,7 @@ export const BEAUTY_NAIL = [
             { key: 'Duration', value: '60 mins' },
             { key: 'Price', value: '£35' },
         ],
+        new: true
     },
     {
         title: 'Luxury Pedicure',
@@ -60,6 +63,7 @@ export const BEAUTY_NAIL = [
             { key: 'Duration', value: '60 mins' },
             { key: 'Price', value: '£40' },
         ],
+        new: true
     },
     {
         title: 'Medical Pedicure',

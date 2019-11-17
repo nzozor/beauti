@@ -2,7 +2,7 @@ export const SKIN_TREATMENTS: any = [
   {
     title: 'Advanced Beauti Signature Relaxing Facial',
     treatment: `
-    Choose from Radio Frequency, Skin Rejuvenation, LED Light Therapy
+    Choose from Radio Frequency, Skin Rejuvenation, LED Light Therapy.
     Add Dermaplaning for £30, extra 15 mins`,
     description: `Lorem of the printing and typesetting industry.
     Lorem Ipsum has been the industry’s standard dummy

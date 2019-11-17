@@ -18,6 +18,9 @@ export class ContactComponent implements OnInit {
     {img: 'assets/beauti-skin-clinic-oval-1.jpg' },
     {img: 'assets/beauti-skin-clinic-oval-2.jpg' },
     {img: 'assets/beauti-skin-clinic-oval-3.jpg' },
+    {img: 'assets/beauti-skin-clinic-oval-alumier.jpg' },
+    {img: 'assets/beauti-skin-clinic-oval-sothys.jpg' },
+    {img: 'assets/beauti-skin-clinic-oval-waxed.jpg' },
   ];
 
   constructor() { }

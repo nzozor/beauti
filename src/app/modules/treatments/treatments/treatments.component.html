@@ -28,7 +28,7 @@
             >
               <div class="title">
                 <div>
-                  <span>{{ treatment.title }} <span class="new" *ngIf="treatment.new"> - new</span></span>
+                  <span [innerHtml]="treatment.title"> <span class="new" *ngIf="treatment.new"> - new</span></span>
                   <span [innerHTML]="treatment.treatment"></span>
                 </div>
                 

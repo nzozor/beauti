@@ -106,7 +106,7 @@ export const SKIN_TREATMENTS: any = [
     Lorem Ipsum has been the industry’s standard dummy
     text ever since the 1500s, when an unknown printer`,
     options: [
-      { key: 'Duration', value: '60 mins'},
+      { key: 'Duration', value: '60 mins' },
       { key: 'Single', value: '£110' },
       { key: '3 Courses', value: '£297' },
       { key: '6 Courses', value: '£561' }

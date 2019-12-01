@@ -1,6 +1,5 @@
-import { Component, AfterContentInit, HostListener, OnInit } from '@angular/core';
-import { Router, NavigationEnd } from '@angular/router';
-import { ReplaySubject, Subject } from 'rxjs';
+import { Component, OnInit } from '@angular/core';
+import { Router, NavigationEnd, RouteConfigLoadStart, RouteConfigLoadEnd } from '@angular/router';
 import { BookingService } from './services/booking.service';
 import { MatDialog } from '@angular/material/dialog';
 import { TreatwellComponent } from './components/treatwell/treatwell.component';
@@ -10,14 +9,11 @@ import { TreatwellComponent } from './components/treatwell/treatwell.component';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
-// export class AppComponent implements AfterContentInit {
 export class AppComponent implements OnInit {
 
   title = 'beauti-frontend';
   stickyHeader = false;
-  // imgUrl = 'assets/beauti-girl.jpg'; // ToDO: move to component or directive
-  // initialTop: number;
-  // parallaxDiv: HTMLDivElement;
+  loadingRouteConfig = false;
   constructor(
     private router: Router,
     private bookingService: BookingService,
@@ -25,11 +21,16 @@ export class AppComponent implements OnInit {
   ) { }
   ngOnInit() {
     this.router.events.subscribe((event) => {
-      if (!(event instanceof NavigationEnd)) {
-        return;
+      if ((event instanceof NavigationEnd)) {
+        window.scrollTo(0, 0);
       }
-      window.scrollTo(0, 0);
+      if (event instanceof RouteConfigLoadStart) {
+        this.loadingRouteConfig = true;
+      } else if (event instanceof RouteConfigLoadEnd) {
+        this.loadingRouteConfig  = false;
+      }
     });
+
   }
   setStickyHeader(value: boolean): void {
     this.stickyHeader = value;

@@ -53,9 +53,9 @@ export const WAX_DATA = [
         treatment: 'Intimate Waxing for Women',
         options: [
           { key: 'Bikini', value: '£18' },
-          { key: 'Brazilian', value: '£32' },
+          { key: 'Brazilian', value: '£35' },
           { key: 'Extended Bikini', value: '£25' },
-          { key: 'Hollywood', value: '£34' },
+          { key: 'Hollywood', value: '£35' },
         ]
       },
     ]

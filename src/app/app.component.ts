@@ -23,6 +23,7 @@ export class AppComponent implements OnInit {
     this.router.events.subscribe((event) => {
       if ((event instanceof NavigationEnd)) {
         window.scrollTo(0, 0);
+        this.loadingRouteConfig  = false;
       }
       if (event instanceof RouteConfigLoadStart) {
           this.loadingRouteConfig = true;

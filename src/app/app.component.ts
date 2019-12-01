@@ -25,10 +25,7 @@ export class AppComponent implements OnInit {
         window.scrollTo(0, 0);
       }
       if (event instanceof RouteConfigLoadStart) {
-        setTimeout( () => {
           this.loadingRouteConfig = true;
-
-        }, 250);
       } else if (event instanceof RouteConfigLoadEnd) {
         this.loadingRouteConfig  = false;
       }

@@ -12,7 +12,7 @@ export const BODY_MASSAGE = [
     ]
   },
   {
-    title: 'Deep Tissue Massage',
+    title: 'Full Body Deep Tissue Massage',
     treatment: `
         Upgrade to aromatherapy oil for extra £5`,
     description: `Lorem of the printing and typesetting industry.

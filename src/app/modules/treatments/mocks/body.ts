@@ -46,6 +46,16 @@ export const BODY_MASSAGE = [
       { key: 'Price', value: '£40' },
     ],
     new: true
+  },
+  {
+    title: `FaceTone Massage`,
+    description: `Lorem of the printing and typesetting industry.
+        Lorem Ipsum has been the industry’s standard dummy
+        text ever since the 1500s, when an unknown printer`,
+    options: [
+      { key: 'Duration', value: '30 mins' },
+      { key: 'Price', value: '£40' },
+    ],
   }
 ];
 

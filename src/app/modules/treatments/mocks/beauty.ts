@@ -76,7 +76,7 @@ export const BEAUTY_NAIL = [
         ],
     },
     {
-        treatment: `Gel Removal Only`,
+        title: `Gel Removal Only`,
         description: ``,
         options: [
             { key: 'Duration', value: '10 mins' },

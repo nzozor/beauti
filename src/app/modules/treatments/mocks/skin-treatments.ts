@@ -229,4 +229,73 @@ export const SKIN_TREATMENTS: any = [
       }
     ]
   },
+  {
+    title: 'Anti-Wrinkle Injections',
+    treatment: ``,
+    description: `Lorem of the printing and typesetting industry.
+    Lorem Ipsum has been the industry’s standard dummy
+    text ever since the 1500s, when an unknown printer`,
+    orientation: 'row',
+    options: [
+      {
+        treatment: `One Area`,
+        options: [
+          { key: 'Duration', value: '60 mins'},
+          { key: 'Single', value: '£175'},
+        ]
+      },
+      {
+        treatment: `Two Areas`,
+        options: [
+          { key: 'Duration', value: '60 mins' },
+          { key: 'Single', value: '£250' },
+        ]
+      },
+      {
+        treatment: `Three Areas`,
+        description: `Lorem of the printing and typesetting industry.
+        Lorem Ipsum has been the industry’s standard dummy
+        text ever since the 1500s, when an unknown printer`,
+        options: [
+          { key: 'Duration', value: '60 mins' },
+          { key: 'Single', value: '£325'},
+        ]
+      },
+    ]
+  },
+  {
+    title: 'Derma Fillers',
+    treatment: ``,
+    description: `Lorem of the printing and typesetting industry.
+    Lorem Ipsum has been the industry’s standard dummy
+    text ever since the 1500s, when an unknown printer`,
+    orientation: 'row',
+    options: [
+      {
+        treatment: `Lip Filler`,
+        options: [
+          { key: 'Duration', value: '60 mins'},
+          { key: 'Single', value: '£190'},
+        ]
+      },
+      {
+        treatment: `Marionette Filler`,
+        options: [
+          { key: 'Duration', value: '60 mins' },
+          { key: 'Single', value: '£190' },
+        ]
+      },
+      {
+        treatment: `Laugh Line Filler`,
+        description: `Lorem of the printing and typesetting industry.
+        Lorem Ipsum has been the industry’s standard dummy
+        text ever since the 1500s, when an unknown printer`,
+        options: [
+          { key: 'Duration', value: '60 mins' },
+          { key: 'Single', value: '£250'},
+        ]
+      },
+      
+    ]
+  },
 ];

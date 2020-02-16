@@ -42,51 +42,16 @@ export const SKIN_TREATMENTS: any = [
     ]
   },
   {
-    title: 'TriBeauti Facial ',
-    treatment: `Skin Rejuvenation + Radio Frequency + Microneedling
-    with Dermapen 3-in-1 Treatment`,
-    description: `of the printing and typesetting industry.
-    Lorem Ipsum has been the industry’s standard dummy
-    text ever since the 1500s, when an unknown printer`,
-    options: [
-      {
-        key: 'Duration',
-        value: '90 mins',
-      },
-      {
-        key: 'Single',
-        value: '£250',
-      },
-      {
-        key: '3 Courses',
-        value: '£675'
-      },
-    ],
-    new: true
-  },
-  {
-    title: 'IPL Skin Rejuvenation',
-    treatment: ``,
-    description: `Lorem of the printing and typesetting industry.
-    Lorem Ipsum has been the industry’s standard dummy
-    text ever since the 1500s, when an unknown printer`,
-    options: [
-      { key: 'Duration', value: '30 mins' },
-      { key: 'Single', value: '£100' },
-      { key: '3 Courses', value: '£270' },
-      { key: '6 Courses', value: '£510' }
-    ],
-  },
-  {
-    title: 'Microneedling with Dermapen',
-    treatment: ``,
+    title: `Skin Peels`,
+    treatment: `Add LED Light Therapy for £20, extra 15 mins`,
     description: `Lorem of the printing and typesetting industry.
     Lorem Ipsum has been the industry’s standard dummy
     text ever since the 1500s, when an unknown printer`,
     options: [
       { key: 'Duration', value: '60 mins' },
-      { key: 'Single', value: '£180' },
-      { key: '4 Courses', value: '£648' }
+      { key: 'Single', value: '£110' },
+      { key: '3 Courses', value: '£297' },
+      { key: '6 Courses', value: '£561' }
     ]
   },
   {
@@ -103,16 +68,108 @@ export const SKIN_TREATMENTS: any = [
     ]
   },
   {
-    title: `Skin Peels`,
-    treatment: `Add LED Light Therapy for £20, extra 15 mins`,
+    title: `Beauti Fusion Mesotherapy`,
+    treatment: ``,
     description: `Lorem of the printing and typesetting industry.
     Lorem Ipsum has been the industry’s standard dummy
     text ever since the 1500s, when an unknown printer`,
     options: [
       { key: 'Duration', value: '60 mins' },
-      { key: 'Single', value: '£110' },
-      { key: '3 Courses', value: '£297' },
-      { key: '6 Courses', value: '£561' }
+      { key: 'Face Meso', value: '£150' },
+      { key: 'Neck & Decolletage Meso', value: '£200'},
+    ]
+  },
+  {
+    title: 'IPL Skin Rejuvenation',
+    treatment: ``,
+    description: `Lorem of the printing and typesetting industry.
+    Lorem Ipsum has been the industry’s standard dummy
+    text ever since the 1500s, when an unknown printer`,
+    options: [
+      { key: 'Duration', value: '30 mins' },
+      { key: 'Single', value: '£100' },
+      { key: '3 Courses', value: '£270' },
+      { key: '6 Courses', value: '£510' }
+    ],
+  },
+  {
+    title: 'Micro-Needling with Dermapen',
+    treatment: ``,
+    description: `Lorem of the printing and typesetting industry.
+    Lorem Ipsum has been the industry’s standard dummy
+    text ever since the 1500s, when an unknown printer`,
+    options: [
+      { key: 'Duration', value: '60 mins' },
+      { key: 'Single', value: '£180' },
+      { key: '4 Courses', value: '£648' }
+    ]
+  },
+  {
+    title: 'Anti-Wrinkle Injections',
+    treatment: ``,
+    description: `Lorem of the printing and typesetting industry.
+    Lorem Ipsum has been the industry’s standard dummy
+    text ever since the 1500s, when an unknown printer`,
+    orientation: 'row',
+    options: [
+      {
+        treatment: `One Area`,
+        options: [
+          { key: 'Duration', value: '60 mins'},
+          { key: 'Single', value: '£175'},
+        ]
+      },
+      {
+        treatment: `Two Areas`,
+        options: [
+          { key: 'Duration', value: '60 mins' },
+          { key: 'Single', value: '£250' },
+        ]
+      },
+      {
+        treatment: `Three Areas`,
+        description: `Lorem of the printing and typesetting industry.
+        Lorem Ipsum has been the industry’s standard dummy
+        text ever since the 1500s, when an unknown printer`,
+        options: [
+          { key: 'Duration', value: '60 mins' },
+          { key: 'Single', value: '£325'},
+        ]
+      },
+    ]
+  },
+  {
+    title: 'Dermal Fillers',
+    treatment: ``,
+    description: `Lorem of the printing and typesetting industry.
+    Lorem Ipsum has been the industry’s standard dummy
+    text ever since the 1500s, when an unknown printer`,
+    orientation: 'row',
+    options: [
+      {
+        treatment: `Lip Filler`,
+        options: [
+          { key: 'Duration', value: '60 mins'},
+          { key: 'Single', value: '£190'},
+        ]
+      },
+      {
+        treatment: `Marionette Filler`,
+        options: [
+          { key: 'Duration', value: '60 mins' },
+          { key: 'Single', value: '£190' },
+        ]
+      },
+      {
+        treatment: `Laugh Line Filler`,
+        description: `Lorem of the printing and typesetting industry.
+        Lorem Ipsum has been the industry’s standard dummy
+        text ever since the 1500s, when an unknown printer`,
+        options: [
+          { key: 'Duration', value: '60 mins' },
+          { key: 'Single', value: '£250'},
+        ]
+      },
     ]
   },
   {
@@ -230,72 +287,26 @@ export const SKIN_TREATMENTS: any = [
     ]
   },
   {
-    title: 'Anti-Wrinkle Injections',
-    treatment: ``,
-    description: `Lorem of the printing and typesetting industry.
+    title: 'TriBeauti Facial ',
+    treatment: `Skin Rejuvenation + Radio Frequency + Microneedling
+    with Dermapen 3-in-1 Treatment`,
+    description: `of the printing and typesetting industry.
     Lorem Ipsum has been the industry’s standard dummy
     text ever since the 1500s, when an unknown printer`,
-    orientation: 'row',
     options: [
       {
-        treatment: `One Area`,
-        options: [
-          { key: 'Duration', value: '60 mins'},
-          { key: 'Single', value: '£175'},
-        ]
+        key: 'Duration',
+        value: '90 mins',
       },
       {
-        treatment: `Two Areas`,
-        options: [
-          { key: 'Duration', value: '60 mins' },
-          { key: 'Single', value: '£250' },
-        ]
+        key: 'Single',
+        value: '£250',
       },
       {
-        treatment: `Three Areas`,
-        description: `Lorem of the printing and typesetting industry.
-        Lorem Ipsum has been the industry’s standard dummy
-        text ever since the 1500s, when an unknown printer`,
-        options: [
-          { key: 'Duration', value: '60 mins' },
-          { key: 'Single', value: '£325'},
-        ]
+        key: '3 Courses',
+        value: '£675'
       },
-    ]
-  },
-  {
-    title: 'Derma Fillers',
-    treatment: ``,
-    description: `Lorem of the printing and typesetting industry.
-    Lorem Ipsum has been the industry’s standard dummy
-    text ever since the 1500s, when an unknown printer`,
-    orientation: 'row',
-    options: [
-      {
-        treatment: `Lip Filler`,
-        options: [
-          { key: 'Duration', value: '60 mins'},
-          { key: 'Single', value: '£190'},
-        ]
-      },
-      {
-        treatment: `Marionette Filler`,
-        options: [
-          { key: 'Duration', value: '60 mins' },
-          { key: 'Single', value: '£190' },
-        ]
-      },
-      {
-        treatment: `Laugh Line Filler`,
-        description: `Lorem of the printing and typesetting industry.
-        Lorem Ipsum has been the industry’s standard dummy
-        text ever since the 1500s, when an unknown printer`,
-        options: [
-          { key: 'Duration', value: '60 mins' },
-          { key: 'Single', value: '£250'},
-        ]
-      },
-      
-    ]
+    ],
+    new: true
   },
 ];

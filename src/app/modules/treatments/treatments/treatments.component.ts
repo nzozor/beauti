@@ -43,7 +43,6 @@ export class TreatmentsComponent implements OnInit {
   ngOnInit() {
     this.leftCol = this.waxing[0].options.slice(0, Math.ceil(this.waxing[0].options.length / 2));
     this.rightCol = this.waxing[0].options.slice(Math.ceil(this.waxing[0].options.length / 2));
-
     this.innerWidth = window.innerWidth;
   }
 }

@@ -47,58 +47,6 @@
             </div>
           </div>
         </div>
-        <mat-expansion-panel>
-          <mat-expansion-panel-header>
-            <mat-panel-title>
-                            Skin Treatments
-                        </mat-panel-title>
-            <mat-panel-description></mat-panel-description>
-          </mat-expansion-panel-header>
-          <div>
-            <!-- <div
-              class="skin-treatment"
-              *ngFor="let treatment of skinTreatments"
-            >
-                            <div class="title">
-                                <div>
-                                    <span [innerHtml]="treatment.title"></span>
-                                    <span [innerHTML]="treatment.treatment"></span>
-                                </div>
-
-                                <button (click)="openBooking($event)" mat-stroked-button color="primary" class="main-button">
-                    Book now
-                  </button>
-
-                            </div>
-                            <div class="description">{{ treatment.description }}</div>
-                            <div
-                class="direction-column"
-                *ngIf="treatment.orientation !== 'row'"
-              >
-                                <div class="options-key">
-                                    <div *ngFor="let option of treatment.options">
-                                        {{ option.key }}
-                                    </div>
-                                </div>
-
-                                <div class="options-value">
-                                    <div *ngFor="let option of treatment.options">
-                                        {{ option.value }}
-                                    </div>
-                                </div>
-                            </div>
-                            <div
-                class="direction-row"
-                *ngIf="treatment.orientation === 'row'"
-              >
-                                <div class="row" *ngFor="let option of treatment.options">
-                                    <div>{{ option.treatment }}</div>
-                                    <div>{{ option.options[1].value }}</div>
-                                </div>
-                            </div>
-                        </div> -->
-          </div>
-        </mat-expansion-panel>
         <!-- <mat-expansion-panel>
                     <mat-expansion-panel-header>
                         <mat-panel-title>

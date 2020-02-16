@@ -2,8 +2,7 @@ export const SKIN_TREATMENTS: any = [
   {
     title: 'Advanced Beauti Signature Relaxing Facial',
     treatment: `
-    Choose from Radio Frequency, Skin Rejuvenation, LED Light Therapy
-    <br>Add Dermaplaning for £30, extra 15 mins`,
+    Choose from Radio Frequency, Skin Rejuvenation, LED Light Therapy`,
     description: `Lorem of the printing and typesetting industry.
     Lorem Ipsum has been the industry’s standard dummy
     text ever since the 1500s, when an unknown printer`,
@@ -16,9 +15,7 @@ export const SKIN_TREATMENTS: any = [
   {
     title: 'Aqua 3 Hydrotherapy Facial',
     treatment: `
-    Choose from Deep-cleaning, Anti-Aging<br>
-    Add Black Head Extraction for £10, extra 10 mins<br>
-    Add LED Light Therapy for £20, extra 15 mins`,
+    Choose from Deep-cleaning, Anti-Aging`,
     description: `Lorem of the printing and typesetting industry.
     Lorem Ipsum has been the industry’s standard dummy
     text ever since the 1500s, when an unknown printer`,
@@ -43,7 +40,7 @@ export const SKIN_TREATMENTS: any = [
   },
   {
     title: `Skin Peels`,
-    treatment: `Add LED Light Therapy for £20, extra 15 mins`,
+    treatment: ``,
     description: `Lorem of the printing and typesetting industry.
     Lorem Ipsum has been the industry’s standard dummy
     text ever since the 1500s, when an unknown printer`,
@@ -56,7 +53,7 @@ export const SKIN_TREATMENTS: any = [
   },
   {
     title: `Radio Frequency Skin Tightening`,
-    treatment: `Add LED Light Therapy for £20, extra 15 mins`,
+    treatment: ``,
     description: `Lorem of the printing and typesetting industry.
     Lorem Ipsum has been the industry’s standard dummy
     text ever since the 1500s, when an unknown printer`,

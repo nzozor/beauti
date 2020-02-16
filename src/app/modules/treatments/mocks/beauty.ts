@@ -1,8 +1,7 @@
 export const BEAUTY_FACIAL = [
     {
         title: 'Beauti Signature Relaxing Facial',
-        treatment: `
-        Add Dermaplaning for £30, extra 15 mins`,
+        treatment: ``,
         description: `Dermaplaning is a face shaving treatment believe to be
         used by Marilyn Monroe and Elizabeth Taylor and it is now a very popular
         skin treatment loved by many modern women. We use a medical grade scalpel
@@ -20,8 +19,7 @@ export const BEAUTY_FACIAL = [
     },
     {
         title: 'Dermaplaning',
-        treatment: `
-        Add a hydration mask for £10, extra 15 mins`,
+        treatment: ``,
         description: `Dermaplaning is a face shaving treatment believe to be used by Marilyn
         Monroe and Elizabeth Taylor and it is now a very popular skin treatment loved by many modern women.
         We use a medical grade scalpel to remove peach fuzz (vellus hair) and lightly exfoilate the skin's surface,

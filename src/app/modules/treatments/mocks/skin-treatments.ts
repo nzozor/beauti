@@ -7,8 +7,8 @@ export const SKIN_TREATMENTS: any = [
     Lorem Ipsum has been the industry’s standard dummy
     text ever since the 1500s, when an unknown printer`,
     options: [
-      { key: 'Duration',  value: '75 mins'},
-      { key: 'Single', value: '£130'}
+      { key: 'Duration', value: '75 mins' },
+      { key: 'Single', value: '£130' }
     ],
     new: true
   },
@@ -60,8 +60,8 @@ export const SKIN_TREATMENTS: any = [
     options: [
       { key: 'Duration', value: '60 mins' },
       { key: 'Single', value: '£80' },
-      { key: '3 Courses', value: '£216'},
-      { key: '6 Courses', value: '£408'}
+      { key: '3 Courses', value: '£216' },
+      { key: '6 Courses', value: '£408' }
     ]
   },
   {
@@ -70,10 +70,33 @@ export const SKIN_TREATMENTS: any = [
     description: `Lorem of the printing and typesetting industry.
     Lorem Ipsum has been the industry’s standard dummy
     text ever since the 1500s, when an unknown printer`,
+    orientation: 'row',
+    fullOptions: 'true',
     options: [
-      { key: 'Duration', value: '60 mins' },
-      { key: 'Face Meso', value: '£150' },
-      { key: 'Neck & Decolletage Meso', value: '£200'},
+      {
+        treatment: '                            ',
+        options: [
+          { key: '   Duration', value: '' },
+          { key: '   1 course', value: '' },
+          { key: '   4 courses', value: '' },
+        ]
+      },
+      {
+        treatment: `    Face Meso`,
+        options: [
+          { key: '', value: '    60 mins' },
+          { key: '', value: '    £150' },
+          { key: '', value: '    £540' },
+        ]
+      },
+      {
+        treatment: `Neck & Decolletage`,
+        options: [
+          { key: '', value: '60 mins' },
+          { key: '', value: '£200' },
+          { key: '', value: '£720' },
+        ]
+      },
     ]
   },
   {
@@ -112,8 +135,8 @@ export const SKIN_TREATMENTS: any = [
       {
         treatment: `One Area`,
         options: [
-          { key: 'Duration', value: '60 mins'},
-          { key: 'Single', value: '£175'},
+          { key: 'Duration', value: '60 mins' },
+          { key: 'Single', value: '£175' },
         ]
       },
       {
@@ -130,7 +153,7 @@ export const SKIN_TREATMENTS: any = [
         text ever since the 1500s, when an unknown printer`,
         options: [
           { key: 'Duration', value: '60 mins' },
-          { key: 'Single', value: '£325'},
+          { key: 'Single', value: '£325' },
         ]
       },
     ]
@@ -146,8 +169,8 @@ export const SKIN_TREATMENTS: any = [
       {
         treatment: `Lip Filler`,
         options: [
-          { key: 'Duration', value: '60 mins'},
-          { key: 'Single', value: '£190'},
+          { key: 'Duration', value: '60 mins' },
+          { key: 'Single', value: '£190' },
         ]
       },
       {
@@ -164,7 +187,7 @@ export const SKIN_TREATMENTS: any = [
         text ever since the 1500s, when an unknown printer`,
         options: [
           { key: 'Duration', value: '60 mins' },
-          { key: 'Single', value: '£250'},
+          { key: 'Single', value: '£250' },
         ]
       },
     ]
@@ -180,8 +203,8 @@ export const SKIN_TREATMENTS: any = [
       {
         treatment: `Upper Eye`,
         options: [
-          { key: 'Duration', value: '60 mins'},
-          { key: 'Single', value: '£350'},
+          { key: 'Duration', value: '60 mins' },
+          { key: 'Single', value: '£350' },
         ]
       },
       {
@@ -198,7 +221,7 @@ export const SKIN_TREATMENTS: any = [
         text ever since the 1500s, when an unknown printer`,
         options: [
           { key: 'Duration', value: '60 mins' },
-          { key: 'Single', value: '£500'},
+          { key: 'Single', value: '£500' },
         ]
       },
       {
@@ -257,8 +280,8 @@ export const SKIN_TREATMENTS: any = [
         Lorem Ipsum has been the industry’s standard dummy
         text ever since the 1500s, when an unknown printer`,
         options: [
-          {key: 'Duration', value: '60 mins'},
-          {key: 'Single', value: '£800'}
+          { key: 'Duration', value: '60 mins' },
+          { key: 'Single', value: '£800' }
         ]
       },
       {
@@ -268,7 +291,7 @@ export const SKIN_TREATMENTS: any = [
         text ever since the 1500s, when an unknown printer`,
         options: [
           { key: 'Duration', value: '60 mins' },
-          { key: 'Single', value: '£900'},
+          { key: 'Single', value: '£900' },
         ]
       },
       {
@@ -277,8 +300,8 @@ export const SKIN_TREATMENTS: any = [
         Lorem Ipsum has been the industry’s standard dummy
         text ever since the 1500s, when an unknown printer`,
         options: [
-          {key: 'Duration', value: '60 mins'},
-           {key: 'Single', value: '£1700'},
+          { key: 'Duration', value: '60 mins' },
+          { key: 'Single', value: '£1700' },
         ]
       }
     ]

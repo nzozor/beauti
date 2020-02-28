@@ -47,11 +47,23 @@
                 </div>
               </div>
             </div>
-            <div class="direction-row" *ngIf="treatment.orientation === 'row'">
-              <div class="row" *ngFor="let option of treatment.options">
-                <div>{{ option.treatment }}</div>
-                <div>{{ option.options[1].value }}</div>
-              </div>
+
+
+            <div class="direction-row" *ngIf="treatment.orientation === 'row' && treatment.fullOptions !== 'true'">
+                <div class="row" *ngFor="let option of treatment.options">
+                    <div>{{ option.treatment }}</div>
+                    <div>{{ option.options[1].value }}</div>
+                </div>
+            </div>
+            <div class="direction-row" *ngIf="treatment.orientation === 'row' && treatment.fullOptions === 'true'">
+                <div class="row" *ngFor="let option of treatment.options">
+                    <div>{{ option.treatment }}</div>
+                    <div *ngFor="let op of option.options">
+                        <div>{{ op.key }}
+                            <span>{{ op.value }}</span>
+                        </div>
+                    </div>
+                </div>
             </div>
           </div>
           <!-- <mat-expansion-panel>
@@ -157,12 +169,26 @@
                   </div>
                 </div>
               </div>
-              <div class="direction-row" *ngIf="treatment.orientation === 'row'">
-                <div class="row" *ngFor="let option of treatment.options">
-                  <div>{{ option.treatment }}</div>
-                  <div>{{ option.options[1].value }}</div>
-                </div>
+              <div class="direction-row" *ngIf="treatment.orientation === 'row' && treatment.fullOptions !== 'true'">
+                  <div class="row" *ngFor="let option of treatment.options">
+                      <div>{{ option.treatment }}</div>
+                      <div>{{ option.options[1].value }}</div>
+                  </div>
               </div>
+              <div class="direction-row" *ngIf="treatment.orientation === 'row' && treatment.fullOptions === 'true'">
+                  <div class="row" *ngFor="let option of treatment.options">
+                      <div>{{ option.treatment }}</div>
+                      <div *ngFor="let op of option.options">
+                          <div>{{ op.key }}
+                              <span>{{ op.value }}</span>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+
+
+
+
             </div>
 
           </div>
@@ -346,12 +372,28 @@
                 </div>
               </div>
             </div>
-            <div class="direction-row" *ngIf="mainTreat.orientation === 'row'">
-              <div class="row" *ngFor="let option of mainTreat.options">
-                <div>{{ option.treatment }}</div>
-                <div>{{ option.options[1].value }}</div>
-              </div>
+
+            <div class="direction-row" *ngIf="mainTreat.orientation === 'row' && mainTreat.fullOptions !== 'true'">
+                <div class="row" *ngFor="let option of mainTreat.options">
+                    <div>{{ option.treatment }}</div>
+                    <div>{{ option.options[1].value }}</div>
+                </div>
             </div>
+            <div class="direction-row" *ngIf="mainTreat.orientation === 'row' && mainTreat.fullOptions === 'true'">
+                <div class="row" *ngFor="let option of mainTreat.options">
+                    <div>{{ option.treatment }}</div>
+                    <div *ngFor="let op of option.options">
+                        <div>{{ op.key }}
+                            <span>{{ op.value }}</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+
           </div>
         </mat-expansion-panel>
         <!-- </mat-accordion> -->
@@ -404,12 +446,25 @@
                   </div>
                 </div>
               </div>
-              <div class="direction-row" *ngIf="treatment.orientation === 'row'">
-                <div class="row" *ngFor="let option of treatment.options">
-                  <div>{{ option.treatment }}</div>
-                  <div>{{ option.options[1].value }}</div>
-                </div>
+
+              <div class="direction-row" *ngIf="treatment.orientation === 'row' && treatment.fullOptions !== 'true'">
+                  <div class="row" *ngFor="let option of treatment.options">
+                      <div>{{ option.treatment }}</div>
+                      <div>{{ option.options[1].value }}</div>
+                  </div>
               </div>
+
+              <div class="direction-row" *ngIf="treatment.orientation === 'row' && treatment.fullOptions === 'true'">
+                  <div class="row" *ngFor="let option of treatment.options">
+                      <div>{{ option.treatment }}</div>
+                      <div *ngFor="let op of option.options">
+                          <div>{{ op.key }}
+                              <span>{{ op.value }}</span>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+
             </div>
           </div>
         </mat-expansion-panel>
@@ -460,12 +515,27 @@
                   </div>
                 </div>
               </div>
-              <div class="direction-row" *ngIf="treatment.orientation === 'row'">
-                <div class="row" *ngFor="let option of treatment.options">
-                  <div>{{ option.treatment }}</div>
-                  <div>{{ option.options[1].value }}</div>
-                </div>
+
+              <div class="direction-row" *ngIf="treatment.orientation === 'row' && treatment.fullOptions !== 'true'">
+                  <div class="row" *ngFor="let option of treatment.options">
+                      <div>{{ option.treatment }}</div>
+                      <div>{{ option.options[1].value }}</div>
+                  </div>
               </div>
+              <div class="direction-row" *ngIf="treatment.orientation === 'row' && treatment.fullOptions === 'true'">
+                  <div class="row" *ngFor="let option of treatment.options">
+                      <div>{{ option.treatment }}</div>
+                      <div *ngFor="let op of option.options">
+                          <div>{{ op.key }}
+                              <span>{{ op.value }}</span>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+
+
+
+
             </div>
           </div>
         </mat-expansion-panel>

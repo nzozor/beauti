@@ -306,27 +306,27 @@ export const SKIN_TREATMENTS: any = [
       }
     ]
   },
-  {
-    title: 'TriBeauti Facial ',
-    treatment: `Skin Rejuvenation + Radio Frequency + Microneedling
-    with Dermapen 3-in-1 Treatment`,
-    description: `of the printing and typesetting industry.
-    Lorem Ipsum has been the industry’s standard dummy
-    text ever since the 1500s, when an unknown printer`,
-    options: [
-      {
-        key: 'Duration',
-        value: '90 mins',
-      },
-      {
-        key: 'Single',
-        value: '£250',
-      },
-      {
-        key: '3 Courses',
-        value: '£675'
-      },
-    ],
-    new: true
-  },
+  // {
+  //   title: 'TriBeauti Facial ',
+  //   treatment: `Skin Rejuvenation + Radio Frequency + Microneedling
+  //   with Dermapen 3-in-1 Treatment`,
+  //   description: `of the printing and typesetting industry.
+  //   Lorem Ipsum has been the industry’s standard dummy
+  //   text ever since the 1500s, when an unknown printer`,
+  //   options: [
+  //     {
+  //       key: 'Duration',
+  //       value: '90 mins',
+  //     },
+  //     {
+  //       key: 'Single',
+  //       value: '£250',
+  //     },
+  //     {
+  //       key: '3 Courses',
+  //       value: '£675'
+  //     },
+  //   ],
+  //   new: true
+  // },
 ];

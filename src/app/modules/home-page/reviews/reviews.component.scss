@@ -158,8 +158,11 @@
 }
 
 .carousel {
+  touch-action: auto!important;
+  -ms-touch-action: auto!important;
   ::ng-deep {
     .slick-list {
+      cursor: grab;
       margin: 0 auto;
       height: 250px;      
       display: flex;
@@ -178,7 +181,8 @@
 
     }
     .slick-slide {
-      max-width: 200px;
+      font-size: 14px;
+      max-width: 300px;
       margin: 0 25px;
       transition: all .5s;
       @media only screen and (min-width: 360px) {

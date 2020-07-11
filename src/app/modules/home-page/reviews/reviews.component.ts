@@ -92,8 +92,9 @@ export class ReviewsComponent {
     centerMode: true,
     variableWidth: true,
     adaptiveHeight: true,
-    focusOnSelect: true,
+    focusOnSelect: false,
     touchThreshold: 1000,
+    // touchMove: false,
     responsive: [
       {
         breakpoint: 768,

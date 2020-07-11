@@ -13,7 +13,6 @@ import { MatDialogModule } from '@angular/material/dialog';
 import { BeautiLogoComponent } from './beauti-logo/beauti-logo.component';
 import { MenuLinkComponent } from './menu-link/menu-link.component';
 import { MatIconModule } from '@angular/material/icon';
-import { FooterComponent } from './footer/footer.component';
 import { HomePageModule } from './modules/home-page/home-page.module';
 import { TreatmentsModule } from './modules/treatments/treatments.module';
 import { RouterModule } from '@angular/router';
@@ -21,6 +20,7 @@ import { InstaComponent } from './shared/svg/insta/insta.component';
 import { SafePipe } from './pipes/safe.pipe';
 import { TreatwellComponent } from './components/treatwell/treatwell.component';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
+import { FooterComponent } from './components/footer/footer.component';
 
 @NgModule({
   declarations: [

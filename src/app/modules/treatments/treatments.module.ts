@@ -6,6 +6,7 @@ import { TreatmentsRoutingModule } from './treatments-routing.module';
 import { TreatmentsComponent } from './treatments/treatments.component';
 import { MatExpansionModule } from '@angular/material/expansion';
 import { MatTableModule } from '@angular/material/table';
+import { TreatmentShowcaseModule } from '../treatment-showcase/treatment-showcase.module';
 
 @NgModule({
   declarations: [TreatmentsComponent],
@@ -14,7 +15,8 @@ import { MatTableModule } from '@angular/material/table';
     TreatmentsRoutingModule,
     MatExpansionModule,
     MatTableModule,
-    MatButtonModule
+    MatButtonModule,
+    TreatmentShowcaseModule
   ]
 })
 export class TreatmentsModule { }

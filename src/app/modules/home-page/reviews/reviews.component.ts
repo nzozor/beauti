@@ -21,16 +21,40 @@ export class ReviewsComponent {
   activeSliderWidth: number;
 
   sliderPanelstyle = {
-    width: '247px'
+    width: '347px'
   };
 
-  minHeight = 273;
+  minHeight = 373;
   marginBetweenSlides = 10;
   totalSlideWidth: number;
   stars = [1, 2, 3, 4, 5];
   innerWidth: number;
 
   reviews = [
+    {
+      quote: 'Really happy with my wax! Lovely venue, very clean and luxurious and my treatment was very professional. Would highly recommend.',
+      reviewerName: 'Kate'
+    },
+    {
+      reviewerName: 'Liz',
+      quote: 'Such a professional and well run clinic. I have already made a follow up appointment. Cinzia was very knowledgeable about treatments and products without any hard sell. It was a lovely relaxing environment and I will be back. Thank you'
+    },
+    {
+      reviewerName: 'Ruth',
+      quote: 'There is nowhere I would trust more with my skin! I\'ve been coming here for about a year now and will continue. Cinza and her team are professional but also like my agony aunts!'
+    },
+    {
+      reviewerName: 'WeiTing',
+      quote: 'Cinzia was SO lovely. Walked into the salon, it smelled fab and the ambience was on point. My Hollywood laser treatment was as painless as it can be haha. Would definitely come back.'
+    },
+    {
+      reviewerName: 'Kate',
+      quote: 'Couldn\'t be bettered! Brilliant service, pleasant atmosphere, highly trained people who know their job!'
+    },
+    {
+      reviewerName: '',
+      quote: 'Fabulous treatment as always. Professional with that signature Beauti charm!'
+    },
     {
       reviewerName: 'Jodie',
       quote: 'Such friendly staff - very clean',
@@ -54,24 +78,9 @@ export class ReviewsComponent {
     {
       reviewerName: 'Nadia',
       quote: 'Brilliant and painless waxing - very chilled and Julia was perfect',
-    }
+    },
   ];
 
-
-  slides = [
-    { img: 'https://www.freakyjolly.com/demo/Angular/Angular7/slickCarousel/assets/images/1.jpg' },
-    { img: 'https://www.freakyjolly.com/demo/Angular/Angular7/slickCarousel/assets/images/2.jpg' },
-    { img: 'https://www.freakyjolly.com/demo/Angular/Angular7/slickCarousel/assets/images/3.jpg' },
-    { img: 'https://www.freakyjolly.com/demo/Angular/Angular7/slickCarousel/assets/images/4.jpg' },
-    { img: 'https://www.freakyjolly.com/demo/Angular/Angular7/slickCarousel/assets/images/5.jpg' },
-    { img: 'https://www.freakyjolly.com/demo/Angular/Angular7/slickCarousel/assets/images/6.jpg' },
-    { img: 'https://www.freakyjolly.com/demo/Angular/Angular7/slickCarousel/assets/images/7.jpg' },
-    { img: 'https://www.freakyjolly.com/demo/Angular/Angular7/slickCarousel/assets/images/8.jpg' },
-    { img: 'https://www.freakyjolly.com/demo/Angular/Angular7/slickCarousel/assets/images/9.jpg' },
-    { img: 'https://www.freakyjolly.com/demo/Angular/Angular7/slickCarousel/assets/images/10.jpg' },
-    { img: 'https://www.freakyjolly.com/demo/Angular/Angular7/slickCarousel/assets/images/11.jpg' },
-    { img: 'https://www.freakyjolly.com/demo/Angular/Angular7/slickCarousel/assets/images/12.jpg' }
-  ];
 
   slideConfig = {
     slidesToShow: 3,
@@ -107,14 +116,6 @@ export class ReviewsComponent {
   };
 
   constructor() { }
-
-  addSlide() {
-    this.slides.push({ img: 'http://placehold.it/350x150/777777' })
-  }
-
-  removeSlide() {
-    this.slides.length = this.slides.length - 1;
-  }
 
   slickInit(e) {
     console.log('slick initialized');

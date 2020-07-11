@@ -160,16 +160,16 @@
 .carousel {
   ::ng-deep {
     .slick-list {
-      // max-width: 964px;
-      
       margin: 0 auto;
-      height: 370px;      
+      height: 250px;      
       display: flex;
       flex-direction: column;
       justify-content: center;
 
       @media only screen and (min-width: 600px) {
         max-width: 50%;
+        height: 370px;      
+
       }
     }
 
@@ -178,9 +178,12 @@
 
     }
     .slick-slide {
-      max-width: 347px;
+      max-width: 200px;
       margin: 0 25px;
       transition: all .5s;
+      @media only screen and (min-width: 360px) {
+        max-width: 347px;
+      }
     }
 
     .slick-current {

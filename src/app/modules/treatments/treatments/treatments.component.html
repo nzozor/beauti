@@ -1,7 +1,7 @@
 <div>
   <h3>Treatments</h3>
   <mat-accordion [multi]="true">
-    <mat-expansion-panel>
+    <mat-expansion-panel [expanded]="isActive('Skin Treatments')">
       <mat-expansion-panel-header>
         <mat-panel-title>
                     Skin Treatments
@@ -14,7 +14,7 @@
       </mat-expansion-panel-header>
       <div class="sub">
         <!-- <mat-accordion> -->
-        <mat-expansion-panel>
+        <mat-expansion-panel [expanded]="isActive('Advanced Skin Treatments')" id="Advanced-Skin-Treatments">
           <mat-expansion-panel-header>
             <mat-panel-title>
                 Advanced Skin Treatments
@@ -28,10 +28,13 @@
                 <span [innerHTML]="treatment.treatment"></span>
               </div>
 
-              <button (click)="openBooking($event)" mat-stroked-button color="primary" class="main-button">
+              <button (click)="openBooking($event)" mat-stroked-button color="primary" class="main-button" *ngIf="!treatment.hasShowcase">
                             Book now
                         </button>
 
+              <button (click)="goToTreatmentShowcase('Advanced Skin Treatments', treatment.title)" mat-stroked-button color="primary" class="main-button" *ngIf="treatment.hasShowcase">
+                            Read More
+                        </button>
             </div>
             <div class="description">{{ treatment.description }}</div>
             <div class="direction-column" *ngIf="treatment.orientation !== 'row'">
@@ -131,7 +134,7 @@
             *ngFor="let treatment of waxing"
           >
             <div class="direction-row" *ngFor="let option of treatment.options">
-              <div class="header row"> 
+              <div class="header row">
                 <div>{{option.treatment}}</div>
                 <div>Single</div>
               </div>
@@ -263,7 +266,7 @@
             *ngFor="let treatment of waxing"
           >
             <div class="direction-row" *ngFor="let option of treatment.options">
-              <div class="header row"> 
+              <div class="header row">
                 <div>{{option.treatment}}</div>
                 <div>Single</div>
               </div>

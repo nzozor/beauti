@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Router, NavigationEnd, RouteConfigLoadStart, RouteConfigLoadEnd } from '@angular/router';
-import { BookingService } from './services/booking.service';
 import { MatDialog } from '@angular/material/dialog';
 import { TreatwellComponent } from './components/treatwell/treatwell.component';
+import { BookingService } from './shared/services/booking.service';
 
 @Component({
   selector: 'app-root',

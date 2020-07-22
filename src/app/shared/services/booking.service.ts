@@ -9,7 +9,9 @@ export class BookingService {
 
   constructor() { }
 
-  sendBooking(event: boolean) {
+  sendBooking(event) {
+    event.preventDefault();
+    event.stopPropagation();
     window.open('https://widget.treatwell.co.uk/place/beauti-skin-clinic/', '_blank');
   }
 

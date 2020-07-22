@@ -16,11 +16,11 @@ import { MatIconModule } from '@angular/material/icon';
 import { HomePageModule } from './modules/home-page/home-page.module';
 import { TreatmentsModule } from './modules/treatments/treatments.module';
 import { RouterModule } from '@angular/router';
-import { InstaComponent } from './shared/svg/insta/insta.component';
 import { SafePipe } from './pipes/safe.pipe';
 import { TreatwellComponent } from './components/treatwell/treatwell.component';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { FooterComponent } from './components/footer/footer.component';
+import { InstaComponent } from './shared/components/svg/insta/insta.component';
 
 @NgModule({
   declarations: [

@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { MatDialogRef, MatDialog } from '@angular/material/dialog';
 import {ViewEncapsulation} from '@angular/core';
-import { BookingService } from 'src/app/services/booking.service';
 
 @Component({
   selector: 'app-treatwell',

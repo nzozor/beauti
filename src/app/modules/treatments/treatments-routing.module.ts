@@ -8,10 +8,10 @@ const routes: Routes = [
     path: '',
     component: TreatmentsComponent
   },
-  // {
-  //   path: ':id',
-  //   loadChildren: () => import('../treatment-showcase/treatment-showcase.module').then(m => m.TreatmentShowcaseModule)
-  // },
+  {
+    path: ':slug',
+    loadChildren: () => import('../treatment-showcase/treatment-showcase.module').then(m => m.TreatmentShowcaseModule)
+  },
 ];
 
 @NgModule({

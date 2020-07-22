@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { BookingService } from 'src/app/services/booking.service';
+import { BookingService } from 'src/app/shared/services/booking.service';
 
 @Component({
   selector: 'app-jumbotron',

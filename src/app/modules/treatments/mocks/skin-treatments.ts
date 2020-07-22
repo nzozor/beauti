@@ -14,6 +14,7 @@ export const SKIN_TREATMENTS: any = [
   },
   {
     title: 'Aqua 3 Hydrotherapy Facial',
+    hasShowcase: true,
     treatment: `
     Choose from Deep-cleaning, Anti-Aging`,
     description: `Lorem of the printing and typesetting industry.

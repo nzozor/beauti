@@ -1,11 +1,14 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, OnDestroy } from '@angular/core';
 import { SKIN_TREATMENTS } from '../mocks/skin-treatments';
 import { SKIN_IMP_REM } from '../mocks/skin-imperfections';
 import { WAX_DATA } from '../mocks/waxing';
 import { BODY_MASSAGE, BODY_CONTOURING } from '../mocks/body';
 import { BEAUTY_NAIL, BEAUTY_FACIAL } from '../mocks/beauty';
 import { HAIR_REMOVAL_IPL_LASER, HAIR_REMOVAL_ELECTRO } from '../mocks/hair-removal';
-import { BookingService } from 'src/app/services/booking.service';
+import { Router, ActivatedRoute } from '@angular/router';
+import { BookingService } from 'src/app/shared/services/booking.service';
+import { DataService } from 'src/app/shared/services/data.service';
+import { ViewportScroller } from '@angular/common';
 
 @Component({
   selector: 'app-treatments',
@@ -26,23 +29,54 @@ export class TreatmentsComponent implements OnInit {
 
   leftCol: [];
   rightCol: [];
-
-
-  constructor(private bookingService: BookingService) { }
+  activeTreatment: string;
+  activeTreatmentList: string[];
+  constructor(
+    private bookingService: BookingService,
+    private router: Router,
+    private route: ActivatedRoute,
+    private dataService: DataService,
+    private viewPortScroller: ViewportScroller
+  ) { }
 
   get isWideScreen() {
     return this.innerWidth >= 600;
   }
 
   openBooking(e) {
-    e.preventDefault();
-    e.stopPropagation();
-    this.bookingService.sendBooking(true);
+    this.bookingService.sendBooking(e);
   }
 
   ngOnInit() {
     this.leftCol = this.waxing[0].options.slice(0, Math.ceil(this.waxing[0].options.length / 2));
     this.rightCol = this.waxing[0].options.slice(Math.ceil(this.waxing[0].options.length / 2));
     this.innerWidth = window.innerWidth;
+    this.activeTreatment =  this.dataService.currentParentTreatment;
+    this.activeTreatmentList = this.dataService.activeTreatmentList;
+    if (this.activeTreatmentList) {
+      this.viewPortScroller.scrollToAnchor('Advanced-Skin-Treatments');
+    }
+  }
+
+  goToTreatmentShowcase(treatmentParent: string, treatmentName: string) {
+    this.activeTreatmentList = [
+      'Advanced Skin Treatments',
+      'Skin Treatments'
+    ];
+    this.dataService.activeTreatmentList = this.activeTreatmentList;
+    this.dataService.currentParentTreatment = treatmentParent;
+    this.router.navigate([this.getSlug(treatmentName)], { relativeTo: this.route });
+  }
+
+  getSlug(treatmentName: string) {
+    return treatmentName.split(' ').join('-');
+  }
+
+  isActive(treatment): boolean {
+    if (this.activeTreatmentList) {
+      return !!this.activeTreatmentList.find(treat => treat === treatment );
+    } else {
+      return false;
+    }
   }
 }

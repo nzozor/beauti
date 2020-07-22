@@ -1,3 +1,21 @@
-<p>
-  treatment-showcase works!
-</p>
+<div *ngIf="treatment">
+  <button (click)="goToParent()" mat-flat-button color="primary" class="main-button">
+    <mat-icon>keyboard_arrow_left</mat-icon>
+  </button>
+  <h3>
+  {{treatmentParentName}}
+  </h3>
+  <div>
+    <h2>
+      {{treatment.title}}
+    </h2>
+    <button (click)="openBooking($event)" mat-stroked-button color="primary" class="main-button">
+      Book now
+    </button>
+  </div>
+
+  <div>
+    {{treatment.content}}
+  </div>
+  <img [src]="getImage()"/>
+</div>

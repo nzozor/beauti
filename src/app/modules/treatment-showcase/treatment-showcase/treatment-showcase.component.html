@@ -1,21 +1,46 @@
-<div *ngIf="treatment">
-  <button (click)="goToParent()" mat-flat-button color="primary" class="main-button">
-    <mat-icon>keyboard_arrow_left</mat-icon>
-  </button>
-  <h3>
-  {{treatmentParentName}}
-  </h3>
-  <div>
-    <h2>
-      {{treatment.title}}
-    </h2>
-    <button (click)="openBooking($event)" mat-stroked-button color="primary" class="main-button">
-      Book now
-    </button>
-  </div>
+<div class="outer">
+  <div *ngIf="treatment" class="container">
+    <div class="header">
+      <button (click)="goToParent()"         mat-stroked-button
+      class="arrow-button main-button"
+      >
+        <!-- <mat-icon>keyboard_arrow_left</mat-icon> -->
+        <i class="arrow left"></i>
 
-  <div>
-    {{treatment.content}}
+        <h4>
+          {{ treatment.parent.title }}
+        </h4>
+      </button>
+    </div>
+    <div class="title">
+      <h3>
+        {{ treatment.title }}
+      </h3>
+      <!-- <button
+      mat-flat-button
+      color="primary"
+      class="main-button"
+      (click)="openBooking()"
+    >
+
+      Book now
+    </button> -->
+      <button
+        (click)="openBooking($event)"
+        mat-flat-button
+        color="primary"
+        class="main-button"
+      >
+        Book now
+      </button>
+    </div>
+    <img [src]="getImage()" />
+    <div class="showcase-content">
+      <div [innerHTML]="treatment.content | MarkdownToHtml"></div>
+    </div>
+    `
+    <!-- <div>
+      {{treatment.content}}
+    </div> -->
   </div>
-  <img [src]="getImage()"/>
 </div>

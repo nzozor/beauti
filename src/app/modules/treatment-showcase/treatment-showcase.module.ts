@@ -4,6 +4,8 @@ import { TreatmentShowcaseComponent } from './treatment-showcase/treatment-showc
 import { RouterModule, Routes } from '@angular/router';
 import { HttpClientModule } from '@angular/common/http';
 import { MatIconModule } from '@angular/material/icon';
+import { MatButtonModule } from '@angular/material/button';
+import {MarkdownToHtmlModule} from 'markdown-to-html-pipe';
 
 const routes: Routes = [
   {
@@ -18,7 +20,9 @@ const routes: Routes = [
     CommonModule,
     RouterModule.forChild(routes),
     HttpClientModule,
-    MatIconModule
+    MatIconModule,
+    MatButtonModule,
+    MarkdownToHtmlModule
   ]
 })
 export class TreatmentShowcaseModule { }

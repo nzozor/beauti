@@ -1,5 +1,5 @@
-import { Component, OnInit, Inject, Output, EventEmitter } from '@angular/core';
-import { fromEvent, Observable, Subscription } from 'rxjs';
+import { Component, OnInit, Inject } from '@angular/core';
+import { fromEvent, Subscription } from 'rxjs';
 import { throttleTime, tap } from 'rxjs/operators';
 
 import { DOCUMENT } from '@angular/common';
@@ -12,7 +12,7 @@ import { BookingService } from '../shared/services/booking.service';
 })
 export class HeaderNavComponent implements OnInit {
 
-  constructor(@Inject(DOCUMENT) private document: Document,private bookingService: BookingService) { }
+  constructor(@Inject(DOCUMENT) private document: Document, private bookingService: BookingService) { }
 
   scrolltop: boolean;
   stickyHeader = false;

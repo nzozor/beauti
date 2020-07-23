@@ -1,0 +1,58 @@
+@import '../../../../scss/palette';
+
+.container {
+padding: 80px 0;
+}
+.header {
+  display: inline;
+  padding-top: 85px;
+  .arrow-button {
+    border: none;
+    background-color: transparent;
+    width: auto;
+    padding-left: 0;
+    ::ng-deep span {
+      display: flex;
+      align-items: center;
+
+    }
+
+    h4 {
+      margin: 0;
+      font-size: 17px;
+      margin-left: 16px;
+    }
+    .arrow {
+      border: solid $grey-black;
+      border-width: 0px 1px 1px 0;
+      display: inline-block;
+      padding: 9px;
+    }
+
+    .right {
+      transform: rotate(-45deg);
+      -webkit-transform: rotate(-45deg);
+    }
+
+    .left {
+      transform: rotate(135deg);
+      -webkit-transform: rotate(135deg);
+    }
+  }
+}
+.title {
+  display: flex;
+  justify-content: space-between ;
+  margin: 45px 0 30px;
+
+  h3 {
+    margin: 0;
+  }
+  p {
+    display: none;
+    margin-bottom: 0;
+  }
+}
+
+
+

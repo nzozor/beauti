@@ -20,15 +20,17 @@ body {
 * {
     margin: 0;
 }
-
+h3, h4 {
+  font-family: 'Roboto';
+  text-align: center;
+  color: $grey-black;
+  font-weight: 100;
+}
 h3 {
     font-size: 32px;
-    font-family: 'Roboto';
-    text-align: center;
     margin-bottom: 50px;
-    color: $grey-black;
-    font-weight: 100;
 }
+
 
 #carousel,
 .carousel {
@@ -42,7 +44,7 @@ h3 {
         @media (max-width: 360px) {
             bottom: -66px;
         }
-        
+
     }
 }
 
@@ -50,5 +52,50 @@ h3 {
     max-width: 100vw!important;
     .mat-dialog-container {
         padding: 0;
-      } 
+      }
+}
+
+.container {
+  max-width: 1170px;
+  margin: 0 auto;
+}
+
+.outer {
+  background-color: rgba($blue-type1, 0.15);
+}
+
+.showcase-content {
+  h4 {
+    font-size: 17px;
+    font-weight: normal;
+    font-family: 'Nunito Sans', sans-serif;
+
+    text-align: left;
+    padding: 10px 15px;
+    background-color: rgba($blue-type1, .4);
+    margin-top: 35px;
+    margin-bottom: 20px;
+  }
+
+
+p {
+  font-family: "Nunito Sans", sans-serif;
+  font-size: 17px;
+  font-weight: 100;
+  line-height: 32px;
+  margin-bottom: 40px;
+  a {
+      color: inherit;
+  }
+}
+
+ul {
+  padding: 0px;
+    padding-left: 20px;
+    font-family: "Nunito Sans", sans-serif;
+    font-size: 17px;
+    font-weight: normal;
+    line-height: 32px;
+
+}
 }

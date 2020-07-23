@@ -3,13 +3,17 @@ export interface TreatmentShowcase {
   title: string;
   slug: string;
   content: string;
+  parent: TreatmentShowcase;
 }
 
 export interface TreatmentImages {
   name: string;
   url: string;
-  format: {
+  formats: {
     large: {
+      url: string;
+    },
+    small: {
       url: string;
     },
   };

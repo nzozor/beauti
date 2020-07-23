@@ -10,7 +10,7 @@ export class AboutUsComponent implements OnInit {
   slideConfig = {
     slidesToShow: 3,
     slidesToScroll: 1,
-    centerMode: true, 
+    centerMode: true,
     responsive: [
       {
         breakpoint: 768,

@@ -293,34 +293,6 @@
     }
 }
 
-.book-treatment {
-    // margin: 50px auto;
-    position: fixed;
-    display: none;
-    width: 100%;
-    background-color: rgba(255, 255, 255, 0.7);
-    bottom: 0;
-    text-align: center;
-    height: 70px;
-    align-items: center;
-    justify-content: center;
-    .main-button.mat-flat-button.mat-primary.mobile {
-        border: none;
-        width: 146px;
-        height: 41px;
-        max-height: 146px;
-        padding: 0;
-        // margin: 10px;
-        // left: 50%;
-        // transform: translate(0, -50%);
-        // bottom: 13px;
-        z-index: 10;
-    }
-    @media only screen and (max-width: 600px) {
-        display: flex;
-    }
-}
-
 .mat-expansion-panel {
     & .mat-expansion-panel-header.mat-expanded {
          ::ng-deep {
@@ -329,4 +301,9 @@
             }
         }
     }
+}
+.read-more {
+  font-style: italic;
+  text-decoration: underline;
+  text-transform: uppercase;
 }

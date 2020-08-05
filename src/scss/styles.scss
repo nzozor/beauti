@@ -87,6 +87,11 @@ p {
   a {
       color: inherit;
   }
+
+  @media (max-width: 1200px) {
+      margin-left: 30px;
+      margin-right: 30px;
+  }
 }
 
 ul {
@@ -96,6 +101,37 @@ ul {
     font-size: 17px;
     font-weight: normal;
     line-height: 32px;
-
+    @media (max-width: 1200px) {
+      margin-left: 30px;
+      margin-right: 30px;
+  }
 }
+}
+
+
+.book-treatment-fixed {
+  position: fixed;
+  display: none;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.7);
+  bottom: 0;
+  text-align: center;
+  height: 70px;
+  align-items: center;
+  justify-content: center;
+  .main-button.mat-flat-button.mat-primary.mobile {
+      border: none;
+      width: 146px;
+      height: 41px;
+      max-height: 146px;
+      padding: 0;
+      // margin: 10px;
+      // left: 50%;
+      // transform: translate(0, -50%);
+      // bottom: 13px;
+      z-index: 10;
+  }
+  @media only screen and (max-width: 600px) {
+      display: flex;
+  }
 }

@@ -26,6 +26,8 @@
               <div>
                 <span [innerHtml]="treatment.title"></span>
                 <span [innerHTML]="treatment.treatment"></span>
+                <span class="read-more" *ngIf="treatment.hasShowcase" (click)="goToTreatmentShowcase('Advanced Skin Treatments', treatment.title)"> Read More </span>
+
               </div>
 
               <button (click)="openBooking($event)" mat-stroked-button color="primary" class="main-button" *ngIf="!treatment.hasShowcase">
@@ -589,7 +591,7 @@
       </div>
     </mat-expansion-panel>
   </mat-accordion>
-  <div class="book-treatment">
+  <div class="book-treatment-fixed">
     <button (click)="openBooking($event)" mat-flat-button color="primary" class="main-button mobile">
             Book now
         </button>

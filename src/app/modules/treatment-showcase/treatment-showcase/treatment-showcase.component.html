@@ -29,7 +29,7 @@
         (click)="openBooking($event)"
         mat-flat-button
         color="primary"
-        class="main-button"
+        class="main-button book-now"
       >
         Book now
       </button>
@@ -42,5 +42,10 @@
     <!-- <div>
       {{treatment.content}}
     </div> -->
+  </div>
+  <div class="book-treatment-fixed">
+    <button (click)="openBooking($event)" mat-flat-button color="primary" class="main-button mobile">
+            Book now
+        </button>
   </div>
 </div>

@@ -11,6 +11,8 @@ export class DataService {
   }
 
   beautiCmsUrl = `https://cms.beautiskinclinic.com`;
+  // beautiCmsUrl = `http://192.168.1.104:1337`;
+
   currentParentTreatment: string;
   activeTreatmentList: string[];
   getTreatmentShowcase(slug: string): Observable<TreatmentShowcase> {

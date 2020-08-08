@@ -59,11 +59,6 @@ export class TreatmentsComponent implements OnInit {
   }
 
   goToTreatmentShowcase(treatmentParent: string, treatmentName: string) {
-    this.activeTreatmentList = [
-      'Advanced Skin Treatments',
-      'Skin Treatments'
-    ];
-    this.dataService.activeTreatmentList = this.activeTreatmentList;
     this.dataService.currentParentTreatment = treatmentParent;
     this.router.navigate([this.getSlug(treatmentName)], { relativeTo: this.route });
   }

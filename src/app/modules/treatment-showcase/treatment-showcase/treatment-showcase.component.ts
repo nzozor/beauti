@@ -36,7 +36,8 @@ export class TreatmentShowcaseComponent implements OnInit, OnDestroy {
     this.dataService.activeTreatmentList = this.activeTreatmentList;
     this.treatmentShowcaseSub = this.dataService.getTreatmentShowcase(slug).subscribe(treatment => {
       this.treatment = treatment[0];
-      this.dataService.currentParentTreatment = this.treatment.parent.title;
+      // this.dataService.currentParentTreatment = this.treatment.parent.title;
+      this.dataService.currentParentTreatment = this.activeTreatmentList[0];
     }
     );
     this.breakpointObserver.observe([

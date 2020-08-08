@@ -10,7 +10,7 @@ export class DataService {
   constructor(private http: HttpClient) {
   }
 
-  beautiCmsUrl = `https://cms.beautiskinclinic.com/`;
+  beautiCmsUrl = `https://cms.beautiskinclinic.com`;
   currentParentTreatment: string;
   activeTreatmentList: string[];
   getTreatmentShowcase(slug: string): Observable<TreatmentShowcase> {

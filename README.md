@@ -16,7 +16,7 @@ Run `ng build` to build the project. The build artifacts will be stored in the `
 
 On the server: 
 
-npm run build:ssr && cp -r dist/ ../beauti && forever restartall
+npm run build:ssr --prod && cp -r dist/ ../beauti && forever restartall
 
 ## Running unit tests
 

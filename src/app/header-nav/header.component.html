@@ -4,10 +4,10 @@
       <h1>
         <app-beauti-logo [sticky]="sticky" (click)="menuLinkOpen=false"></app-beauti-logo>
       </h1>
-  
+
     <ul class="menu-list">
-      <li><a routerLink="/">HOME</a></li> 
-      <li><a routerLink="/about-us">ABOUT US</a></li>    
+      <li><a routerLink="/">HOME</a></li>
+      <li><a routerLink="/about-us">ABOUT US</a></li>
       <li><a routerLink="/treatments">TREATMENTS</a></li>
       <li><a routerLink="/contact">CONTACT</a></li>
     </ul>
@@ -15,9 +15,9 @@
         mat-flat-button
         color="primary"
         class="main-button"
-        (click)="openBooking()"
+        (click)="openBooking($event)"
       >
-      
+
         Book now
       </button>
 

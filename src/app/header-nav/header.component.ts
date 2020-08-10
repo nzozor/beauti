@@ -56,8 +56,7 @@ export class HeaderNavComponent implements OnInit {
     this.menuLinkOpen = value;
   }
 
-  openBooking() {
-    this.bookingService.sendBooking(true);
+  openBooking(event) {
+    this.bookingService.sendBooking(event);
   }
-
 }

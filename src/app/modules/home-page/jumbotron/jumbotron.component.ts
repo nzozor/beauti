@@ -13,8 +13,8 @@ export class JumbotronComponent implements OnInit {
   ngOnInit() {
   }
 
-  openBooking() {
-    this.bookingService.sendBooking(true);
+  openBooking(event) {
+    this.bookingService.sendBooking(event);
   }
 
 }

@@ -1,19 +1,19 @@
 <div>
-  <app-quote [position]="'left'"></app-quote> 
+  <app-quote [position]="'left'"></app-quote>
   <div class="slogan">
     Your local <span>skin and beauty specialist</span>, <br>
     Italian standard.
-  </div>  
+  </div>
 </div>
   <button
   mat-flat-button
   color="primary"
   class="main-button book"
-  (click)="openBooking()"
+  (click)="openBooking($event)"
   >
   Book now
   </button>
-<button 
+<button
 mat-flat-button
 color="primary"
 class="main-button treatments"

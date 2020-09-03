@@ -328,7 +328,7 @@
       </mat-expansion-panel-header>
       <div id="hair-removal">
         <!-- <mat-accordion> -->
-        <mat-expansion-panel *ngFor="let mainTreat of hairRemoveLaser">
+        <mat-expansion-panel *ngFor="let mainTreat of hairRemoveLaser" [expanded]="isActive(mainTreat.treatmentName)" id="{{getSlug(mainTreat.treatmentName)">
           <mat-expansion-panel-header>
             <mat-panel-title>
               {{ mainTreat.treatmentName }}
@@ -340,7 +340,7 @@
             <div class="description">
               {{ mainTreat.description }}
             </div>
-            <button (click)="goToTreatmentShowcase(['Permanent Hair Removal', 'Permanent Hair Removal'], mainTreat.treatmentName)" mat-stroked-button color="primary" class="main-button" *ngIf="mainTreat.hasShowcase">
+            <button (click)="goToTreatmentShowcase(['Permanent Hair Removal', getSlug(mainTreat.treatmentName)], mainTreat.treatmentName)" mat-stroked-button color="primary" class="main-button" *ngIf="mainTreat.hasShowcase">
               Read More
           </button>
           <div>
@@ -369,7 +369,7 @@
             </div>
           </div>
         </mat-expansion-panel>
-        <mat-expansion-panel *ngFor="let mainTreat of hairRemoveElectro" [expanded]="isActive('Electrolysis')" id="Electrolysis">
+        <mat-expansion-panel *ngFor="let mainTreat of hairRemoveElectro" [expanded]="isActive(mainTreat.treatmentName)" id="{{getSlug(mainTreat.treatmentName)">
           <mat-expansion-panel-header>
             <mat-panel-title>
               {{ mainTreat.treatmentName }}
@@ -380,14 +380,14 @@
               <div>
                 <span>{{ mainTreat.title }}</span>
                 <span [innerHTML]="mainTreat.treatment"></span>
-                <span class="read-more" *ngIf="mainTreat.hasShowcase" (click)="goToTreatmentShowcase('Electrolysis', mainTreat.treatmentName)"> Read More </span>
+                <span class="read-more" *ngIf="mainTreat.hasShowcase" (click)="goToTreatmentShowcase(['Permanent Hair Removal', getSlug(mainTreat.treatmentName)], mainTreat.treatmentName)"> Read More </span>
               </div>
 
               <button (click)="openBooking($event)" mat-stroked-button color="primary" class="main-button" *ngIf="!mainTreat.hasShowcase">
                             Book now
                         </button>
 
-              <button (click)="goToTreatmentShowcase(['Permanent Hair Removal', 'Permanent Hair Removal'], mainTreat.treatmentName)" mat-stroked-button color="primary" class="main-button" *ngIf="mainTreat.hasShowcase">
+              <button (click)="goToTreatmentShowcase(['Permanent Hair Removal', getSlug(mainTreat.treatmentName)], mainTreat.treatmentName)" mat-stroked-button color="primary" class="main-button" *ngIf="mainTreat.hasShowcase">
                             Read More
                         </button>
 

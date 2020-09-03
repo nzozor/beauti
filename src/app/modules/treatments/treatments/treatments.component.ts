@@ -1,4 +1,4 @@
-import { Component, OnInit, OnDestroy } from '@angular/core';
+import { Component, OnInit, AfterViewInit, AfterContentChecked } from '@angular/core';
 import { SKIN_TREATMENTS } from '../mocks/skin-treatments';
 import { SKIN_IMP_REM } from '../mocks/skin-imperfections';
 import { WAX_DATA } from '../mocks/waxing';
@@ -15,7 +15,7 @@ import { ViewportScroller } from '@angular/common';
   templateUrl: './treatments.component.html',
   styleUrls: ['./treatments.component.scss']
 })
-export class TreatmentsComponent implements OnInit {
+export class TreatmentsComponent implements OnInit, AfterViewInit, AfterContentChecked {
   skinTreatments = SKIN_TREATMENTS;
   skinImperfectionRemoval = SKIN_IMP_REM;
   waxing: any[] = WAX_DATA;
@@ -30,7 +30,9 @@ export class TreatmentsComponent implements OnInit {
   leftCol: [];
   rightCol: [];
   activeTreatment: string;
+  activeParrentTreatment: string;
   activeTreatmentList: string[];
+  scrollAdjusted;
   constructor(
     private bookingService: BookingService,
     private router: Router,
@@ -51,25 +53,44 @@ export class TreatmentsComponent implements OnInit {
     this.leftCol = this.waxing[0].options.slice(0, Math.ceil(this.waxing[0].options.length / 2));
     this.rightCol = this.waxing[0].options.slice(Math.ceil(this.waxing[0].options.length / 2));
     this.innerWidth = window.innerWidth;
-    this.activeTreatment =  this.dataService.currentParentTreatment;
+    this.activeParrentTreatment = this.dataService.currentParentTreatment;
     this.activeTreatmentList = this.dataService.activeTreatmentList;
-    if (this.activeTreatmentList) {
-      this.viewPortScroller.scrollToAnchor('Advanced-Skin-Treatments');
+    this.activeTreatment = this.dataService.activeTreatment;
+
+  }
+  ngAfterViewInit(): void {
+    if (this.activeTreatment) {
+      this.viewPortScroller.scrollToAnchor(this.activeTreatment);
+
+    } else {
+      this.viewPortScroller.scrollToAnchor(this.activeParrentTreatment);
     }
   }
 
-  goToTreatmentShowcase(treatmentParent: string, treatmentName: string) {
-    this.dataService.currentParentTreatment = treatmentParent;
+  ngAfterContentChecked(): void {
+    if (this.viewPortScroller.getScrollPosition()[1] && !this.scrollAdjusted) {
+      this.viewPortScroller.scrollToPosition(
+        [this.viewPortScroller.getScrollPosition()[0],
+        this.viewPortScroller.getScrollPosition()[1] - 80]
+      );
+      this.scrollAdjusted = true;
+    }
+  }
+
+  goToTreatmentShowcase(treatmentParentList: string[], treatmentName: string) {
+    this.dataService.activeTreatmentList = treatmentParentList;
+    this.dataService.activeTreatment = this.getSlug(treatmentName);
+
     this.router.navigate([this.getSlug(treatmentName)], { relativeTo: this.route });
   }
 
   getSlug(treatmentName: string) {
-    return treatmentName.split(' ').join('-');
+    return treatmentName.split(' ').join('-').split('/').join('');
   }
 
   isActive(treatment): boolean {
     if (this.activeTreatmentList) {
-      return !!this.activeTreatmentList.find(treat => treat === treatment );
+      return !!this.activeTreatmentList.find(treat => this.getSlug(treat) === this.getSlug(treatment));
     } else {
       return false;
     }

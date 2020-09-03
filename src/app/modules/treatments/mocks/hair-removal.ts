@@ -1,9 +1,9 @@
 export const HAIR_REMOVAL_IPL_LASER = [{
   treatmentName: 'IPL Laser Hair Removal',
+  hasShowcase:  true,
     description: `Lorem of the printing and typesetting industry.
       Lorem Ipsum has been the industry’s standard dummy
       text ever since the 1500s, when an unknown printer`,
-
   options: [
     {
       treatmentName: 'Small Area',
@@ -218,6 +218,7 @@ export const HAIR_REMOVAL_IPL_LASER = [{
 export const HAIR_REMOVAL_ELECTRO = [
   {
     treatmentName: `Electrolysis`,
+    hasShowcase: true,
     description: `Lorem of the printing and typesetting industry.
       Lorem Ipsum has been the industry’s standard dummy
       text ever since the 1500s, when an unknown printer`,

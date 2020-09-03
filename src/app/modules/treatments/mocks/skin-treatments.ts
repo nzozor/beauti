@@ -1,6 +1,7 @@
 export const SKIN_TREATMENTS: any = [
   {
     title: 'Advanced Beauti Signature Relaxing Facial',
+    hasShowcase: true,
     treatment: `
     Choose from Radio Frequency, Skin Rejuvenation, LED Light Therapy`,
     description: `Lorem of the printing and typesetting industry.
@@ -40,7 +41,8 @@ export const SKIN_TREATMENTS: any = [
     ]
   },
   {
-    title: `Skin Peels`,
+    title: `Skin Peel`,
+    hasShowcase: true,
     treatment: ``,
     description: `Lorem of the printing and typesetting industry.
     Lorem Ipsum has been the industry’s standard dummy
@@ -55,6 +57,7 @@ export const SKIN_TREATMENTS: any = [
   {
     title: `Radio Frequency Skin Tightening`,
     treatment: ``,
+    hasShowcase: true,
     description: `Lorem of the printing and typesetting industry.
     Lorem Ipsum has been the industry’s standard dummy
     text ever since the 1500s, when an unknown printer`,
@@ -68,6 +71,7 @@ export const SKIN_TREATMENTS: any = [
   {
     title: `Beauti Fusion Mesotherapy`,
     treatment: ``,
+    hasShowcase: true,
     description: `Lorem of the printing and typesetting industry.
     Lorem Ipsum has been the industry’s standard dummy
     text ever since the 1500s, when an unknown printer`,
@@ -103,6 +107,7 @@ export const SKIN_TREATMENTS: any = [
   {
     title: 'IPL Skin Rejuvenation',
     treatment: ``,
+    hasShowcase: true,
     description: `Lorem of the printing and typesetting industry.
     Lorem Ipsum has been the industry’s standard dummy
     text ever since the 1500s, when an unknown printer`,
@@ -116,6 +121,7 @@ export const SKIN_TREATMENTS: any = [
   {
     title: 'Micro-Needling with Dermapen',
     treatment: ``,
+    hasShowcase: true,
     description: `Lorem of the printing and typesetting industry.
     Lorem Ipsum has been the industry’s standard dummy
     text ever since the 1500s, when an unknown printer`,
@@ -128,6 +134,7 @@ export const SKIN_TREATMENTS: any = [
   {
     title: 'Anti-Wrinkle Injections',
     treatment: ``,
+    hasShowcase: true,
     description: `Lorem of the printing and typesetting industry.
     Lorem Ipsum has been the industry’s standard dummy
     text ever since the 1500s, when an unknown printer`,
@@ -162,6 +169,7 @@ export const SKIN_TREATMENTS: any = [
   {
     title: 'Dermal Fillers',
     treatment: ``,
+    hasShowcase: true,
     description: `Lorem of the printing and typesetting industry.
     Lorem Ipsum has been the industry’s standard dummy
     text ever since the 1500s, when an unknown printer`,
@@ -195,6 +203,7 @@ export const SKIN_TREATMENTS: any = [
   },
   {
     title: 'Plasma Face Lift',
+    hasShowcase: true,
     treatment: `Prices below include one free top up session`,
     description: `Lorem of the printing and typesetting industry.
     Lorem Ipsum has been the industry’s standard dummy

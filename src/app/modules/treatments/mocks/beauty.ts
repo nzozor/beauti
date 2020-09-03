@@ -2,6 +2,7 @@ export const BEAUTY_FACIAL = [
     {
         title: 'Beauti Signature Relaxing Facial',
         treatment: ``,
+        hasShowcase: true,
         description: `Dermaplaning is a face shaving treatment believe to be
         used by Marilyn Monroe and Elizabeth Taylor and it is now a very popular
         skin treatment loved by many modern women. We use a medical grade scalpel
@@ -20,12 +21,13 @@ export const BEAUTY_FACIAL = [
     {
         title: 'Dermaplaning',
         treatment: ``,
+        hasShowcase: true,
         description: `Dermaplaning is a face shaving treatment believe to be used by Marilyn
         Monroe and Elizabeth Taylor and it is now a very popular skin treatment loved by many modern women.
         We use a medical grade scalpel to remove peach fuzz (vellus hair) and lightly exfoilate the skin's surface,
         completely pain free and your hair won't grow back thicker or darker. If you want a smoother skin for better
         absobing skin care products or a smoother foundation application, be sure to add Dermaplaning on your regular
-        skin treamtent list. It is perfect as an add on with our Beauti Signature Relaxing Facial or have it on its own, 
+        skin treamtent list. It is perfect as an add on with our Beauti Signature Relaxing Facial or have it on its own,
         for extra hydration after the exfoilation, add a hydration mask to give your skin a beautiful
         glow and softer skin. Suitable for all skin types.`,
         options: [

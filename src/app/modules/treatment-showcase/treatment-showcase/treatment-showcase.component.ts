@@ -29,15 +29,9 @@ export class TreatmentShowcaseComponent implements OnInit, OnDestroy {
   ngOnInit() {
     const slug: string = this.route.snapshot.params.slug;
     this.treatmentParentName = this.dataService.currentParentTreatment;
-    this.activeTreatmentList = [
-      'Advanced Skin Treatments',
-      'Skin Treatments'
-    ];
-    this.dataService.activeTreatmentList = this.activeTreatmentList;
+    this.activeTreatmentList = this.dataService.activeTreatmentList ? this.dataService.activeTreatmentList : ['Back to Treatments'];
     this.treatmentShowcaseSub = this.dataService.getTreatmentShowcase(slug).subscribe(treatment => {
       this.treatment = treatment[0];
-      // this.dataService.currentParentTreatment = this.treatment.parent.title;
-      this.dataService.currentParentTreatment = this.activeTreatmentList[0];
     }
     );
     this.breakpointObserver.observe([

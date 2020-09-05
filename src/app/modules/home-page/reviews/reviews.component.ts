@@ -7,9 +7,9 @@ import { Component, ElementRef, ViewChild } from '@angular/core';
   styleUrls: ['./reviews.component.scss']
 })
 export class ReviewsComponent {
-  @ViewChild('sliderEl') sliderEl: ElementRef;
-  @ViewChild('start') start: ElementRef;
-  @ViewChild('slickModal') slickModal: any;
+  @ViewChild('sliderEl', { static: false }) sliderEl: ElementRef;
+  @ViewChild('start', { static: false }) start: ElementRef;
+  @ViewChild('slickModal', { static: false }) slickModal: any;
 
   activeSlide = 0;
   slideCount = 0;

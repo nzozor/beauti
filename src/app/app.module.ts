@@ -1,4 +1,4 @@
-import { BrowserModule, HammerModule } from '@angular/platform-browser';
+import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -44,8 +44,7 @@ import { InstaComponent } from './shared/components/svg/insta/insta.component';
     HomePageModule,
     TreatmentsModule,
     RouterModule,
-    MatProgressSpinnerModule,
-    HammerModule
+    MatProgressSpinnerModule
   ],
   providers: [],
   bootstrap: [AppComponent],

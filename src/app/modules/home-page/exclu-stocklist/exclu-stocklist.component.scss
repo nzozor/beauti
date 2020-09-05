@@ -20,7 +20,7 @@
       position: relative;
       cursor: pointer;
       transition: all .4s;
-
+      width: 50%;
       &:hover {
         box-shadow: 0 10px 20px rgba(3, 27, 78, .1);
       }
@@ -85,5 +85,5 @@ h4 {
   text-align: center;
   color: $grey-black;
   letter-spacing: .5px;
-  margin: 0 30px 30px 30px; 
+  margin: 0 30px 30px 30px;
 }

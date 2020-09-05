@@ -11,11 +11,10 @@ export class DataService {
   }
 
   beautiCmsUrl = `https://cms.beautiskinclinic.com`;
-  // beautiCmsUrl = `http://localhost:1337`;
+  // beautiCmsUrl = `http://192.168.1.104:1337`;
 
-  currentParentTreatment = 'Skin Treatmetns';
+  currentParentTreatment: string;
   activeTreatmentList: string[];
-  activeTreatment: string;
   getTreatmentShowcase(slug: string): Observable<TreatmentShowcase> {
     return this.http.get<TreatmentShowcase>(`${this.beautiCmsUrl}/treatments?slug=${slug}`);  // Template litterral ``
   }

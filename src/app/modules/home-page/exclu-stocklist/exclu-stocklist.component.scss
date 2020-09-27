@@ -20,7 +20,11 @@
       position: relative;
       cursor: pointer;
       transition: all .4s;
-      width: 50%;
+
+      @media (min-width: 1024px) {
+        width: 50%;
+      }
+
       &:hover {
         box-shadow: 0 10px 20px rgba(3, 27, 78, .1);
       }

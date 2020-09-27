@@ -52,24 +52,12 @@ export class ReviewsComponent {
       quote: 'Couldn\'t be bettered! Brilliant service, pleasant atmosphere, highly trained people who know their job!'
     },
     {
-      reviewerName: '',
-      quote: 'Fabulous treatment as always. Professional with that signature Beauti charm!'
-    },
-    {
-      reviewerName: 'Jodie',
-      quote: 'Such friendly staff - very clean',
-    },
-    {
       reviewerName: 'Lucy',
       quote: 'Lovely manicure - clean salon and professional and very friendly staff',
     },
     {
       reviewerName: 'Miriam',
       quote: 'Best waxing I’ve had in London, I highly recommend Beauti!',
-    },
-    {
-      reviewerName: 'Jade',
-      quote: 'Wonderful ladies and a beautiful venue',
     },
     {
       reviewerName: 'Bethany',

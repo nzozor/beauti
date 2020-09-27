@@ -17,6 +17,7 @@ Run `ng build` to build the project. The build artifacts will be stored in the `
 On the server: 
 
 npm run build:ssr --prod && cp -r dist/ ../beauti && sudo forever restartall
+yarn build:ssr --prod && cp -r dist/ ../beauti && sudo forever restartall
 
 ## Running unit tests
 

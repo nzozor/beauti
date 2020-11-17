@@ -74,7 +74,8 @@
           },
           "configurations": {
             "production": {
-              "browserTarget": "beauti-frontend:build:production"
+              "browserTarget": "beauti-frontend:build:production",
+              "optimization": true
             }
           }
         },

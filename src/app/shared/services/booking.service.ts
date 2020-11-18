@@ -12,7 +12,7 @@ export class BookingService {
   sendBooking(event) {
     // event.preventDefault();
     // event.stopPropagation();
-    window.open('https://widget.treatwell.co.uk/place/beauti-skin-clinic/', '_blank');
+    window.open('https://widget.treatwell.co.uk/place/beauti-skin-clinic/', '_blank', 'noopener');
   }
 
   getBooking(): Observable<boolean> {

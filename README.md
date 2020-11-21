@@ -18,6 +18,12 @@ On the server:
 
 npm run build:ssr --prod && cp -r dist/ ../beauti && sudo forever restartall
 yarn build:ssr --prod && cp -r dist/ ../beauti && sudo forever restartall
+pm2 start dist/server.js --name ssr.angular
+tsconfig put ivy off:
+"angularCompilerOptions": {
+    "entryModule": "app/app.server.module#AppServerModule",
+    "enableIvy": false
+  },
 
 ## Running unit tests
 

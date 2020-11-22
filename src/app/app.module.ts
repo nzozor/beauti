@@ -45,7 +45,7 @@ import { InstaComponent } from './shared/components/svg/insta/insta.component';
     TreatmentsModule,
     RouterModule,
     MatProgressSpinnerModule,
-    HammerModule
+    HammerModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

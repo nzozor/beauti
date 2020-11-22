@@ -13,6 +13,7 @@ import { SlickCarouselModule } from 'ngx-slick-carousel';
 import { MapComponent } from 'src/app/shared/components/map/map.component';
 import { QuoteComponent } from 'src/app/shared/components/svg/quote/quote.component';
 import { ArrowComponent } from 'src/app/shared/components/svg/arrow/arrow.component';
+import { LazyImgDirective } from 'src/app/shared/directives/lazy-img.directive';
 
 @NgModule({
   imports: [
@@ -20,10 +21,18 @@ import { ArrowComponent } from 'src/app/shared/components/svg/arrow/arrow.compon
     HomePageRoutingModule,
     MatIconModule,
     MatButtonModule,
-    SlickCarouselModule
+    SlickCarouselModule,
   ],
-  declarations: [HomePageComponent, ExcluStocklistComponent, JumbotronComponent, ReviewsComponent, MapComponent, QuoteComponent,
-  ArrowComponent],
+  declarations: [
+    HomePageComponent,
+    ExcluStocklistComponent,
+    JumbotronComponent,
+    ReviewsComponent,
+    MapComponent,
+    QuoteComponent,
+    ArrowComponent,
+    LazyImgDirective,
+  ],
   exports: [MapComponent, SlickCarouselModule]
 })
 export class HomePageModule { }

@@ -117,56 +117,7 @@
               </div>
             </div>
           </div>
-          <!-- <mat-expansion-panel>
-                    <mat-expansion-panel-header>
-                        <mat-panel-title>
-                            Skin Imperfection Removal
-                        </mat-panel-title>
-                        <mat-panel-description></mat-panel-description>
-                    </mat-expansion-panel-header>
-                    <div>
-                        <div>
-                            <div class="skin-treatment">
-                                <div class="title">
-                                    <div>
-                                        <span>{{ skinImperfectionRemoval[0].title }}</span>
-                                        <span
-                      [innerHTML]="skinImperfectionRemoval[0].treatment"
-                    ></span>
-                                    </div>
-                                    <button (click)="openBooking($event)"
-                      mat-stroked-button
-                      color="primary"
-                      class="main-button"
-                    >
-                      Book now
-                    </button>
-                                </div>
-                                <div class="description">
-                                    {{ skinImperfectionRemoval[0].description }}
-                                </div>
-                                <div class="direction-column">
-                                    <div class="options-key">
-                                        <div
-                      *ngFor="let option of skinImperfectionRemoval[0].options"
-                    >
-                                            {{ option.key }}
-                                        </div>
-                                    </div>
-
-                                    <div class="options-value">
-                                        <div
-                      *ngFor="let option of skinImperfectionRemoval[0].options"
-                    >
-                                            {{ option.value }}
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </mat-expansion-panel> -->
-          <!-- </mat-accordion> -->
+          
         </mat-expansion-panel>
         <mat-expansion-panel
           [expanded]="isActive('Classic Skin Treatments')"
@@ -176,23 +127,7 @@
             <mat-panel-title> Classic Skin Treatments </mat-panel-title>
             <mat-panel-description> </mat-panel-description>
           </mat-expansion-panel-header>
-          <!-- <div >
-          <div
-            class="waxing "
-            *ngFor="let treatment of waxing"
-          >
-            <div class="direction-row" *ngFor="let option of treatment.options">
-              <div class="header row">
-                <div>{{option.treatment}}</div>
-                <div>Single</div>
-              </div>
-              <div class="body row" *ngFor="let rowTreatment of option.options">
-                  <div>{{rowTreatment.key}}</div>
-                  <div>{{rowTreatment.value}}</div>
-              </div>
-            </div>
-        </div>
-      </div> -->
+          
           <div class="sub">
             <div class="skin-treatment" *ngFor="let treatment of beautyFacial">
               <div class="title" id="{{ getSlug(treatment.title) }}">

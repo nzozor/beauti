@@ -45,7 +45,7 @@ export const BODY_MASSAGE = [
         text ever since the 1500s, when an unknown printer`,
     options: [
       { key: 'Duration', value: '30 mins' },
-      { key: 'Price', value: '£40' },
+      { key: 'Price', value: '£50' },
     ],
     new: true
   },

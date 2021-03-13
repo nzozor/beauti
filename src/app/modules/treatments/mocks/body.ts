@@ -15,14 +15,20 @@ export const BODY_MASSAGE = [
     title: 'Full Body Deep Tissue Massage',
     treatment: `
         Upgrade to aromatherapy oil for extra £5`,
-    description: `Lorem of the printing and typesetting industry.
-        Lorem Ipsum has been the industry’s standard dummy
-        text ever since the 1500s, when an unknown printer`,
     options: [
       { key: 'Duration', value: '60 mins' },
-      { key: 'Price', value: '£60' },
+      { key: 'Price', value: '£80' },
       { key: 'Duration', value: '90 mins' },
-      { key: 'Price', value: '£80' }
+      { key: 'Price', value: '£130' }
+    ]
+  },
+{
+    title: 'Full Body Deep Tissue Massage + Face',
+    treatment: `
+        Upgrade to aromatherapy oil for extra £5`,
+   options: [
+      { key: 'Duration', value: '90 mins' },
+      { key: 'Price', value: '£130' }
     ]
   },
   {

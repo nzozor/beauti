@@ -1,4 +1,4 @@
-<div id="treatment-page">
+<div>
   <h3>Treatments</h3>
   <mat-accordion [multi]="true">
     <mat-expansion-panel [expanded]="isActive('Skin-Treatments')">
@@ -25,8 +25,7 @@
             <mat-panel-title> Advanced Skin Treatments </mat-panel-title>
             <mat-panel-description></mat-panel-description>
           </mat-expansion-panel-header>
-          <app-treatment-full-width [treatments]="skinTreatments"></app-treatment-full-width>
-          <!-- <div class="skin-treatment" *ngFor="let treatment of skinTreatments">
+          <div class="skin-treatment" *ngFor="let treatment of skinTreatments">
             <div class="title" id="{{ getSlug(treatment.title) }}">
               <div>
                 <span [innerHtml]="treatment.title"></span>
@@ -117,7 +116,7 @@
                 </div>
               </div>
             </div>
-          </div> -->
+          </div>
           
         </mat-expansion-panel>
         <mat-expansion-panel
@@ -130,7 +129,98 @@
           </mat-expansion-panel-header>
           
           <div class="sub">
-            <app-treatment-full-width [treatments]="beautyFacial"></app-treatment-full-width>
+            <div class="skin-treatment" *ngFor="let treatment of beautyFacial">
+              <div class="title" id="{{ getSlug(treatment.title) }}">
+                <div>
+                  <span [innerHtml]="treatment.title"></span>
+
+                  <span [innerHTML]="treatment.treatment"></span>
+                  <span
+                    class="read-more"
+                    *ngIf="treatment.hasShowcase"
+                    (click)="
+                      goToTreatmentShowcase(
+                        ['Skin Treatments', 'Classic Skin Treatments'],
+                        treatment.title
+                      )
+                    "
+                  >
+                    Read More
+                  </span>
+                </div>
+
+                <button
+                  (click)="openBooking($event)"
+                  mat-stroked-button
+                  color="primary"
+                  class="main-button"
+                  *ngIf="!treatment.hasShowcase"
+                >
+                  Book now
+                </button>
+
+                <button
+                  (click)="
+                    goToTreatmentShowcase(
+                      ['Skin Treatments', 'Classic Skin Treatments'],
+                      treatment.title
+                    )
+                  "
+                  mat-stroked-button
+                  color="primary"
+                  class="main-button"
+                  *ngIf="treatment.hasShowcase"
+                >
+                  Read More
+                </button>
+              </div>
+              <div class="description">{{ treatment.description }}</div>
+              <div
+                class="direction-column"
+                *ngIf="treatment.orientation !== 'row'"
+              >
+                <div class="options-key">
+                  <div *ngFor="let option of treatment.options">
+                    {{ option.key }}
+                  </div>
+                </div>
+
+                <div class="options-value">
+                  <div *ngFor="let option of treatment.options">
+                    {{ option.value }}
+                  </div>
+                </div>
+              </div>
+              <div
+                class="direction-row"
+                *ngIf="
+                  treatment.orientation === 'row' &&
+                  treatment.fullOptions !== 'true'
+                "
+              >
+                <div class="row" *ngFor="let option of treatment.options">
+                  <div>{{ option.treatment }}</div>
+                  <div>{{ option.options[1].value }}</div>
+                </div>
+              </div>
+              <div
+                class="direction-row"
+                *ngIf="
+                  treatment.orientation === 'row' &&
+                  treatment.fullOptions === 'true'
+                "
+              >
+                <div class="row" *ngFor="let option of treatment.options">
+                  <div>{{ option.treatment }}</div>
+                  <div *ngFor="let op of option.options">
+                    <div>
+                      {{ op.key }}
+                      <span>{{ op.value }}</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </mat-expansion-panel>
         <mat-expansion-panel
@@ -143,7 +233,76 @@
           </mat-expansion-panel-header>
           <div>
             <div>
-              <app-treatment-full-width [treatments]="skinImperfectionRemoval"></app-treatment-full-width>
+              <div class="skin-treatment">
+                <div
+                  class="title"
+                  id="{{ getSlug(skinImperfectionRemoval[0].title) }}"
+                >
+                  <div>
+                    <span>{{ skinImperfectionRemoval[0].title }}</span>
+                    <span
+                      [innerHTML]="skinImperfectionRemoval[0].treatment"
+                    ></span>
+                    <span
+                      class="read-more"
+                      *ngIf="skinImperfectionRemoval[0].hasShowcase"
+                      (click)="
+                        goToTreatmentShowcase(
+                          ['Skin Treatments', 'Skin Imperfection Removal'],
+                          skinImperfectionRemoval[0].title
+                        )
+                      "
+                    >
+                      Read More
+                    </span>
+                  </div>
+
+                  <button
+                    (click)="openBooking($event)"
+                    mat-stroked-button
+                    color="primary"
+                    class="main-button"
+                    *ngIf="!skinImperfectionRemoval[0].hasShowcase"
+                  >
+                    Book now
+                  </button>
+
+                  <button
+                    (click)="
+                      goToTreatmentShowcase(
+                        ['Skin Treatments', 'Skin Imperfection Removal'],
+                        skinImperfectionRemoval[0].title
+                      )
+                    "
+                    mat-stroked-button
+                    color="primary"
+                    class="main-button"
+                    *ngIf="skinImperfectionRemoval[0].hasShowcase"
+                  >
+                    Read More
+                  </button>
+                </div>
+                <div class="description">
+                  {{ skinImperfectionRemoval[0].description }}
+                </div>
+                <div class="direction-column">
+                  <div class="options-key">
+                    <div
+                      *ngFor="let option of skinImperfectionRemoval[0].options"
+                    >
+                      {{ option.key }}
+                    </div>
+                  </div>
+
+                  <div class="options-value">
+                    <div
+                      *ngFor="let option of skinImperfectionRemoval[0].options"
+                    >
+                      {{ option.value }}
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </mat-expansion-panel>
@@ -164,6 +323,23 @@
           </button>
         </mat-panel-description>
       </mat-expansion-panel-header>
+      <!-- <div >
+          <div
+            class="waxing "
+            *ngFor="let treatment of waxing"
+          >
+            <div class="direction-row" *ngFor="let option of treatment.options">
+              <div class="header row">
+                <div>{{option.treatment}}</div>
+                <div>Single</div>
+              </div>
+              <div class="body row" *ngFor="let rowTreatment of option.options">
+                  <div>{{rowTreatment.key}}</div>
+                  <div>{{rowTreatment.value}}</div>
+              </div>
+            </div>
+        </div>
+      </div> -->
       <div class="waxing">
         <div class="description">
           {{ waxing[0].description }}
@@ -317,7 +493,7 @@
                   *ngIf="mainTreat.hasShowcase"
                   (click)="
                     goToTreatmentShowcase(
-                      ['Electrolysis'],
+                      'Electrolysis',
                       mainTreat.treatmentName
                     )
                   "

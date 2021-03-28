@@ -29,7 +29,7 @@ export const SKIN_TREATMENTS: any = [
     title: 'Advanced Beauti Signature Relaxing Facial',
     hasShowcase: true,
     treatment: `
-    Choose from Radio Frequency, Skin Rejuvenation, LED Light Therapy. Add Dermaplaning for £30, (extra 15 mins)`,
+    Choose from Radio Frequency, Skin Rejuvenation, LED Light Therapy.<br /> Add Dermaplaning for £30, (extra 15 mins)`,
     description: `Lorem of the printing and typesetting industry.
     Lorem Ipsum has been the industry’s standard dummy
     text ever since the 1500s, when an unknown printer`,
@@ -43,8 +43,8 @@ export const SKIN_TREATMENTS: any = [
     title: 'Aqua 3 Hydrotherapy Facial',
     hasShowcase: true,
     treatment: `
-    Choose from Deep-cleaning, Anti-Aging.Add Black Head Extraction for £10, (extra 10 mins).
-     Add LED Light Therapy for £20, (extra 15 mins)`,
+    Choose from Deep-cleaning, Anti-Aging. <br />Add Black Head Extraction for £10, (extra 10 mins)
+    <br />Add LED Light Therapy for £20, (extra 15 mins)`,
     description: `Lorem of the printing and typesetting industry.
     Lorem Ipsum has been the industry’s standard dummy
     text ever since the 1500s, when an unknown printer`,
@@ -97,7 +97,7 @@ export const SKIN_TREATMENTS: any = [
   },
   {
     title: `Beauti Fusion Mesotherapy`,
-    treatment: `Add Dermaplaning for £30, (extra 15 mins).
+    treatment: `Add Dermaplaning for £30, (extra 15 mins)<br />
      Add LED Light Therapy for £20, (extra 15 mins)`,
     hasShowcase: true,
     description: `Lorem of the printing and typesetting industry.

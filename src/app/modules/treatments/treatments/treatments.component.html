@@ -132,7 +132,8 @@
             <div class="skin-treatment" *ngFor="let treatment of beautyFacial">
               <div class="title" id="{{ getSlug(treatment.title) }}">
                 <div>
-                  <span>{{ treatment.title }}</span>
+                  <span [innerHtml]="treatment.title"></span>
+
                   <span [innerHTML]="treatment.treatment"></span>
                   <span
                     class="read-more"

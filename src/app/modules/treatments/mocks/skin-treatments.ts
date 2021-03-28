@@ -242,14 +242,14 @@ export const SKIN_TREATMENTS: any = [
         treatment: `Upper Eye`,
         options: [
           { key: 'Duration', value: '60 mins' },
-          { key: 'Single', value: '£350' },
+          { key: 'Single', value: '£450' },
         ]
       },
       {
         treatment: `Lower Eye`,
         options: [
           { key: 'Duration', value: '60 mins' },
-          { key: 'Single', value: '£250' },
+          { key: 'Single', value: '£350' },
         ]
       },
       {
@@ -259,7 +259,7 @@ export const SKIN_TREATMENTS: any = [
         text ever since the 1500s, when an unknown printer`,
         options: [
           { key: 'Duration', value: '60 mins' },
-          { key: 'Single', value: '£500' },
+          { key: 'Single', value: '£600' },
         ]
       },
       {
@@ -269,7 +269,7 @@ export const SKIN_TREATMENTS: any = [
         text ever since the 1500s, when an unknown printer`,
         options: [
           { key: 'Duration', value: '60 mins' },
-          { key: 'Single', value: '£350' }
+          { key: 'Single', value: '£450' }
         ]
       },
       {
@@ -289,7 +289,7 @@ export const SKIN_TREATMENTS: any = [
         text ever since the 1500s, when an unknown printer`,
         options: [
           { key: 'Duration', value: '60 mins' },
-          { key: 'Single', value: '£350' },
+          { key: 'Single', value: '£450' },
         ]
       },
       {
@@ -299,7 +299,7 @@ export const SKIN_TREATMENTS: any = [
         text ever since the 1500s, when an unknown printer`,
         options: [
           { key: 'Duration', value: '60 mins' },
-          { key: 'Single', value: '£400' }
+          { key: 'Single', value: '£500' }
         ]
       },
       {
@@ -309,7 +309,7 @@ export const SKIN_TREATMENTS: any = [
         text ever since the 1500s, when an unknown printer`,
         options: [
           { key: 'Duration', value: '60 mins' },
-          { key: 'Single', value: '£450' },
+          { key: 'Single', value: '£550' },
         ]
       },
       {
@@ -319,7 +319,7 @@ export const SKIN_TREATMENTS: any = [
         text ever since the 1500s, when an unknown printer`,
         options: [
           { key: 'Duration', value: '60 mins' },
-          { key: 'Single', value: '£800' }
+          { key: 'Single', value: '£900' }
         ]
       },
       {
@@ -329,7 +329,7 @@ export const SKIN_TREATMENTS: any = [
         text ever since the 1500s, when an unknown printer`,
         options: [
           { key: 'Duration', value: '60 mins' },
-          { key: 'Single', value: '£900' },
+          { key: 'Single', value: '£100' },
         ]
       },
       {
@@ -339,32 +339,9 @@ export const SKIN_TREATMENTS: any = [
         text ever since the 1500s, when an unknown printer`,
         options: [
           { key: 'Duration', value: '60 mins' },
-          { key: 'Single', value: '£1700' },
+          { key: 'Single', value: '£2000' },
         ]
       }
     ]
-  },
-  // {
-  //   title: 'TriBeauti Facial ',
-  //   treatment: `Skin Rejuvenation + Radio Frequency + Microneedling
-  //   with Dermapen 3-in-1 Treatment`,
-  //   description: `of the printing and typesetting industry.
-  //   Lorem Ipsum has been the industry’s standard dummy
-  //   text ever since the 1500s, when an unknown printer`,
-  //   options: [
-  //     {
-  //       key: 'Duration',
-  //       value: '90 mins',
-  //     },
-  //     {
-  //       key: 'Single',
-  //       value: '£250',
-  //     },
-  //     {
-  //       key: '3 Courses',
-  //       value: '£675'
-  //     },
-  //   ],
-  //   new: true
-  // },
+  }
 ];

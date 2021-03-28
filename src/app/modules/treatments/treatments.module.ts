@@ -7,9 +7,10 @@ import { TreatmentsComponent } from './treatments/treatments.component';
 import { MatExpansionModule } from '@angular/material/expansion';
 import { MatTableModule } from '@angular/material/table';
 import { TreatmentShowcaseModule } from '../treatment-showcase/treatment-showcase.module';
+import { TreatmentFullWidthComponent } from './treatment-full-width/treatment-full-width.component';
 
 @NgModule({
-  declarations: [TreatmentsComponent],
+  declarations: [TreatmentsComponent, TreatmentFullWidthComponent],
   imports: [
     CommonModule,
     TreatmentsRoutingModule,

@@ -1,4 +1,4 @@
-import { Component, OnInit, AfterViewInit, AfterContentChecked } from '@angular/core';
+import { Component, OnInit, AfterViewInit, AfterContentChecked, ViewEncapsulation } from '@angular/core';
 import { SKIN_TREATMENTS } from '../mocks/skin-treatments';
 import { SKIN_IMP_REM } from '../mocks/skin-imperfections';
 import { WAX_DATA } from '../mocks/waxing';
@@ -13,7 +13,8 @@ import { ViewportScroller } from '@angular/common';
 @Component({
   selector: 'app-treatments',
   templateUrl: './treatments.component.html',
-  styleUrls: ['./treatments.component.scss']
+  styleUrls: ['./treatments.component.scss'],
+  encapsulation: ViewEncapsulation.None
 })
 export class TreatmentsComponent implements OnInit, AfterViewInit, AfterContentChecked {
   skinTreatments = SKIN_TREATMENTS;

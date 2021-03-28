@@ -1,0 +1,92 @@
+<div class="skin-treatment" *ngFor="let treatment of treatments">
+  <div class="title" id="{{ getSlug(treatment.title) }}">
+    <div>
+      <span [innerHtml]="treatment.title"></span>
+      <span [innerHTML]="treatment.treatment"></span>
+      <span
+        class="read-more"
+        *ngIf="treatment.hasShowcase"
+        (click)="
+          goToTreatmentShowcase(
+            ['Skin Treatments', 'Advanced Skin Treatments'],
+            treatment.title
+          )
+        "
+      >
+        Read More
+      </span>
+    </div>
+
+    <button
+      (click)="openBooking($event)"
+      mat-stroked-button
+      color="primary"
+      class="main-button"
+      *ngIf="!treatment.hasShowcase"
+    >
+      Book now
+    </button>
+
+    <button
+      (click)="
+        goToTreatmentShowcase(
+          ['Skin Treatments', 'Advanced Skin Treatments'],
+          treatment.title
+        )
+      "
+      mat-stroked-button
+      color="primary"
+      class="main-button"
+      *ngIf="treatment.hasShowcase"
+    >
+      Read More
+    </button>
+  </div>
+  <div class="description">{{ treatment.description }}</div>
+  <div
+    class="direction-column"
+    *ngIf="treatment.orientation !== 'row'"
+  >
+    <div class="options-key">
+      <div *ngFor="let option of treatment.options">
+        {{ option.key }}
+      </div>
+    </div>
+
+    <div class="options-value">
+      <div *ngFor="let option of treatment.options">
+        {{ option.value }}
+      </div>
+    </div>
+  </div>
+
+  <div
+    class="direction-row"
+    *ngIf="
+      treatment.orientation === 'row' &&
+      treatment.fullOptions !== 'true'
+    "
+  >
+    <div class="row" *ngFor="let option of treatment.options">
+      <div>{{ option.treatment }}</div>
+      <div>{{ option.options[1].value }}</div>
+    </div>
+  </div>
+  <div
+    class="direction-row"
+    *ngIf="
+      treatment.orientation === 'row' &&
+      treatment.fullOptions === 'true'
+    "
+  >
+    <div class="row" *ngFor="let option of treatment.options">
+      <div>{{ option.treatment }}</div>
+      <div *ngFor="let op of option.options">
+        <div>
+          {{ op.key }}
+          <span>{{ op.value }}</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

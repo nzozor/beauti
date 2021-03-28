@@ -6,6 +6,7 @@ import { Subscription } from 'rxjs';
 import { DomSanitizer } from '@angular/platform-browser';
 import { BookingService } from 'src/app/shared/services/booking.service';
 import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
+import { SeoService } from 'src/app/shared/services/seo.service';
 
 @Component({
   selector: 'app-treatment-showcase',
@@ -19,7 +20,8 @@ export class TreatmentShowcaseComponent implements OnInit, OnDestroy {
     private domSanitizer: DomSanitizer,
     private router: Router,
     private bookingService: BookingService,
-    public breakpointObserver: BreakpointObserver
+    public breakpointObserver: BreakpointObserver,
+    public seo: SeoService
   ) { }
   treatment: TreatmentShowcase;
   treatmentShowcaseSub: Subscription;
@@ -32,6 +34,7 @@ export class TreatmentShowcaseComponent implements OnInit, OnDestroy {
     this.activeTreatmentList = this.dataService.activeTreatmentList ? this.dataService.activeTreatmentList : ['Back to Treatments'];
     this.treatmentShowcaseSub = this.dataService.getTreatmentShowcase(slug).subscribe(treatment => {
       this.treatment = treatment[0];
+      this.seo.setTitle(`${this.treatment.title} | ${this.treatmentParentName }`);
     }
     );
     this.breakpointObserver.observe([

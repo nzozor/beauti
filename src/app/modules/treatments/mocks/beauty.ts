@@ -1,7 +1,7 @@
 export const BEAUTY_FACIAL = [
     {
         title: 'Beauti Signature Relaxing Facial',
-        treatment: ``,
+        treatment: `Add Dermaplaning for £30, (extra 15 mins)`,
         hasShowcase: true,
         description: `Dermaplaning is a face shaving treatment believe to be
         used by Marilyn Monroe and Elizabeth Taylor and it is now a very popular
@@ -14,13 +14,13 @@ export const BEAUTY_FACIAL = [
         add a hydration mask to give your skin a beautiful glow and softer skin. Suitable for all skin types.`,
         options: [
             { key: 'Duration', value: '60 mins' },
-            { key: 'Single', value: '£80' },
+            { key: 'Single', value: '£110' },
         ],
         new: true
     },
     {
         title: 'Dermaplaning',
-        treatment: ``,
+        treatment: `Add a hydration mask for £10, (extra 15 mins)`,
         hasShowcase: true,
         description: `Dermaplaning is a face shaving treatment believe to be used by Marilyn
         Monroe and Elizabeth Taylor and it is now a very popular skin treatment loved by many modern women.
@@ -32,7 +32,7 @@ export const BEAUTY_FACIAL = [
         glow and softer skin. Suitable for all skin types.`,
         options: [
             { key: 'Duration', value: '45 mins' },
-            { key: 'Single', value: '£65' },
+            { key: 'Single', value: '£70' },
         ],
         new: true
     },

@@ -1,15 +1,41 @@
 export const SKIN_TREATMENTS: any = [
   {
+    title: 'Skin Consultation with Cinzia',
+    hasShowcase: false,
+    treatment: ``,
+    description: `Lorem of the printing and typesetting industry.
+    Lorem Ipsum has been the industry’s standard dummy
+    text ever since the 1500s, when an unknown printer`,
+    options: [
+      { key: 'Duration', value: '30 mins' },
+      { key: 'Single', value: '£50' }
+    ],
+    new: true
+  },
+  {
+    title: 'Bespoke Facial with Cinzia (by appointment only)',
+    hasShowcase: false,
+    treatment: ``,
+    description: `Lorem of the printing and typesetting industry.
+    Lorem Ipsum has been the industry’s standard dummy
+    text ever since the 1500s, when an unknown printer`,
+    options: [
+      { key: 'Duration', value: '180 mins' },
+      { key: 'Single', value: '£300' }
+    ],
+    new: true
+  },
+  {
     title: 'Advanced Beauti Signature Relaxing Facial',
     hasShowcase: true,
     treatment: `
-    Choose from Radio Frequency, Skin Rejuvenation, LED Light Therapy`,
+    Choose from Radio Frequency, Skin Rejuvenation, LED Light Therapy. Add Dermaplaning for £30, (extra 15 mins)`,
     description: `Lorem of the printing and typesetting industry.
     Lorem Ipsum has been the industry’s standard dummy
     text ever since the 1500s, when an unknown printer`,
     options: [
       { key: 'Duration', value: '75 mins' },
-      { key: 'Single', value: '£130' }
+      { key: 'Single', value: '£150' }
     ],
     new: true
   },
@@ -17,7 +43,8 @@ export const SKIN_TREATMENTS: any = [
     title: 'Aqua 3 Hydrotherapy Facial',
     hasShowcase: true,
     treatment: `
-    Choose from Deep-cleaning, Anti-Aging`,
+    Choose from Deep-cleaning, Anti-Aging.Add Black Head Extraction for £10, (extra 10 mins).
+     Add LED Light Therapy for £20, (extra 15 mins)`,
     description: `Lorem of the printing and typesetting industry.
     Lorem Ipsum has been the industry’s standard dummy
     text ever since the 1500s, when an unknown printer`,
@@ -28,7 +55,7 @@ export const SKIN_TREATMENTS: any = [
       },
       {
         key: 'Single',
-        value: '£120'
+        value: '£130'
       },
       {
         key: '3 Courses',
@@ -43,34 +70,35 @@ export const SKIN_TREATMENTS: any = [
   {
     title: `Skin Peel`,
     hasShowcase: true,
-    treatment: ``,
+    treatment: `Add LED Light Therapy for £20, (extra 15 mins)`,
     description: `Lorem of the printing and typesetting industry.
     Lorem Ipsum has been the industry’s standard dummy
     text ever since the 1500s, when an unknown printer`,
     options: [
       { key: 'Duration', value: '60 mins' },
-      { key: 'Single', value: '£110' },
+      { key: 'Single', value: '£120' },
       { key: '3 Courses', value: '£297' },
       { key: '6 Courses', value: '£561' }
     ]
   },
   {
     title: `Radio Frequency Skin Tightening`,
-    treatment: ``,
+    treatment: `Add LED Light Therapy for £20, (extra 15 mins)	`,
     hasShowcase: true,
     description: `Lorem of the printing and typesetting industry.
     Lorem Ipsum has been the industry’s standard dummy
     text ever since the 1500s, when an unknown printer`,
     options: [
       { key: 'Duration', value: '60 mins' },
-      { key: 'Single', value: '£80' },
+      { key: 'Single', value: '£120' },
       { key: '3 Courses', value: '£216' },
       { key: '6 Courses', value: '£408' }
     ]
   },
   {
     title: `Beauti Fusion Mesotherapy`,
-    treatment: ``,
+    treatment: `Add Dermaplaning for £30, (extra 15 mins).
+     Add LED Light Therapy for £20, (extra 15 mins)`,
     hasShowcase: true,
     description: `Lorem of the printing and typesetting industry.
     Lorem Ipsum has been the industry’s standard dummy
@@ -90,7 +118,7 @@ export const SKIN_TREATMENTS: any = [
         treatment: `    Face Meso`,
         options: [
           { key: '', value: '    60 mins' },
-          { key: '', value: '    £150' },
+          { key: '', value: '    £300' },
           { key: '', value: '    £540' },
         ]
       },
@@ -98,7 +126,7 @@ export const SKIN_TREATMENTS: any = [
         treatment: `Neck & Decolletage`,
         options: [
           { key: '', value: '60 mins' },
-          { key: '', value: '£200' },
+          { key: '', value: '£350' },
           { key: '', value: '£720' },
         ]
       },
@@ -113,7 +141,7 @@ export const SKIN_TREATMENTS: any = [
     text ever since the 1500s, when an unknown printer`,
     options: [
       { key: 'Duration', value: '30 mins' },
-      { key: 'Single', value: '£100' },
+      { key: 'Single', value: '£110' },
       { key: '3 Courses', value: '£270' },
       { key: '6 Courses', value: '£510' }
     ],
@@ -127,7 +155,7 @@ export const SKIN_TREATMENTS: any = [
     text ever since the 1500s, when an unknown printer`,
     options: [
       { key: 'Duration', value: '60 mins' },
-      { key: 'Single', value: '£180' },
+      { key: 'Single', value: '£200' },
       { key: '4 Courses', value: '£648' }
     ]
   },

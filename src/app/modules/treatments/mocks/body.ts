@@ -1,5 +1,14 @@
 export const BODY_MASSAGE = [
   {
+    title: 'Beauti Signature Relaxing Massage (Body + Face)',
+    treatment: `
+        Upgrade to aromatherapy oil for extra £5`,
+   options: [
+      { key: 'Duration', value: '90 mins' },
+      { key: 'Price', value: '£130' }
+    ]
+  },
+  {
     title: 'Back, Neck and Shoulder Massage',
     treatment: `
       Upgrade to aromatherapy oil for extra £5`,
@@ -18,19 +27,9 @@ export const BODY_MASSAGE = [
     options: [
       { key: 'Duration', value: '60 mins' },
       { key: 'Price', value: '£80' },
-      { key: 'Duration', value: '90 mins' },
-      { key: 'Price', value: '£130' }
     ]
   },
-{
-    title: 'Full Body + Face Massage',
-    treatment: `
-        Upgrade to aromatherapy oil for extra £5`,
-   options: [
-      { key: 'Duration', value: '90 mins' },
-      { key: 'Price', value: '£130' }
-    ]
-  },
+
   {
     title: `Hot Stone Massage`,
     description: `Lorem of the printing and typesetting industry.
@@ -39,8 +38,6 @@ export const BODY_MASSAGE = [
     options: [
       { key: 'Duration', value: '60 mins' },
       { key: 'Price', value: '£90' },
-      { key: 'Duration', value: '90 mins' },
-      { key: 'Price', value: '£130' },
     ],
     new: true
   },

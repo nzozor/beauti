@@ -41,7 +41,7 @@ export const WAX_DATA = [
           { key: 'Chest', value: '£20' },
           { key: 'Forearms', value: '£16' },
           { key: 'Full Arms', value: '£29' },
-          { key: 'Full Back ', value: '£35' },
+          { key: 'Full Back ', value: '£40' },
           { key: 'Full Stomach', value: '£20' },
           { key: 'Lower Back', value: '£15' },
           { key: 'Navel Line', value: '£10' },

@@ -223,10 +223,10 @@ export const HAIR_REMOVAL_ELECTRO = [
       Lorem Ipsum has been the industry’s standard dummy
       text ever since the 1500s, when an unknown printer`,
     options: [
-      { key: '10 mins', value: '£20' },
-      { key: '15 mins', value: '£30' },
-      { key: '30 mins', value: '£40' },
-      { key: '60 mins', value: '£60' },
+      { key: '15 mins', value: '£40' },
+      { key: '30 mins', value: '£60' },
+      { key: '45 mins', value: '£80' },
+      { key: '60 mins', value: '£100' },
     ],
   },
 ];

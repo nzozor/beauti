@@ -35,7 +35,11 @@ export const SKIN_TREATMENTS: any = [
     text ever since the 1500s, when an unknown printer`,
     options: [
       { key: 'Duration', value: '75 mins' },
-      { key: 'Single', value: '£150' }
+      { key: 'Single', value: '£150' },
+      {
+        key: '6 Courses',
+        value: '£900'
+      }
     ],
     new: true
   },
@@ -59,11 +63,11 @@ export const SKIN_TREATMENTS: any = [
       },
       {
         key: '3 Courses',
-        value: '£324'
+        value: '£351'
       },
       {
         key: '6 Courses',
-        value: '£612'
+        value: '£663'
       }
     ]
   },
@@ -77,8 +81,8 @@ export const SKIN_TREATMENTS: any = [
     options: [
       { key: 'Duration', value: '60 mins' },
       { key: 'Single', value: '£120' },
-      { key: '3 Courses', value: '£297' },
-      { key: '6 Courses', value: '£561' }
+      { key: '3 Courses', value: '£324' },
+      { key: '6 Courses', value: '£612' }
     ]
   },
   {
@@ -91,8 +95,8 @@ export const SKIN_TREATMENTS: any = [
     options: [
       { key: 'Duration', value: '60 mins' },
       { key: 'Single', value: '£120' },
-      { key: '3 Courses', value: '£216' },
-      { key: '6 Courses', value: '£408' }
+      { key: '3 Courses', value: '£324' },
+      { key: '6 Courses', value: '£612' }
     ]
   },
   {
@@ -119,7 +123,7 @@ export const SKIN_TREATMENTS: any = [
         options: [
           { key: '', value: '    60 mins' },
           { key: '', value: '    £300' },
-          { key: '', value: '    £540' },
+          { key: '', value: '    £1080' },
         ]
       },
       {
@@ -127,7 +131,7 @@ export const SKIN_TREATMENTS: any = [
         options: [
           { key: '', value: '60 mins' },
           { key: '', value: '£350' },
-          { key: '', value: '£720' },
+          { key: '', value: '£1260' },
         ]
       },
     ]
@@ -142,8 +146,8 @@ export const SKIN_TREATMENTS: any = [
     options: [
       { key: 'Duration', value: '30 mins' },
       { key: 'Single', value: '£110' },
-      { key: '3 Courses', value: '£270' },
-      { key: '6 Courses', value: '£510' }
+      { key: '3 Courses', value: '£297' },
+      { key: '6 Courses', value: '£561' }
     ],
   },
   {
@@ -156,7 +160,7 @@ export const SKIN_TREATMENTS: any = [
     options: [
       { key: 'Duration', value: '60 mins' },
       { key: 'Single', value: '£200' },
-      { key: '4 Courses', value: '£648' }
+      { key: '4 Courses', value: '£720' }
     ]
   },
   {

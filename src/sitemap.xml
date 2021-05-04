@@ -1,32 +1,132 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset
-      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
             http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
-<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
-
-
-<url>
-  <loc>https://www.beautiskinclinic.com/</loc>
-  <lastmod>2019-11-10T20:20:35+00:00</lastmod>
-  <priority>1.00</priority>
-</url>
-<url>
-  <loc>https://www.beautiskinclinic.com/about-us</loc>
-  <lastmod>2019-11-10T20:20:35+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://www.beautiskinclinic.com/treatments</loc>
-  <lastmod>2019-11-10T20:20:35+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://www.beautiskinclinic.com/contact</loc>
-  <lastmod>2019-11-10T20:20:35+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-
-
+    <url>
+        <loc>https://www.beautiskinclinic.com/</loc>
+        <lastmod>2019-11-10T20:20:35+00:00</lastmod>
+        <priority>1.00</priority>
+    </url>
+    <url>
+        <loc>https://www.beautiskinclinic.com/about-us</loc>
+        <lastmod>2019-11-10T20:20:35+00:00</lastmod>
+        <priority>0.80</priority>
+    </url>
+    <url>
+        <loc>https://www.beautiskinclinic.com/treatments</loc>
+        <lastmod>2019-11-10T20:20:35+00:00</lastmod>
+        <priority>0.80</priority>
+    </url>
+    <url>
+        <loc>https://www.beautiskinclinic.com/contact</loc>
+        <lastmod>2019-11-10T20:20:35+00:00</lastmod>
+        <priority>0.80</priority>
+    </url>
+    <url>
+        <loc>https://www.beautiskinclinic.com/treatments/Aqua-3-Hydrotherapy-Facial</loc>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+        <lastmod>2021-05-04</lastmod>
+    </url>
+    <url>
+        <loc>https://www.beautiskinclinic.com/treatments/Skin-Treatments</loc>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+        <lastmod>2021-05-04</lastmod>
+    </url>
+    <url>
+        <loc>https://www.beautiskinclinic.com/treatments/Advanced-Skin-Treatments</loc>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+        <lastmod>2021-05-04</lastmod>
+    </url>
+    <url>
+        <loc>https://www.beautiskinclinic.com/treatments/Skin-Peel</loc>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+        <lastmod>2021-05-04</lastmod>
+    </url>
+    <url>
+        <loc>https://www.beautiskinclinic.com/treatments/Radio-Frequency-Skin-Tightening</loc>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+        <lastmod>2021-05-04</lastmod>
+    </url>
+    <url>
+        <loc>https://www.beautiskinclinic.com/treatments/Advanced-Beauti-Signature-Relaxing-Facial</loc>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+        <lastmod>2021-05-04</lastmod>
+    </url>
+    <url>
+        <loc>https://www.beautiskinclinic.com/treatments/Beauti-Fusion-Mesotherapy</loc>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+        <lastmod>2021-05-04</lastmod>
+    </url>
+    <url>
+        <loc>https://www.beautiskinclinic.com/treatments/IPL-Skin-Rejuvenation</loc>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+        <lastmod>2021-05-04</lastmod>
+    </url>
+    <url>
+        <loc>https://www.beautiskinclinic.com/treatments/Micro-Needling-with-Dermapen</loc>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+        <lastmod>2021-05-04</lastmod>
+    </url>
+    <url>
+        <loc>https://www.beautiskinclinic.com/treatments/Anti-Wrinkle-Injections</loc>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+        <lastmod>2021-05-04</lastmod>
+    </url>
+    <url>
+        <loc>https://www.beautiskinclinic.com/treatments/Dermal-Fillers</loc>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+        <lastmod>2021-05-04</lastmod>
+    </url>
+    <url>
+        <loc>https://www.beautiskinclinic.com/treatments/Plasma-Face-Lift</loc>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+        <lastmod>2021-05-04</lastmod>
+    </url>
+    <url>
+        <loc>https://www.beautiskinclinic.com/treatments/Dermaplaning</loc>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+        <lastmod>2021-05-04</lastmod>
+    </url>
+    <url>
+        <loc>https://www.beautiskinclinic.com/treatments/Beauti-Signature-Relaxing-Facial</loc>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+        <lastmod>2021-05-04</lastmod>
+    </url>
+    <url>
+        <loc>https://www.beautiskinclinic.com/treatments/Skin-imperfection-removal</loc>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+        <lastmod>2021-05-04</lastmod>
+    </url>
+    <url>
+        <loc>https://www.beautiskinclinic.com/treatments/Electrolysis</loc>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+        <lastmod>2021-05-04</lastmod>
+    </url>
+    <url>
+        <loc>https://www.beautiskinclinic.com/treatments/Fat-and-Cellulite-Reduction</loc>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+        <lastmod>2021-05-04</lastmod>
+    </url>
+    <url>
+        <loc>https://www.beautiskinclinic.com/treatments/IPL-Laser-Hair-Removal</loc>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+        <lastmod>2021-05-04</lastmod>
+    </url>
 </urlset>

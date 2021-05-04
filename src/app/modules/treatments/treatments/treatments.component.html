@@ -233,28 +233,28 @@
           </mat-expansion-panel-header>
           <div>
             <div>
-              <div class="skin-treatment">
+              <div class="skin-treatment" *ngFor="let element of skinImperfectionRemoval">
                 <div
                   class="title"
-                  id="{{ getSlug(skinImperfectionRemoval[0].title) }}"
+                  id="{{ getSlug(element.title) }}"
                 >
                   <div>
-                    <span>{{ skinImperfectionRemoval[0].title }}</span>
+                    <span>{{ element.title }}</span>
                     <span
-                      [innerHTML]="skinImperfectionRemoval[0].treatment"
+                      [innerHTML]="element.treatment"
                     ></span>
                     <span
                       class="read-more"
-                      *ngIf="skinImperfectionRemoval[0].hasShowcase"
+                      *ngIf="element.hasShowcase"
                       (click)="
                         goToTreatmentShowcase(
                           ['Skin Treatments', 'Skin Imperfection Removal'],
-                          skinImperfectionRemoval[0].title
+                          'Skin-imperfection-removal'
                         )
                       "
                     >
                       Read More
-                    </span>
+                    </span> 
                   </div>
 
                   <button
@@ -262,7 +262,7 @@
                     mat-stroked-button
                     color="primary"
                     class="main-button"
-                    *ngIf="!skinImperfectionRemoval[0].hasShowcase"
+                    *ngIf="!element.hasShowcase"
                   >
                     Book now
                   </button>
@@ -271,24 +271,24 @@
                     (click)="
                       goToTreatmentShowcase(
                         ['Skin Treatments', 'Skin Imperfection Removal'],
-                        skinImperfectionRemoval[0].title
+                        'Skin-imperfection-removal'
                       )
                     "
                     mat-stroked-button
                     color="primary"
                     class="main-button"
-                    *ngIf="skinImperfectionRemoval[0].hasShowcase"
+                    *ngIf="element.hasShowcase"
                   >
                     Read More
                   </button>
                 </div>
                 <div class="description">
-                  {{ skinImperfectionRemoval[0].description }}
+                  {{ element.description }}
                 </div>
                 <div class="direction-column">
                   <div class="options-key">
                     <div
-                      *ngFor="let option of skinImperfectionRemoval[0].options"
+                      *ngFor="let option of element.options"
                     >
                       {{ option.key }}
                     </div>
@@ -296,7 +296,7 @@
 
                   <div class="options-value">
                     <div
-                      *ngFor="let option of skinImperfectionRemoval[0].options"
+                      *ngFor="let option of element.options"
                     >
                       {{ option.value }}
                     </div>

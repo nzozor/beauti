@@ -1,0 +1,24 @@
+@import '../../../../scss/palette';
+
+:host {
+  max-width: 50%;
+}
+
+.container {
+  text-align: center;
+}
+
+div {
+  font-size: 20px;
+  font-family: 'Nunito Sans', sans-serif;
+  line-height: 32px;
+  font-weight: 300;
+  color: $grey-black;
+  margin-top: 60px;
+  margin-bottom: 40px;
+  max-width: 850px;
+}
+
+.main-button.mat-flat-button.mat-primary, .mat-stroked-button.mat-flat-button.mat-primary {
+  padding: 5px 30px;
+}

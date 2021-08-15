@@ -1,0 +1,48 @@
+h3,h4,h5, div {
+  font-family: 'Nunito Sans', sans-serif;
+}
+
+h3 {
+  font-size: 19px;
+  color: white;
+}
+
+
+h4 {
+  font-size: 44px;
+  color: white;
+  text-align: left;
+  &.semi-bold {
+    font-weight: 600;
+  }
+  &.light {
+    font-weight: 300;
+  }
+}
+h5.light {
+  font-weight: 300;
+  font-size: 27px;
+}
+.asterisk {
+  margin-top: 5%;
+  font-size: 16px;
+  color: rgba(255,255,255,0.67);
+}
+button {
+  margin: 30px 0;
+}
+.slide {
+  > div {
+    display: flex;
+    flex-direction: column;
+    justify-self: center;
+    align-items: flex-start;
+    background-color: black;
+    color: white;
+    background-image: url("../../../../assets/BT_Carousel\ Images_2-03.png");
+    background-repeat: no-repeat, repeat;
+    background-size:cover;
+    padding: 5% 70px 3% 70px;
+  }
+}
+

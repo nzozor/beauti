@@ -14,6 +14,8 @@ import { MapComponent } from 'src/app/shared/components/map/map.component';
 import { QuoteComponent } from 'src/app/shared/components/svg/quote/quote.component';
 import { ArrowComponent } from 'src/app/shared/components/svg/arrow/arrow.component';
 import { LazyImgDirective } from 'src/app/shared/directives/lazy-img.directive';
+import { MainSliderComponent } from './main-slider/main-slider.component';
+import { BoutiqueSummaryComponent } from './boutique-summary/boutique-summary.component';
 
 @NgModule({
   imports: [
@@ -32,6 +34,8 @@ import { LazyImgDirective } from 'src/app/shared/directives/lazy-img.directive';
     QuoteComponent,
     ArrowComponent,
     LazyImgDirective,
+    MainSliderComponent,
+    BoutiqueSummaryComponent,
   ],
   exports: [MapComponent, SlickCarouselModule]
 })

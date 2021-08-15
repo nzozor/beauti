@@ -1,0 +1,28 @@
+<ngx-slick-carousel
+  class="carousel"
+  #slickModal="slick-carousel"
+  [config]="slideConfig"
+  (init)="slickInit($event)"
+  (breakpoint)="breakpoint($event)"
+  (afterChange)="afterChange($event)"
+  (beforeChange)="beforeChange($event)"
+>
+  <div ngxSlickItem *ngFor="let slide of slides" class="slide">
+    <div>
+      <h3>NEW TREATMENT</h3>
+      <h4 class="semi-bold">TriBella</h4>
+      <h4 class="light">The Ultimate Anti-Aging Facial</h4>
+      <h5 class="light">Limited time Introductory Offer 30% OFF</h5>
+      <button
+        mat-flat-button
+        color="primary"
+        class="main-button treatments"
+        routerLink="/treatments"
+      >
+      FIND OUT MORE
+      </button>
+      <div class="asterisk">*Patch test required  **Offer ends on 30 September 2021</div>
+    </div>
+    
+  </div>
+</ngx-slick-carousel>

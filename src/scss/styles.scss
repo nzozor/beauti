@@ -43,13 +43,8 @@ h3 {
     bottom: -35px;
 
     @media (max-width: 479px) {
-      bottom: -40px;
+      bottom: -0px!important;
     }
-
-    @media (max-width: 360px) {
-      bottom: -66px;
-    }
-
   }
 }
 
@@ -166,4 +161,11 @@ h3 {
       }
     }
   }
+}
+
+.showcase-content {
+  img {
+    max-width: 400px;
+    display: block;
+  } 
 }

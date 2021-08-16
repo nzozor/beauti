@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { BookingService } from 'src/app/shared/services/booking.service';
+import { DataService } from 'src/app/shared/services/data.service';
 
 @Component({
   selector: 'app-main-slider',
@@ -6,46 +8,33 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./main-slider.component.scss']
 })
 export class MainSliderComponent implements OnInit {
-  slides = [
-    { img: 'http://placehold.it/350x150/000000' },
-    { img: 'http://placehold.it/350x150/111111' },
-    { img: 'http://placehold.it/350x150/333333' },
-    { img: 'http://placehold.it/350x150/666666' }
-  ];
+  banners;
   slideConfig = {
+
     slidesToShow: 1, slidesToScroll: 1, dots: true,
     infinite: true,
-
     adaptiveHeight: true,
     focusOnSelect: false,
     touchThreshold: 1000,
   };
 
-  constructor() { }
-  ngOnInit() { }
+  constructor(private dataService: DataService, private bookingService: BookingService) { }
 
-  addSlide() {
-    this.slides.push({ img: 'http://placehold.it/350x150/777777' })
+  get cmsUrl() {
+    return this.dataService.beautiCmsUrl;
+  }
+  ngOnInit() {
+    this.getBanners();
+   }
+
+  getBanners() {
+    this.dataService.getHomageBanners().subscribe(banners =>  {
+      this.banners = banners;
+      console.log(this.banners);
+    });
   }
 
-  removeSlide() {
-    this.slides.length = this.slides.length - 1;
+  openBooking(event) {
+    this.bookingService.sendBooking(event);
   }
-
-  slickInit(e) {
-    console.log('slick initialized');
-  }
-
-  breakpoint(e) {
-    console.log('breakpoint');
-  }
-
-  afterChange(e) {
-    console.log('afterChange');
-  }
-
-  beforeChange(e) {
-    console.log('beforeChange');
-  }
-
 }

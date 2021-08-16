@@ -16,7 +16,12 @@ export class DataService {
   currentParentTreatment = 'Skin Treatmetns';
   activeTreatmentList: string[];
   activeTreatment: string;
+  
   getTreatmentShowcase(slug: string): Observable<TreatmentShowcase> {
     return this.http.get<TreatmentShowcase>(`${this.beautiCmsUrl}/treatments?slug=${slug}`);  // Template litterral ``
+  }
+
+  getHomageBanners(): Observable<any> {
+    return this.http.get<any>(`${this.beautiCmsUrl}/homepage-sliders`);  // Template litterral ``
   }
 }

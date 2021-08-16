@@ -13,9 +13,9 @@ export const SKIN_TREATMENTS: any = [
     new: true
   },
   {
-    title: 'Bespoke Facial with Cinzia (by appointment only)',
+    title: 'Bespoke Facial with Cinzia',
     hasShowcase: false,
-    treatment: ``,
+    treatment: `This treatment is made by appointment only, to book please call: 020 7820 1177 or email: info@beautiskinclinic.com`,
     description: `Lorem of the printing and typesetting industry.
     Lorem Ipsum has been the industry’s standard dummy
     text ever since the 1500s, when an unknown printer`,
@@ -346,6 +346,34 @@ export const SKIN_TREATMENTS: any = [
           { key: 'Single', value: '£2000' },
         ]
       }
+    ]
+  },
+  {
+    title: 'TriBella',
+    treatment: ``,
+    hasShowcase: true,
+    description: `Lorem of the printing and typesetting industry.
+    Lorem Ipsum has been the industry’s standard dummy
+    text ever since the 1500s, when an unknown printer`,
+    options: [
+      { key: 'Single', value: '£520' },
+      { key: '*Introductory price', value: '£364' },
+      { key: '3 Courses', value: '£1404' },
+      { key: '*Introductory price' , value: '£1193' }
+    ]
+  },
+  {
+    title: 'Skin Resurfacing',
+    treatment: ``,
+    hasShowcase: true,
+    description: `Lorem of the printing and typesetting industry.
+    Lorem Ipsum has been the industry’s standard dummy
+    text ever since the 1500s, when an unknown printer`,
+    options: [
+      { key: 'Single', value: '£300' },
+      { key: '*Introductory price', value: '£210' },
+      { key: '3 Courses', value: '£810' },
+      { key: '*Introductory price' , value: '£689' }
     ]
   }
 ];

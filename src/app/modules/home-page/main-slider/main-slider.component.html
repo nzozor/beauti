@@ -2,26 +2,31 @@
   class="carousel"
   #slickModal="slick-carousel"
   [config]="slideConfig"
-  (init)="slickInit($event)"
-  (breakpoint)="breakpoint($event)"
-  (afterChange)="afterChange($event)"
-  (beforeChange)="beforeChange($event)"
 >
-  <div ngxSlickItem *ngFor="let slide of slides" class="slide">
-    <div>
-      <h3>NEW TREATMENT</h3>
-      <h4 class="semi-bold">TriBella</h4>
-      <h4 class="light">The Ultimate Anti-Aging Facial</h4>
-      <h5 class="light">Limited time Introductory Offer 30% OFF</h5>
-      <button
+  <div ngxSlickItem *ngFor="let slide of banners" class="slide">
+    <div [style.background-image]="'url(' + cmsUrl + slide.image.url + ')'">
+      <h3>{{slide.title1}}</h3>
+      <h4 class="semi-bold">{{slide.title2}}</h4>
+      <h4 class="light">{{slide.title3}}</h4>
+      <h5 class="light">{{slide.title4}}</h5>
+      <button *ngIf="slide.findOutMoreUrl"
         mat-flat-button
         color="primary"
         class="main-button treatments"
-        routerLink="/treatments"
+        [routerLink]="'/treatments/'+ slide.findOutMoreUrl"
       >
       FIND OUT MORE
       </button>
-      <div class="asterisk">*Patch test required  **Offer ends on 30 September 2021</div>
+      <button *ngIf="!slide.findOutMoreUrl"
+        mat-flat-button
+        color="primary"
+        class="main-button treatments"
+        (click)="openBooking($event)"
+      >
+      BOOK NOW
+      </button>
+      
+      <div class="asterisk">{{slide.asterisk}}</div>
     </div>
     
   </div>

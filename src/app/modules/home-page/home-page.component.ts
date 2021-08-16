@@ -22,16 +22,16 @@ export class HomePageComponent implements AfterViewInit {
   }
 
   ngAfterViewInit() {
-    this.parallaxDiv = this.document.querySelector('.parallax');
+    // this.parallaxDiv = this.document.querySelector('.parallax');
 
-    this.parallaxDiv.style.backgroundPositionY = '100px';
-    this.initialTop = parseInt(this.parallaxDiv.style.backgroundPositionY, 10);
+    // this.parallaxDiv.style.backgroundPositionY = '100px';
+    // this.initialTop = parseInt(this.parallaxDiv.style.backgroundPositionY, 10);
   }
 
-  @HostListener('window:scroll')
-  onWindowScroll() {
-    if (window.innerWidth > 600) {
-      this.parallaxDiv.style.backgroundPositionY = this.initialTop - window.scrollY * 0.5 + 'px';
-    }
-  }
+  // @HostListener('window:scroll')
+  // onWindowScroll() {
+  //   if (window.innerWidth > 600) {
+  //     this.parallaxDiv.style.backgroundPositionY = this.initialTop - window.scrollY * 0.5 + 'px';
+  //   }
+  // }
 }

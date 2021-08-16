@@ -18,10 +18,16 @@ h4 {
   &.light {
     font-weight: 300;
   }
+  @media (max-width: 479px) {
+    font-size: 34px;
+  }
 }
 h5.light {
   font-weight: 300;
   font-size: 27px;
+  @media (max-width: 479px) {
+    font-size: 24px;
+  }
 }
 .asterisk {
   margin-top: 5%;
@@ -37,12 +43,15 @@ button {
     flex-direction: column;
     justify-self: center;
     align-items: flex-start;
-    background-color: black;
+    background-color: white;
     color: white;
-    background-image: url("../../../../assets/BT_Carousel\ Images_2-03.png");
+    
     background-repeat: no-repeat, repeat;
     background-size:cover;
     padding: 5% 70px 3% 70px;
+    @media (max-width: 479px) {
+      padding: 5% 30px 3% 30px;
+    }
   }
 }
 

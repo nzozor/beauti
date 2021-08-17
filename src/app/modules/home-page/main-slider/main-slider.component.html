@@ -4,7 +4,8 @@
   [config]="slideConfig"
 >
   <div ngxSlickItem *ngFor="let slide of banners" class="slide">
-    <div [style.background-image]="'url(' + cmsUrl + slide.image.url + ')'">
+    <div [style.background-image]="getBackGroudImg(slide.image.url,slide.imgSmall.url)">
+
       <h3>{{slide.title1}}</h3>
       <h4 class="semi-bold">{{slide.title2}}</h4>
       <h4 class="light">{{slide.title3}}</h4>

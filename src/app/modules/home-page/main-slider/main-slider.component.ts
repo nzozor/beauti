@@ -47,7 +47,7 @@ export class MainSliderComponent implements OnInit {
   }
 
   getBackGroudImg(imgLarge: string, imgSmall: string) {
-    if (window.innerWidth > 479) {
+    if (window.innerWidth > 768) {
       return 'url(' + this.cmsUrl + imgLarge + ')';
     } else {
       return 'url(' + this.cmsUrl + imgSmall + ')';

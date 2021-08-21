@@ -45,7 +45,7 @@
               </div>
 
               <button
-                (click)="openBooking($event)"
+                (click)="openBooking($event,treatment)"
                 mat-stroked-button
                 color="primary"
                 class="main-button"
@@ -285,7 +285,7 @@
                 <div class="description">
                   {{ element.description }}
                 </div>
-                <div class="direction-column">
+                <div class="direction-column content">
                   <div class="options-key">
                     <div
                       *ngFor="let option of element.options"
@@ -345,7 +345,7 @@
           {{ waxing[0].description }}
         </div>
         <div class="left-col">
-          <div class="direction-row" *ngFor="let option of leftCol">
+          <div class="direction-row content" *ngFor="let option of leftCol">
             <div class="header row">
               <div>{{ option.treatment }}</div>
               <div>Single</div>

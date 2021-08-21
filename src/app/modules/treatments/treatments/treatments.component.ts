@@ -45,8 +45,12 @@ export class TreatmentsComponent implements OnInit, AfterViewInit, AfterContentC
     return this.innerWidth >= 600;
   }
 
-  openBooking(e) {
-    this.bookingService.sendBooking(e);
+  openBooking(e, treatment = null) {
+    if (treatment?.bespoke) {
+      this.bookingService.sendBookingBespoke(e);
+    } else {
+      this.bookingService.sendBooking(e);
+    }
   }
 
   ngOnInit() {

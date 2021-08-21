@@ -169,22 +169,21 @@
       display: flex;
       flex-direction: column;
       justify-content: center;
-
+      padding: 50px!important;
       @media (min-width: 1024px) {
         -webkit-mask-image: linear-gradient(to left, transparent 1%, black 7%);
         mask-image: linear-gradient(to left, transparent 1%, black 7%);
 
         &::before {
           content: "\00a0 ";
-          position: absolute;
-          width: 9%;
+          width: 200px;
           height: 100%;
-          background: linear-gradient(to right, white, #0000ff00);
+          -webkit-mask-image: linear-gradient(to right, transparent 1%, black 7%);
+          mask-image: linear-gradient(to right, transparent 1%, black 7%);
           z-index: 5;
           left: 0;
         }
       }
-
 
       @media only screen and (min-width: 600px) {
         max-width: 50%;

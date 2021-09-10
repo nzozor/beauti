@@ -1,34 +1,38 @@
 <app-map class="map"></app-map>
 <div class="contact-points">
+  <div>
+    <h3>Address</h3>
     <div>
-        <h3>Address</h3>
-        <div>
-                66A Brixton Road  <br>
-                London, SW9 6BP
-        </div>
+      66A Brixton Road <br />
+      London, SW9 6BP
+    </div>
+  </div>
+  <div>
+    <h3>Contact Details</h3>
+    <div>
+      020 7820 1177 <br />
+      info@beautiskinclinic.com
+    </div>
+  </div>
+  <div>
+    <h3>Hours</h3>
+    <div>
+      Mon-Fri |
+      12pm-8pm <br />
     </div>
     <div>
-        <h3>Contact Details</h3>
-        <div>
-                020 7820 1177  <br>
-                info@beautiskinclinic.com
-        </div>
+      Sat |
+      9am-5pm <br />
     </div>
-    <div>
-        <h3>Hours</h3>
-        <div>
-Mon-Fri <br> 12pm-8pm
-        </div>
-    </div>
+  </div>
 </div>
 
-
-<ngx-slick-carousel id="carousel"
- #slickModal="slick-carousel"
- [config]="slideConfig"
+<ngx-slick-carousel
+  id="carousel"
+  #slickModal="slick-carousel"
+  [config]="slideConfig"
 >
-
-<div ngxSlickItem *ngFor="let slide of slides" class="slide">
-    <img src="{{ slide.img }}" alt="" width="100%">
-</div>
+  <div ngxSlickItem *ngFor="let slide of slides" class="slide">
+    <img src="{{ slide.img }}" alt="" width="100%" />
+  </div>
 </ngx-slick-carousel>

@@ -32,40 +32,28 @@ export class ReviewsComponent {
 
   reviews = [
     {
-      quote: 'Really happy with my wax! Lovely venue, very clean and luxurious and my treatment was very professional. Would highly recommend.',
-      reviewerName: 'Kate'
+      quote: `There is nowhere I would trust more with my skin! I've been coming here for about a year now and will continue. Cinza and her team are professional but also like my agony aunts!`,
+      reviewerName: 'Ruth'
     },
     {
-      reviewerName: 'Liz',
-      quote: 'Such a professional and well run clinic. I have already made a follow up appointment. Cinzia was very knowledgeable about treatments and products without any hard sell. It was a lovely relaxing environment and I will be back. Thank you'
+      quote: `Cinzia is adorable. Excellent knowledge and made me feel amazing. Would thoroughly recommend Cinzia and her beauty salon to my family and friends`,
+      reviewerName: 'Maggie'
     },
     {
-      reviewerName: 'Ruth',
-      quote: 'There is nowhere I would trust more with my skin! I\'ve been coming here for about a year now and will continue. Cinza and her team are professional but also like my agony aunts!'
+      quote: `I always have a wonderful experience when I go here! Best clinic in south london, possibly in the whole of london!`,
+      reviewerName: 'Louise'
     },
     {
-      reviewerName: 'WeiTing',
-      quote: 'Cinzia was SO lovely. Walked into the salon, it smelled fab and the ambience was on point. My Hollywood laser treatment was as painless as it can be haha. Would definitely come back.'
+      quote: `Cinzia is very knowledgeable about her trade. Totally dedicated and shows a passion for her desired outcomes. Very professional and person centred. Highly recommended`,
+      reviewerName: 'Wendy'
     },
     {
-      reviewerName: 'Kate',
-      quote: 'Couldn\'t be bettered! Brilliant service, pleasant atmosphere, highly trained people who know their job!'
+      quote: `You really feel like you’re in good hands at this place! Everyone knows what they’re doing and you trust them to do a good job - and they do! Couldn’t recommend more`,
+      reviewerName: 'Liberty'
     },
     {
-      reviewerName: 'Lucy',
-      quote: 'Lovely manicure - clean salon and professional and very friendly staff',
-    },
-    {
-      reviewerName: 'Miriam',
-      quote: 'Best waxing I’ve had in London, I highly recommend Beauti!',
-    },
-    {
-      reviewerName: 'Bethany',
-      quote: 'Lovely staff and great atmosphere. Both treatments were perfect I’ll definitely be coming back',
-    },
-    {
-      reviewerName: 'Nadia',
-      quote: 'Brilliant and painless waxing - very chilled and Julia was perfect',
+      quote: `Another amazing facial with Cinzia, she really does work miracles with the facials she offers`,
+      reviewerName: 'Angela'
     },
   ];
 
@@ -82,7 +70,9 @@ export class ReviewsComponent {
     adaptiveHeight: true,
     focusOnSelect: false,
     touchThreshold: 1000,
-    // touchMove: false,
+    autoplay: true,
+    speed: 2500,
+    touchMove: false,
     responsive: [
       {
         breakpoint: 768,

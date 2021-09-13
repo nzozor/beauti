@@ -15,7 +15,6 @@ export class MainSliderComponent implements OnInit {
   };
 
   slideConfig = {
-
     slidesToShow: 1, slidesToScroll: 1, dots: true,
     infinite: true,
     adaptiveHeight: true,

@@ -51,6 +51,5 @@ export class MainSliderComponent implements OnInit {
     } else {
       return 'url(' + this.cmsUrl + imgSmall + ')';
     }
-
   }
 }

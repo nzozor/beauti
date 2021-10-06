@@ -1,6 +1,6 @@
 export const SKIN_TREATMENTS: any = [
   {
-    title: 'Skin Consultation with Cinzia',
+    title: 'Skin Consultation',
     hasShowcase: false,
     treatment: ``,
     description: `Lorem of the printing and typesetting industry.
@@ -13,16 +13,22 @@ export const SKIN_TREATMENTS: any = [
     new: true
   },
   {
-    title: 'Bespoke Facial with Cinzia',
+    title: 'Beauti Advanced Bespoke Facial',
     hasShowcase: false,
-    treatment: `This treatment is made by appointment only, to book please call: 020 7820 1177 or email: info@beautiskinclinic.com`,
+    treatment: `We are renaming the treatment adding the Beauti and Advance words,
+     also opened up to the team, available to book online, with 2 sets of prices,
+     more expensive if you want the Cinzia's charm. Each treatment lasts 2 hours, 120 mins.`,
     description: `Lorem of the printing and typesetting industry.
     Lorem Ipsum has been the industry’s standard dummy
     text ever since the 1500s, when an unknown printer`,
-    bespoke: true,
+    bespoke: false,
     options: [
-      { key: 'Duration', value: '180 mins' },
-      { key: 'Single', value: '£300' }
+      { key: 'Duration', value: '120 mins' },
+      { key: 'Single', value: '£250' },
+      {
+        key: 'with Cinzia',
+        value: '£300'
+      }
     ],
     new: true
   },

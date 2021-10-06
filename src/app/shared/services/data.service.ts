@@ -2,6 +2,9 @@ import { Injectable, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
 import { HttpClient } from '@angular/common/http';
 import { TreatmentShowcase } from '../models/treatmentShowcase';
+import { environment } from '../../../environments/environment.prod';
+import { env } from 'process';
+
 @Injectable({
   providedIn: 'root'
 })
@@ -10,7 +13,7 @@ export class DataService {
   constructor(private http: HttpClient) {
   }
 
-  beautiCmsUrl = `https://cms.beautiskinclinic.com`;
+  beautiCmsUrl = environment.cmsUrl;
   // beautiCmsUrl = `http://localhost:1337`;
 
   currentParentTreatment = 'Skin Treatmetns';

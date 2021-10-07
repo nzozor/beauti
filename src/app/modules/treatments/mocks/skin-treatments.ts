@@ -15,9 +15,7 @@ export const SKIN_TREATMENTS: any = [
   {
     title: 'Beauti Advanced Bespoke Facial',
     hasShowcase: false,
-    treatment: `We are renaming the treatment adding the Beauti and Advance words,
-     also opened up to the team, available to book online, with 2 sets of prices,
-     more expensive if you want the Cinzia's charm. Each treatment lasts 2 hours, 120 mins.`,
+    treatment: ``,
     description: `Lorem of the printing and typesetting industry.
     Lorem Ipsum has been the industry’s standard dummy
     text ever since the 1500s, when an unknown printer`,

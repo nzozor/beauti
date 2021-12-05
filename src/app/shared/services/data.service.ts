@@ -4,6 +4,7 @@ import { HttpClient } from '@angular/common/http';
 import { TreatmentShowcase } from '../models/treatmentShowcase';
 import { environment } from '../../../environments/environment.prod';
 import { env } from 'process';
+import { map } from 'rxjs/operators';
 
 @Injectable({
   providedIn: 'root'
@@ -25,6 +26,8 @@ export class DataService {
   }
 
   getHomageBanners(): Observable<any> {
-    return this.http.get<any>(`${this.beautiCmsUrl}/homepage-sliders`);  // Template litterral ``
+    return this.http.get<any>(`${this.beautiCmsUrl}/homepage-sliders`).pipe(
+      map((banners: []) => banners.sort((a:string, b: string) => new Date(b.publication) - new Date(a.publication)))
+    );  
   }
 }

@@ -17,7 +17,7 @@ export class MainSliderComponent implements OnInit {
   slideConfig = {
     slidesToShow: 1, slidesToScroll: 1, dots: true,
     infinite: true,
-    adaptiveHeight: true,
+    adaptiveHeight: false,
     focusOnSelect: false,
     touchThreshold: 1000,
     autoplay: true,

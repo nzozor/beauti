@@ -27,7 +27,7 @@ export class DataService {
 
   getHomageBanners(): Observable<any> {
     return this.http.get<any>(`${this.beautiCmsUrl}/homepage-sliders`).pipe(
-      map((banners: []) => banners.sort((a:string, b: string) => new Date(b.publication) - new Date(a.publication)))
-    );  
+      map((banners) => banners.sort((a, b) => new Date(b.publication).getTime() - new Date(a.publication).getTime()))
+    ); 
   }
 }

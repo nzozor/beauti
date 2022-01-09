@@ -362,9 +362,7 @@ export const SKIN_TREATMENTS: any = [
     text ever since the 1500s, when an unknown printer`,
     options: [
       { key: 'Single', value: '£520' },
-      { key: '*Introductory price', value: '£364' },
       { key: '3 Courses', value: '£1404' },
-      { key: '*Introductory price' , value: '£1193' }
     ]
   },
   {
@@ -376,9 +374,41 @@ export const SKIN_TREATMENTS: any = [
     text ever since the 1500s, when an unknown printer`,
     options: [
       { key: 'Single', value: '£300' },
-      { key: '*Introductory price', value: '£210' },
       { key: '3 Courses', value: '£810' },
-      { key: '*Introductory price' , value: '£689' }
     ]
-  }
+  },
+  {
+    title: `Profhilo`,
+    hasShowcase: true,
+    treatment: ``,
+    description: ``,
+    orientation: 'row',
+    fullOptions: 'true',
+    options: [
+      {
+        treatment: '                            ',
+        options: [
+          { key: '   Duration', value: '' },
+          { key: '   Single', value: '' },
+          { key: '   2 Courses', value: '' },
+        ]
+      },
+      {
+        treatment: `    Face or Neck`,
+        options: [
+          { key: '', value: '    60 mins' },
+          { key: '', value: '    £340' },
+          { key: '', value: '    £646' },
+        ]
+      },
+      {
+        treatment: `Face and Neck`,
+        options: [
+          { key: '', value: '60 mins' },
+          { key: '', value: '£646' },
+          { key: '', value: '£1163' },
+        ]
+      },
+    ]
+  },
 ];

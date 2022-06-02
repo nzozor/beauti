@@ -3,6 +3,7 @@ import { Router, NavigationEnd, RouteConfigLoadStart, RouteConfigLoadEnd } from 
 import { MatDialog } from '@angular/material/dialog';
 import { TreatwellComponent } from './components/treatwell/treatwell.component';
 import { BookingService } from './shared/services/booking.service';
+import { SeoService } from './shared/services/seo.service';
 
 @Component({
   selector: 'app-root',
@@ -18,7 +19,10 @@ export class AppComponent implements OnInit {
     private router: Router,
     private bookingService: BookingService,
     public dialog: MatDialog,
-  ) { }
+    public seo: SeoService,
+  ) {
+    this.seo.setDefaultMeta();
+  }
   ngOnInit() {
     this.router.events.subscribe((event) => {
       if ((event instanceof NavigationEnd)) {

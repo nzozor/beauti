@@ -49,6 +49,5 @@ import { InstaComponent } from './shared/components/svg/insta/insta.component';
   ],
   providers: [],
   bootstrap: [AppComponent],
-  entryComponents: [TreatwellComponent]
 })
 export class AppModule { }

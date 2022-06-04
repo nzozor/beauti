@@ -3,7 +3,6 @@ import { Observable } from 'rxjs';
 import { HttpClient } from '@angular/common/http';
 import { TreatmentShowcase } from '../models/treatmentShowcase';
 import { environment } from '../../../environments/environment.prod';
-import { env } from 'process';
 import { map } from 'rxjs/operators';
 
 @Injectable({

@@ -147,7 +147,6 @@
       }
     }
   },
-  "defaultProject": "beauti-frontend",
   "cli": {
     "analytics": "2a94955a-8067-41c9-bdb1-1162dcdfa0c3"
   }

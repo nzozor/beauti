@@ -8,6 +8,14 @@
   font-family: 'Nunito Sans', sans-serif;
   color: $grey-black;
 
+  a {
+    text-decoration: none;
+    color: inherit;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
   .main {
     display: flex;
     justify-content: space-between;
